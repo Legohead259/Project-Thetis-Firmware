@@ -33,24 +33,25 @@ SdVolume volume;
 void setup() {
     // Initialize USB MSC
     // Set disk vendor id, product id and revision with string up to 8, 16, 4 characters respectively
-    usb_msc.setID("Adafruit", "SD Card", "1.0");
+    // usb_msc.setID("Adafruit", "SD Card", "1.0");
 
     // Set read write callback
-    usb_msc.setReadWriteCallback(msc_read_cb, msc_write_cb, msc_flush_cb);
+    // usb_msc.setReadWriteCallback(msc_read_cb, msc_write_cb, msc_flush_cb);
 
     // Still initialize MSC but tell usb stack that MSC is not ready to read/write
     // If we don't initialize, board will be enumerated as CDC only
-    usb_msc.setUnitReady(false);
-    usb_msc.begin();
+    // usb_msc.setUnitReady(false);
+    // usb_msc.begin();
 
     // Open serial communications and wait for port to open:
     Serial.begin(9600);
     while (!Serial); // wait for serial port to connect. Needed for native USB port only
+    delay(2500); // Wait for port to open manually
 
     Serial.print("Initializing SD card...");
 
     // see if the card is present and can be initialized:
-    if (!card.init(SPI_HALF_SPEED, chipSelect)) {
+    if (!card.init(SPI_HALF_SPEED, chipSelect) && !SD.begin(chipSelect)) {
         Serial.println("initialization failed. Things to check:");
         Serial.println("* is a card inserted?");
         Serial.println("* is your wiring correct?");
@@ -87,6 +88,8 @@ void loop() {
         }
     }
 
+    Serial.print(dataString); // DEBUG
+
     // open the file. note that only one file can be open at a time,
     // so you have to close this one before opening another.
     File dataFile = SD.open("datalog.txt", FILE_WRITE);
@@ -101,11 +104,12 @@ void loop() {
     // if the file isn't open, pop up an error:
     else {
         Serial.println("error opening datalog.txt");
+        delay(150);
     }
 
-    while (millis() > 10000) {
-        usb_msc.setUnitReady(true);
-    }
+    // while (millis() > 10000) {
+    //     usb_msc.setUnitReady(true);
+    // }
 }
 
 // ----- USB MSC CALLBACKS -----
