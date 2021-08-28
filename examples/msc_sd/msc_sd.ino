@@ -16,7 +16,7 @@
 #include "SD.h"
 #include "Adafruit_TinyUSB.h"
 
-const int chipSelect = 10;
+const int chipSelect = A5;
 
 Adafruit_USBD_MSC usb_msc;
 

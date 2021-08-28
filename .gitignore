@@ -1,5 +1,6 @@
 .vscode/
 *.code-workspace
+.arduinobuild/
 
 # Local History for Visual Studio Code
 .history/
