@@ -33,7 +33,7 @@ SdFile root;
 // Adafruit SD shields and modules: pin 10
 // Sparkfun SD shield: pin 8
 // MKRZero SD: SDCARD_SS_PIN
-const int chipSelect = A5;
+const int chipSelect = A5; // A5 for Thetis Breadboard Prototype
 
 void setup() {
   // Open serial communications and wait for port to open:
