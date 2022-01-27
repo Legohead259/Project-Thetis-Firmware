@@ -20,15 +20,12 @@
 
 */
 
-#include <SPI.h>
-#include <SD.h>
+#include "SPI.h"
+#include "SD.h"
 #include "Adafruit_TinyUSB.h"
 
-const int chipSelect = A5;
+// const int chipSelect = A5;
 Adafruit_USBD_MSC usb_msc;
-
-Sd2Card card;
-SdVolume volume;
 
 void setup() {
     // Set disk vendor id, product id and revision with string up to 8, 16, 4 characters respectively
@@ -49,23 +46,37 @@ void setup() {
 
     Serial.print("\nInitializing SD card...");
 
-    if ( !card.init(SPI_HALF_SPEED, chipSelect) )
-    {
-        Serial.println("initialization failed. Things to check:");
+    if(!SD.begin()){
+        Serial.println("Card Mount Failed");
         Serial.println("* is a card inserted?");
         Serial.println("* is your wiring correct?");
         Serial.println("* did you change the chipSelect pin to match your shield or module?");
-        while (1) delay(1);
+        while(true); // Block further code execution
+    }
+    uint8_t cardType = SD.cardType();
+
+    if(cardType == CARD_NONE){
+        Serial.println("No SD card attached");
+        return;
     }
 
-    // Now we will try to open the 'volume'/'partition' - it should be FAT16 or FAT32
-    if (!volume.init(card)) {
-        Serial.println("Could not find FAT16/FAT32 partition.\nMake sure you've formatted the card");
-        while (1) delay(1);
-    }
-    Serial.println("done!");
+    // if ( !card.init() )
+    // {
+    //     Serial.println("initialization failed. Things to check:");
+    //     Serial.println("* is a card inserted?");
+    //     Serial.println("* is your wiring correct?");
+    //     Serial.println("* did you change the chipSelect pin to match your shield or module?");
+    //     while (1) delay(1);
+    // }
 
-    uint32_t block_count = volume.blocksPerCluster()*volume.clusterCount();
+    // // Now we will try to open the 'volume'/'partition' - it should be FAT16 or FAT32
+    // if (!volume.init(card)) {
+    //     Serial.println("Could not find FAT16/FAT32 partition.\nMake sure you've formatted the card");
+    //     while (1) delay(1);
+    // }
+    // Serial.println("done!");
+
+    uint32_t block_count = SD.blocksPerCluster()*SD.clusterCount();
 
     Serial.print("Volume size (MB):  ");
     Serial.println((block_count/2) / 1024);
