@@ -1,4 +1,5 @@
 // General definitions
+#include <Poseidon_Util.h>
 #define BATT_MON_PIN 1
 #define LOG_EN_PIN 12
 #define ACT_LED_PIN 13
@@ -27,6 +28,8 @@ float curMSecond = 0;
 #include <Wire.h>
 #define SAMPLE_RATE 32 // Hz
 #define BNO_RST_PIN 5
+#define BNO_SDA_PIN 26
+#define BNO_SCL_PIN 33
 Adafruit_BNO055 bno = Adafruit_BNO055(0x28); // Create BNO object with I2C addr 0x28
 
 // XTSD instantiation
@@ -83,7 +86,7 @@ void initGPS() {
 
 void initIMU() {
     Serial.println("Initializing IMU..."); // DEBUG
-    Wire.begin(26, 33); // Initialize I2C bus with correct wires
+    Wire.begin(BNO_SDA_PIN, BNO_SCL_PIN); // Initialize I2C bus with correct wires
     if (!bno.begin()) {
         Serial.println("Failed to initialize BNO055"); // DEBUG
         while (true); // Block further code execution
@@ -196,7 +199,7 @@ void ppsHandler(void) {
 	// Serial.println(\triggered!"); //DEBUG
 }
 
-void printUnknownSentence(void) {
+void printUnknownSentence(const MicroNMEA& nmea) {
     // Needed for MicroNMEA library. Does not necessarily need to be used.
 }
 
