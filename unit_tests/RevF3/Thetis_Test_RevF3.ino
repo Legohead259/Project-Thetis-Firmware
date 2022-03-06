@@ -2,9 +2,6 @@
 #define BATT_MON_PIN 1
 #define LOG_EN_PIN 0
 #define ACT_LED_PIN 13
-#define MCAL_LED_PIN 14
-#define GCAL_LED_PIN 15
-#define ACAL_LED_PIN 16
 #define TEST_TIME 10000 // 10 Seconds
 int logEnablePresses = 0;
 
@@ -31,6 +28,7 @@ float curMSecond = 0;
 #define BNO_RST_PIN 5
 #define BNO_SDA_PIN 26
 #define BNO_SCL_PIN 33
+#define BNO_RST_PIN 5
 Adafruit_BNO055 bno = Adafruit_BNO055(0x28); // Create BNO object with I2C addr 0x28
 
 // XTSD instantiation
@@ -39,22 +37,54 @@ Adafruit_BNO055 bno = Adafruit_BNO055(0x28); // Create BNO object with I2C addr 
 #include "FS.h"
 uint64_t cardSize;
 
-// DotStar instantiation
+// Neopixel instantiation
+#include <Adafruit_NeoPixel.h>
+#define NEO_EN_PIN 14
+#define NEO_DATA_PIN 15
 #define DASH_ON 250
 #define DOT_ON 125
 #define BLINK_INTERVAL 125
 #define MESSAGE_INTERVAL 1000
 
-Adafruit_DotStar strip(NUM_PIXELS, DOTSTAR_DATA_PIN, DOTSTAR_CLK_PIN, DOTSTAR_RGB);
-const uint32_t OFF      =  strip.Color(0, 0, 0);       //BGR
-const uint32_t WHITE    =  strip.Color(255, 255, 255);
-const uint32_t BLUE     =  strip.Color(255, 0, 0);
-const uint32_t RED      =  strip.Color(0, 0, 255);
-const uint32_t GREEN    =  strip.Color(0, 255, 0);
-const uint32_t PURPLE   =  strip.Color(255, 0, 255);
-const uint32_t AMBER    =  strip.Color(0, 191, 255);
-const uint32_t CYAN     =  strip.Color(255, 255, 0);
-const uint32_t LIME     =  strip.Color(0, 255, 125);
+/*
+Code Table:
+Error       |  DOT  |  DASH  |  DOT  |  DASH  |  CODE  |  COLOR
+------------|-------|--------|-------|--------|--------|---------
+General     |   0   |   0    |   0   |    1   |  B0001 |   RED
+Radio       |   0   |   0    |   1   |    0   |  B0010 |   RED
+GPS         |   0   |   0    |   1   |    1   |  B0011 |   RED
+Ignitor     |   0   |   1    |   0   |    0   |  B0100 |  WHITE
+IMU         |   0   |   1    |   0   |    1   |  B0101 |   RED
+SHT         |   0   |   1    |   1   |    0   |  B0110 |   RED
+Altimeter   |   0   |   1    |   1   |    1   |  B0111 |   RED
+Low Battery |   1   |   0    |   0   |    0   |  B1000 |  AMBER
+
+A dot is 125 ms on, 125 ms off
+A dash is 250 ms on, 250 ms off
+Space between codes is 1 sec
+*/
+
+enum ErrorCode {
+    GEN_ERROR_CODE          = B0001,
+    RADIO_ERROR_CODE        = B1010,
+    GPS_ERROR_CODE          = B0011,
+    IGNITOR_ERROR_CODE      = B0100,
+    IMU_ERROR_CODE          = B0101,
+    SHT_ERROR_CODE          = B0110,
+    ALTIMETER_ERROR_CODE    = B0111,
+    LOW_BATT_ERROR_CODE     = B1000
+};
+
+Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_BGR + NEO_KHZ800);
+const uint32_t OFF      =  pixel.Color(0, 0, 0);       // BGR
+const uint32_t WHITE    =  pixel.Color(255, 255, 255);
+const uint32_t BLUE     =  pixel.Color(255, 0, 0);
+const uint32_t RED      =  pixel.Color(0, 0, 255);
+const uint32_t GREEN    =  pixel.Color(0, 255, 0);
+const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
+const uint32_t AMBER    =  pixel.Color(0, 191, 255);
+const uint32_t CYAN     =  pixel.Color(255, 255, 0);
+const uint32_t LIME     =  pixel.Color(0, 255, 125);
 
 // DEBUG flags
 #define GPSECHO false // Print GPS data verbose to serial port
@@ -65,7 +95,7 @@ void setup() {
 
     Serial.println("---------------------------------------");
     Serial.println("        Project Thetis Unit Test       ");
-    Serial.println("                 REV F2                ");
+    Serial.println("                 REV F3                ");
     Serial.println("---------------------------------------");
 
     pinMode(ACT_LED_PIN, OUTPUT);
@@ -74,10 +104,14 @@ void setup() {
     attachInterrupt(LOG_EN_PIN, logEnableISR, FALLING);
     
     Serial.println("Testing LOG_EN button...");
-    delay(TEST_TIME);
+    long startMillis = millis();
+    while(millis() < startMillis + TEST_TIME); // Do nothing for the TEST_TIME
     Serial.println("done!");
     Serial.println("---------------------------------------");
     Serial.println();
+    
+    initNeoPixel();
+    testNeoPixel();
 
     testBatteryMon();
     
@@ -215,9 +249,6 @@ void initIMU() {
     }
     bno.setExtCrystalUse(true);
 
-    pinMode(MCAL_LED_PIN, OUTPUT);
-    pinMode(GCAL_LED_PIN, OUTPUT);
-    pinMode(ACAL_LED_PIN, OUTPUT);
     pinMode(BNO_RST_PIN, OUTPUT);
 
     Serial.println("done!"); // DEBUG
@@ -226,7 +257,7 @@ void initIMU() {
 void testIMU() {
     Serial.println("Testing IMU...");
     long startTime = millis();
-    while (millis() < startTime + TEST_TIME*6) { // For TEST_TIME, read off IMU data and update LEDs at SAMPLE_RATE
+    while (millis() < startTime + TEST_TIME) { // For TEST_TIME, read off IMU data and update LEDs at SAMPLE_RATE
         // Possible vector values can be:
         // - VECTOR_ACCELEROMETER - m/s^2
         // - VECTOR_MAGNETOMETER  - uT
@@ -476,14 +507,68 @@ void testFileIO(fs::FS &fs, const char * path){
     file.close();
 }
 
-// =======================
+// ========================
 // ===NEOPIXEL FUNCTIONS===
-// =======================
+// ========================
 
 void initNeoPixel() {
-    strip.begin(); // Initialize pins for output
-    strip.setBrightness(50);
-    strip.show();  // Turn all LEDs off ASAP
+    Serial.print("Initializing NeoPixel...");
+    pinMode(NEO_EN_PIN, OUTPUT);
+    digitalWrite(NEO_EN_PIN, LOW); // Enable NeoPixel
+    pixel.begin(); // Initialize pins for output
+    pixel.setBrightness(50);
+    pixel.show();  // Turn all LEDs off ASAP
+    Serial.println("done!");
+}
+
+void testNeoPixel() {
+    Serial.println("Testing NeoPixel...");
+    blinkCode(GEN_ERROR_CODE, GREEN);
+    delay(50);
+    rainbow(10);
+    delay(50);
+    pixel.setPixelColor(0, OFF);
+    pixel.show(); // Turn off NeoPixel
+    Serial.println("done!");
+    Serial.println("---------------------------------------");
+    Serial.println();
+}
+
+void rainbow(int wait) {
+    for(long firstPixelHue = 0; firstPixelHue < 5*65536; firstPixelHue += 256) {
+        for(int i=0; i<pixel.numPixels(); i++) { 
+            int pixelHue = firstPixelHue + (i * 65536L / pixel.numPixels());
+            pixel.setPixelColor(i, pixel.gamma32(pixel.ColorHSV(pixelHue)));
+        }
+        pixel.show();
+        delay(wait);
+    }
+}
+
+void blinkCode(byte code, uint32_t color) {
+    bool dash = true;
+    for (int n=0; n<4; n++) {
+        if (bitRead(code, n)) {
+            if (dash) {
+                pixel.setPixelColor(0, color); pixel.show();
+                delay(DASH_ON);
+                pixel.setPixelColor(0, OFF); pixel.show();
+                delay(BLINK_INTERVAL);
+            }
+            else {
+                pixel.setPixelColor(0, color); pixel.show();
+                delay(DOT_ON);
+                pixel.setPixelColor(0, OFF); pixel.show();
+                delay(BLINK_INTERVAL);
+            }
+        }
+        else {
+            if (dash) delay(DASH_ON+BLINK_INTERVAL);
+            else delay(DOT_ON+BLINK_INTERVAL);
+        }
+        dash = !dash;
+    }
+    delay(MESSAGE_INTERVAL);
 }
 
 // =======================
