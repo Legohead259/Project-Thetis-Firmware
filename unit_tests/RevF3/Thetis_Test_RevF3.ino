@@ -48,16 +48,16 @@ uint64_t cardSize;
 
 /*
 Code Table:
-Error       |  DOT  |  DASH  |  DOT  |  DASH  |  CODE  |  COLOR
-------------|-------|--------|-------|--------|--------|---------
-General     |   0   |   0    |   0   |    1   |  B0001 |   RED
-Radio       |   0   |   0    |   1   |    0   |  B0010 |   RED
-GPS         |   0   |   0    |   1   |    1   |  B0011 |   RED
-Ignitor     |   0   |   1    |   0   |    0   |  B0100 |  WHITE
-IMU         |   0   |   1    |   0   |    1   |  B0101 |   RED
-SHT         |   0   |   1    |   1   |    0   |  B0110 |   RED
-Altimeter   |   0   |   1    |   1   |    1   |  B0111 |   RED
-Low Battery |   1   |   0    |   0   |    0   |  B1000 |  AMBER
+Error       |  DOT  |  DASH  |  DOT  |  DASH  |  CODE  |  COLOR  |  DESCRIPTION
+------------|-------|--------|-------|--------|--------|---------|--------------------------------------------------
+General     |   0   |   0    |   0   |    1   |  B0001 |   RED   | Unknown, but critical failure
+XTSD Mount  |   0   |   0    |   1   |    0   |  B0010 |   RED   | XTSD filesystem fails to mount
+Card Type   |   0   |   0    |   1   |    1   |  B0011 |   RED   | XTSD initializes, but reports a bad type
+File Write  |   0   |   1    |   0   |    0   |  B0100 |   RED   | Datalog file fails to open
+Radio       |   0   |   1    |   0   |    1   |  B0101 |   RED   | ESP32 radio fails to initialize/encounters error
+GPS         |   0   |   1    |   1   |    0   |  B0110 |   RED   | GPS radio fails to initialize
+IMU         |   0   |   1    |   1   |    1   |  B0111 |   RED   | IMU fails to initialize
+Low Battery |   1   |   0    |   0   |    0   |  B1000 |  AMBER  | Battery voltage is below 3.0V
 
 A dot is 125 ms on, 125 ms off
 A dash is 250 ms on, 250 ms off
@@ -66,13 +66,32 @@ Space between codes is 1 sec
 
 enum ErrorCode {
     GEN_ERROR_CODE          = B0001,
-    RADIO_ERROR_CODE        = B1010,
-    GPS_ERROR_CODE          = B0011,
-    IGNITOR_ERROR_CODE      = B0100,
-    IMU_ERROR_CODE          = B0101,
-    SHT_ERROR_CODE          = B0110,
-    ALTIMETER_ERROR_CODE    = B0111,
+    XTSD_MOUNT_ERROR_CODE   = B0010,
+    CARD_TYPE_ERROR_CODE    = B0011,
+    FILE_ERROR_CODE         = B0100,
+    RADIO_ERROR_CODE        = B0101,
+    GPS_ERROR_CODE          = B0110,
+    IMU_ERROR_CODE          = B0111,
     LOW_BATT_ERROR_CODE     = B1000
+};
+ 
+/*
+Status Table:
+State           |  Color  |  Indication  |  Description
+----------------|---------|--------------|---------------
+Logging, No GPS |  BLUE   |    Solid     | Thetis is logging, but does not have a GPS fix
+Logging, GPS    |  GREEN  |    Solid     | Thetis is logging with a GPS fix
+Ready, No GPS   |  BLUE   |   Pulsing    | Accelerometer is calibrated but no GPS fix
+Ready, GPS      |  GREEN  |   Pulsing    | Accelerometer is calibrated and there is a GPS fix
+Standby         |  AMBER  |    Solid     | Accelerometer is not calibrated yet
+*/
+
+enum Status {
+    LOGGING_NO_GPS,
+    LOGGING_GPS,
+    READY_NO_GPS,
+    READY_GPS,
+    STANDBY
 };
 
 Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_BGR + NEO_KHZ800);
@@ -140,8 +159,8 @@ void initGPS() {
     GPS.begin(9600); // Begin talking with GPS at 9600 baud
     if (!GPS) {
         Serial.println("Failed to initialize GPS"); // DEBUG
-        while (true); // Block further code execution
-            // TODO: Blink error code on activity LED
+        while (true) // Block further code execution
+            blinkCode(GPS_ERROR_CODE, RED);
     }
     nmea.setUnknownSentenceHandler(printUnknownSentence); // Set interrupt Routine for unrecognized sentences
     MicroNMEA::sendSentence(GPS, "$PORZB"); // Clear the list of messages which are sent
@@ -240,12 +259,12 @@ void printUnknownSentence(MicroNMEA& nmea) {
 // ===================
 
 void initIMU() {
-    Serial.print("Initializing IMU..."); // DEBUG
+    Serial.print("Initializing IMU...");
     Wire.begin(BNO_SDA_PIN, BNO_SCL_PIN); // Initialize I2C bus with correct wires
     if (!bno.begin()) {
-        Serial.println("Failed to initialize BNO055"); // DEBUG
-        while (true); // Block further code execution
-            // TODO: Blink error code on activity LED
+        Serial.println("Failed to initialize BNO055");
+        while (true);
+            blinkCode(IMU_ERROR_CODE, RED);
     }
     bno.setExtCrystalUse(true);
 
@@ -315,7 +334,8 @@ void initXTSD() {
     Serial.print("Initializing XTSD card...");
     if(!SD.begin()){
         Serial.println("Card Mount Failed");
-        while(true); // Block further code execution
+        while(true) // Block further code execution
+            blinkCode()
     }
     uint8_t cardType = SD.cardType();
 
