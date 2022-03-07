@@ -2,8 +2,21 @@
 
 #define LED_COUNT 1
 #define LED_PIN   15
+#define DASH_ON 250
+#define DOT_ON 125
+#define BLINK_INTERVAL 125
+#define MESSAGE_INTERVAL 1000
 
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+const uint32_t OFF      =  strip.Color(0, 0, 0);       // RGB
+const uint32_t WHITE    =  strip.Color(255, 255, 255);
+const uint32_t BLUE     =  strip.Color(0, 0, 255);
+const uint32_t RED      =  strip.Color(255, 0, 0);
+const uint32_t GREEN    =  strip.Color(0, 255, 0);
+const uint32_t PURPLE   =  strip.Color(255, 0, 255);
+const uint32_t AMBER    =  strip.Color(255, 191, 0);
+const uint32_t CYAN     =  strip.Color(0, 255, 255);
+const uint32_t LIME     =  strip.Color(125, 255, 0);
 
 void setup() {
   pinMode(14, OUTPUT);
@@ -11,12 +24,13 @@ void setup() {
 
   strip.begin();
   strip.show();
-  strip.setBrightness(50);
+  strip.setBrightness(10);
 }
 
 
 void loop() {
-  rainbow(10);
+  // rainbow(10);
+  blinkCode(B0101, CYAN);
 }
 
 void rainbow(int wait) {
@@ -28,4 +42,30 @@ void rainbow(int wait) {
     strip.show();
     delay(wait);
   }
+}
+
+void blinkCode(byte code, uint32_t color) {
+    bool dash = true;
+    for (int n=0; n<4; n++) {
+        if (bitRead(code, n)) {
+            if (dash) {
+                strip.setPixelColor(0, color); strip.show();
+                delay(DASH_ON);
+                strip.setPixelColor(0, OFF); strip.show();
+                delay(BLINK_INTERVAL);
+            }
+            else {
+                strip.setPixelColor(0, color); strip.show();
+                delay(DOT_ON);
+                strip.setPixelColor(0, OFF); strip.show();
+                delay(BLINK_INTERVAL);
+            }
+        }
+        else {
+            if (dash) delay(DASH_ON+BLINK_INTERVAL);
+            else delay(DOT_ON+BLINK_INTERVAL);
+        }
+        dash = !dash;
+    }
+    delay(MESSAGE_INTERVAL);
 }
