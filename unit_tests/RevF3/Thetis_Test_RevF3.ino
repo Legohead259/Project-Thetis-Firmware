@@ -45,6 +45,9 @@ uint64_t cardSize;
 #define DOT_ON 125
 #define BLINK_INTERVAL 125
 #define MESSAGE_INTERVAL 1000
+#define MAXIMUM_BRIGHTNESS 32
+#define NUM_STEPS 16
+#define BRIGHTNESS_STEP MAXIMUM_BRIGHTNESS/NUM_STEPS
 
 /*
 Code Table:
@@ -93,8 +96,9 @@ enum Status {
     READY_GPS,
     STANDBY
 };
+uint8_t currentState = STANDBY;
 
-Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_BGR + NEO_KHZ800);
+Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_RGB + NEO_KHZ800);
 const uint32_t OFF      =  pixel.Color(0, 0, 0);       // BGR
 const uint32_t WHITE    =  pixel.Color(255, 255, 255);
 const uint32_t BLUE     =  pixel.Color(255, 0, 0);
@@ -104,6 +108,9 @@ const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
 const uint32_t AMBER    =  pixel.Color(0, 191, 255);
 const uint32_t CYAN     =  pixel.Color(255, 255, 0);
 const uint32_t LIME     =  pixel.Color(0, 255, 125);
+const uint8_t brightness = 0.1;
+uint8_t pixelState = 0;
+bool brightnessInc = true; 
 
 // DEBUG flags
 #define GPSECHO false // Print GPS data verbose to serial port
@@ -123,8 +130,8 @@ void setup() {
     attachInterrupt(LOG_EN_PIN, logEnableISR, FALLING);
     
     Serial.println("Testing LOG_EN button...");
-    long startMillis = millis();
-    while(millis() < startMillis + TEST_TIME); // Do nothing for the TEST_TIME
+    long startTime = millis();
+    while(millis() < startTime + TEST_TIME); // Do nothing for the TEST_TIME
     Serial.println("done!");
     Serial.println("---------------------------------------");
     Serial.println();
@@ -334,14 +341,13 @@ void initXTSD() {
     Serial.print("Initializing XTSD card...");
     if(!SD.begin()){
         Serial.println("Card Mount Failed");
-        while(true) // Block further code execution
-            blinkCode()
+        while(true) blinkCode(XTSD_MOUNT_ERROR_CODE, RED); // Block further code execution and flash error code
     }
     uint8_t cardType = SD.cardType();
 
     if(cardType == CARD_NONE) {
         Serial.println("No SD card attached");
-        while(true); // Block further code execution
+        while(true) blinkCode(CARD_TYPE_ERROR_CODE, RED); // Block further code execution and flash error code
     }
     Serial.println("done!");
 }
@@ -543,26 +549,54 @@ void initNeoPixel() {
 
 void testNeoPixel() {
     Serial.println("Testing NeoPixel...");
-    blinkCode(GEN_ERROR_CODE, GREEN);
-    delay(50);
-    rainbow(10);
-    delay(50);
+    Serial.print("Blinking error code...");
+    blinkCode(IMU_ERROR_CODE, GREEN);
+    Serial.println("done")
+
+    Serial.print("Rainbow...");
+    long startTime = millis();
+    while(millis() < startTime + TEST_TIME) rainbow();
+    Serial.println("done");
+
+    Serial.print("Pulsing...");
+    startTime = millis();
+    while(millis() < startTime + TEST_TIME) pulseLED(BLUE);
     pixel.setPixelColor(0, OFF);
     pixel.show(); // Turn off NeoPixel
+    Serial.println("done");
+    
     Serial.println("done!");
     Serial.println("---------------------------------------");
     Serial.println();
 }
 
-void rainbow(int wait) {
-    for(long firstPixelHue = 0; firstPixelHue < 5*65536; firstPixelHue += 256) {
-        for(int i=0; i<pixel.numPixels(); i++) { 
-            int pixelHue = firstPixelHue + (i * 65536L / pixel.numPixels());
-            pixel.setPixelColor(i, pixel.gamma32(pixel.ColorHSV(pixelHue)));
-        }
-        pixel.show();
-        delay(wait);
+void pulseLED(uint32_t color) {
+    pixelState = 0;
+    pixel.setBrightness(pixelState);
+    pixel.setPixelColor(0, color);
+    pixel.show();
+    brightnessInc ? pixelState += BRIGHTNESS_STEP : pixelState -= BRIGHTNESS_STEP;
+    if (pixelState >= MAXIMUM_BRIGHTNESS || pixelState <= 0) brightnessInc = !brightnessInc;
+}
+
+void rainbow(){
+    pixel.setPixelColor(0, Wheel(&pixel,pixelState));
+    pixel.show();
+    pixelState++;
+    if (pixelState >= 255) pixelState = 0;
+}
+
+uint32_t Wheel(Adafruit_NeoPixel *strip, byte WheelPos) {
+    WheelPos = 255 - WheelPos;
+    if(WheelPos < 85) {
+        return strip->Color((255 - WheelPos * 3)*brightness, 0, WheelPos * 3*brightness);
     }
+    if(WheelPos < 170) {
+        WheelPos -= 85;
+        return strip->Color(0, WheelPos * 3 * brightness, (255 - WheelPos * 3)*brightness);
+    }
+    WheelPos -= 170;
+    return strip->Color(WheelPos * 3 * brightness, (255 - WheelPos * 3)*brightness, 0);
 }
 
 void blinkCode(byte code, uint32_t color) {

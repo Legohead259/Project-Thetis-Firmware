@@ -68,8 +68,7 @@ const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
 const uint32_t AMBER    =  pixel.Color(0, 191, 255);
 const uint32_t CYAN     =  pixel.Color(255, 255, 0);
 const uint32_t LIME     =  pixel.Color(0, 255, 125);
-float brightness = 0.1; 
-uint8_t strip_state = 0;
+uint8_t pixel_state = 0;
 bool brightness_inc = true;
 
 void initNeoPixel() {
@@ -92,20 +91,20 @@ void loop() {
 }
 
 void pulseLED(uint32_t color) {
-    pixel.setBrightness(strip_state);
+    pixel.setBrightness(pixel_state);
     pixel.setPixelColor(0, color);
     pixel.show();
-    brightness_inc ? strip_state += BRIGHTNESS_STEP : strip_state -= BRIGHTNESS_STEP;
-    if(strip_state >= MAXIMUM_BRIGHTNESS || strip_state <= 0) brightness_inc = !brightness_inc;
+    brightness_inc ? pixel_state += BRIGHTNESS_STEP : pixel_state -= BRIGHTNESS_STEP;
+    if (pixel_state >= MAXIMUM_BRIGHTNESS || pixel_state <= 0) brightness_inc = !brightness_inc;
 }
 
 void rainbow(){
   for(unsigned int i=0;i<pixel.numPixels();i++){
-    pixel.setPixelColor(i,Wheel(&pixel,strip_state));
+    pixel.setPixelColor(i,Wheel(&pixel,pixel_state));
   }
   pixel.show();
-  strip_state++;
-  if(strip_state>255) strip_state = 0;
+  pixel_state++;
+  if(pixel_state>255) pixel_state = 0;
 }
 
 uint32_t Wheel(Adafruit_NeoPixel *strip, byte WheelPos) {
