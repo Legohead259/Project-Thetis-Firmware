@@ -70,6 +70,7 @@ const uint32_t CYAN     =  pixel.Color(255, 255, 0);
 const uint32_t LIME     =  pixel.Color(0, 255, 125);
 uint8_t pixel_state = 0;
 bool brightness_inc = true;
+float brightness = 0.1;
 
 void initNeoPixel() {
     Serial.print("Initializing NeoPixel...");
@@ -86,8 +87,9 @@ void setup() {
 }
 
 void loop() {
-    pulseLED(BLUE);
+    // pulseLED(BLUE);
     delay(50); // Simulate doing other things
+    rainbow();
 }
 
 void pulseLED(uint32_t color) {
@@ -99,12 +101,10 @@ void pulseLED(uint32_t color) {
 }
 
 void rainbow(){
-  for(unsigned int i=0;i<pixel.numPixels();i++){
-    pixel.setPixelColor(i,Wheel(&pixel,pixel_state));
-  }
-  pixel.show();
-  pixel_state++;
-  if(pixel_state>255) pixel_state = 0;
+    pixel.setPixelColor(0,Wheel(&pixel,pixel_state));
+    pixel.show();
+    pixel_state++;
+    if(pixel_state>255) pixel_state = 0;
 }
 
 uint32_t Wheel(Adafruit_NeoPixel *strip, byte WheelPos) {

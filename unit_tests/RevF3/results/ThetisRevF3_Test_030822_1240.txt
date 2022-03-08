@@ -1,0 +1,366 @@
+---------------------------------------
+        Project Thetis Unit Test
+                 REV F3
+---------------------------------------
+Initializing NeoPixel...done!
+Testing NeoPixel...
+Blinking error code...done
+Rainbow...done
+Pulsing...done
+done!
+---------------------------------------
+
+Testing battery voltage monitoring...
+Battery voltage: 0.000000 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+Battery voltage: 1.805416 V
+done!
+---------------------------------------
+
+Initializing GPS...done!
+Testing GPS...
+▒Valid fix: no
+Nav. system: none
+Num. satellites: 0
+HDOP: 25.5
+Date/time: 0-0-0T99:99:99
+Latitude (deg): 999.000000
+Longitude (deg): 999.000000
+Altitude (m): not available
+Speed: -2147483.648
+Course: -2147483.648
+$GPGGA,193139.000,4035.8763,N,10505.4247,W,2,10,0.84,1519.2,M,-20.9,M,0000,0000*64
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.55,0.84,1.31*0F
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.55,0.84,1.31*0F
+
+$GPRMC,193139.000,A,4035.8763,N,10505.4247,W,0.04,314.79,080322,,,D*72
+$GPVTG,314.79,T,,M,0.04,N,0.08,K,D*3C
+Unknown sentence: $GPVTG,314.79,T,,M,0.04,N,0.08,K,D*3C
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 0
+HDOP: 25.5
+Date/time: 2022-3-8T19:31:39
+Latitude (deg): 40.597938
+Longitude (deg): -105.090411
+Altitude (m): not available
+Speed: 0.040
+Course: 314.790
+$GPGGA,193140.000,4035.8763,N,10505.4247,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*6D
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+
+$GPRMC,193140.000,A,4035.8763,N,10505.4247,W,0.03,295.30,080322,,,D*7E
+$GPVTG,295.30,T,,M,0.03,N,0.05,K,D*33
+Unknown sentence: $GPVTG,295.30,T,,M,0.03,N,0.05,K,D*33
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 10
+HDOP: 0.8
+Date/time: 2022-3-8T19:31:40
+Latitude (deg): 40.597938
+Longitude (deg): -105.090411
+Altitude (m): 1519.200
+Speed: 0.030
+Course: 295.300
+$GPGGA,193141.000,4035.8763,N,10505.4247,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*6C
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+
+$GPRMC,193141.000,A,4035.8763,N,10505.4247,W,0.04,240.36,080322,,,D*76
+$GPVTG,240.36,T,,M,0.04,N,0.07,K,D*38
+Unknown sentence: $GPVTG,240.36,T,,M,0.04,N,0.07,K,D*38
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 10
+HDOP: 0.8
+Date/time: 2022-3-8T19:31:41
+Latitude (deg): 40.597938
+Longitude (deg): -105.090411
+Altitude (m): 1519.200
+Speed: 0.040
+Course: 240.360
+$GPGGA,193142.000,4035.8763,N,10505.4247,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*6F
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+
+$GPRMC,193142.000,A,4035.8763,N,10505.4247,W,0.10,264.40,080322,,,D*77
+$GPVTG,264.40,T,,M,0.10,N,0.19,K,D*35
+Unknown sentence: $GPVTG,264.40,T,,M,0.10,N,0.19,K,D*35
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 10
+HDOP: 0.8
+Date/time: 2022-3-8T19:31:42
+Latitude (deg): 40.597938
+Longitude (deg): -105.090411
+Altitude (m): 1519.200
+Speed: 0.100
+Course: 264.400
+$GPGGA,193143.000,4035.8763,N,10505.4247,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*6E
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+
+$GPGSV,3,1,11,30,80,130,30,14,65,305,26,07,53,130,36,17,42,205,29*7F
+Unknown sentence: $GPGSV,3,1,11,30,80,130,30,14,65,305,26,07,53,130,36,17,42,205,29*7F
+
+$GPGSV,3,2,11,51,42,183,31,13,36,298,35,21,28,070,19,01,28,108,28*7E
+Unknown sentence: $GPGSV,3,2,11,51,42,183,31,13,36,298,35,21,28,070,19,01,28,108,28*7E
+
+$GPGSV,3,3,11,08,19,045,29,19,18,209,19,15,12,318,29*47
+Unknown sentence: $GPGSV,3,3,11,08,19,045,29,19,18,209,19,15,12,318,29*47
+
+$GPRMC,193143.000,A,4035.8763,N,10505.4247,W,0.03,139.69,080322,,,D*74
+$GPVTG,139.69,T,,M,0.03,N,0.05,K,D*3A
+Unknown sentence: $GPVTG,139.69,T,,M,0.03,N,0.05,K,D*3A
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 10
+HDOP: 0.8
+Date/time: 2022-3-8T19:31:43
+Latitude (deg): 40.597938
+Longitude (deg): -105.090411
+Altitude (m): 1519.200
+Speed: 0.030
+Course: 139.690
+$GPGGA,193144.000,4035.8763,N,10505.4247,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*69
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.80*07
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.80*07
+
+$GPRMC,193144.000,A,4035.8763,N,10505.4247,W,0.11,209.33,080322,,,D*7F
+$GPVTG,209.33,T,,M,0.11,N,0.21,K,D*30
+Unknown sentence: $GPVTG,209.33,T,,M,0.11,N,0.21,K,D*30
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 10
+HDOP: 0.8
+Date/time: 2022-3-8T19:31:44
+Latitude (deg): 40.597938
+Longitude (deg): -105.090411
+Altitude (m): 1519.200
+Speed: 0.110
+Course: 209.330
+$GPGGA,193145.000,4035.8763,N,10505.4248,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*67
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+
+$GPRMC,193145.000,A,4035.8763,N,10505.4248,W,0.14,266.80,080322,,,D*75
+$GPVTG,266.80,T,,M,0.14,N,0.27,K,D*32
+Unknown sentence: $GPVTG,266.80,T,,M,0.14,N,0.27,K,D*32
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 10
+HDOP: 0.8
+Date/time: 2022-3-8T19:31:45
+Latitude (deg): 40.597938
+Longitude (deg): -105.090413
+Altitude (m): 1519.200
+Speed: 0.140
+Course: 266.800
+$GPGGA,193146.000,4035.8762,N,10505.4248,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*65
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.80*07
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.80*07
+
+$GPRMC,193146.000,A,4035.8762,N,10505.4248,W,0.02,196.70,080322,,,D*73
+$GPVTG,196.70,T,,M,0.02,N,0.04,K,D*37
+Unknown sentence: $GPVTG,196.70,T,,M,0.02,N,0.04,K,D*37
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 10
+HDOP: 0.8
+Date/time: 2022-3-8T19:31:46
+Latitude (deg): 40.597936
+Longitude (deg): -105.090413
+Altitude (m): 1519.200
+Speed: 0.020
+Course: 196.700
+$GPGGA,193147.000,4035.8762,N,10505.4248,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*64
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.79*01
+
+$GPRMC,193147.000,A,4035.8762,N,10505.4248,W,0.10,111.72,080322,,,D*7C
+$GPVTG,111.72,T,,M,0.10,N,0.19,K,D*35
+Unknown sentence: $GPVTG,111.72,T,,M,0.10,N,0.19,K,D*35
+
+Valid fix: yes
+Nav. system: P
+Num. satellites: 10
+HDOP: 0.8
+Date/time: 2022-3-8T19:31:47
+Latitude (deg): 40.597936
+Longitude (deg): -105.090413
+Altitude (m): 1519.200
+Speed: 0.100
+Course: 111.720
+$GPGGA,193148.000,4035.8762,N,10505.4248,W,2,10,0.83,1519.2,M,-20.9,M,0000,0000*6B
+$GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.80*07
+Unknown sentence: $GPGSA,A,3,14,13,07,15,30,01,21,08,19,17,,,1.15,0.83,0.80*07
+
+$GPGSV,3,1,11,30,80,130,30,14,65,305,24,07,53,130,37,17,42,205,29*7C
+Unknown sentence: $GPGSV,3,1,11,30,80,130,30,14,65,305,24,07,53,130,37,17,42,205,29*7C
+
+$GPGSV,3,2,11,51,42,183,31,13,36,297,35,21,28,070,20,01,28,108,28*7B
+Unknown sentence: $GPGSV,3,2,11,51,42,183,31,13,36,297,35,21,28,070,20,01,28,108,28*7B
+
+$GPGSV,3,3,11,08,19,045,29,19,18,209,19,15,12,317,28*49
+Unknown sentence: $GPGSV,3,3,11,08,19,045,29,19,18,209,19,15,12,317,28*49
+
+$GPRMC,193148.000done!
+---------------------------------------
+
+Initializing IMU...done!
+Testing IMU...
+X: 0.00 Y: 0.00 Z: 0.00         qW: 0.0000 qX: 0.0000 qY: 0.0000 qZ: 0.0000             CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: 0.00 Y: 0.00 Z: 0.00         qW: 0.0000 qX: 0.0000 qY: 0.0000 qZ: 0.0000             CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: 0.00 Y: 0.00 Z: 0.00         qW: 0.0000 qX: 0.0000 qY: 0.0000 qZ: 0.0000             CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: -0.17 Y: -1.58 Z: -9.77              qW: 0.0000 qX: 0.0000 qY: 0.0000 qZ: 0.0000             CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: -0.16 Y: -1.58 Z: -9.74              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0000            CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: -0.16 Y: -1.57 Z: -9.78              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0000            CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: -0.15 Y: -1.59 Z: -9.78              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0000            CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: -0.16 Y: -1.58 Z: -9.73              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0000            CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: -0.15 Y: -1.58 Z: -9.71              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0000            CALIBRATION: Sys=0 Gyro=0 Accel=0 Mag=0
+X: -0.14 Y: -1.58 Z: -9.76              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0000            CALIBRATION: Sys=0 Gyro=3 Accel=0 Mag=0
+X: -0.17 Y: -1.58 Z: -9.75              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0000            CALIBRATION: Sys=0 Gyro=3 Accel=0 Mag=0
+X: -0.15 Y: -1.58 Z: -9.73              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0000            CALIBRATION: Sys=0 Gyro=3 Accel=0 Mag=0
+X: -0.14 Y: -1.63 Z: -9.75              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0001            CALIBRATION: Sys=0 Gyro=3 Accel=0 Mag=0
+X: -0.16 Y: -1.57 Z: -9.74              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0001            CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: -0.18 Y: -1.58 Z: -9.67              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0001            CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: -0.14 Y: -1.55 Z: -9.63              qW: 0.0811 qX: -0.9926 qY: 0.0901 qZ: 0.0001            CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: -0.13 Y: -1.58 Z: -9.71              qW: 0.0809 qX: -0.9926 qY: 0.0901 qZ: 0.0001            CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: -0.11 Y: -1.50 Z: -9.70              qW: 0.0798 qX: -0.9927 qY: 0.0901 qZ: -0.0003           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: -1.30 Y: -0.89 Z: -10.19             qW: 0.0692 qX: -0.9933 qY: 0.0922 qZ: -0.0060           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: 0.46 Y: -0.97 Z: -9.51               qW: 0.0497 qX: -0.9930 qY: 0.1045 qZ: -0.0222           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: 2.02 Y: -0.47 Z: -10.62              qW: -0.0026 qX: -0.9896 qY: 0.1169 qZ: -0.0843          CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: 2.86 Y: 1.57 Z: -7.38                qW: -0.1207 qX: -0.9684 qY: 0.1826 qZ: -0.1198          CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: 1.92 Y: 4.64 Z: -8.93                qW: -0.2860 qX: -0.9229 qY: 0.2492 qZ: -0.0659          CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: 2.52 Y: 4.73 Z: -9.14                qW: -0.3309 qX: -0.9056 qY: 0.2650 qZ: 0.0034           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=0
+X: 3.24 Y: 6.80 Z: -6.08                qW: -0.1868 qX: -0.9254 qY: 0.3225 qZ: 0.0695           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=1
+X: -1.09 Y: 3.08 Z: -9.44               qW: 0.0346 qX: -0.9316 qY: 0.3524 qZ: 0.0815            CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=1
+X: -3.18 Y: -4.56 Z: -6.75              qW: 0.3674 qX: -0.8649 qY: 0.3389 qZ: 0.0454            CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=1
+X: -3.51 Y: -7.13 Z: -3.24              qW: 0.5921 qX: -0.7464 qY: 0.3034 qZ: -0.0150           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=1
+X: -2.04 Y: -7.80 Z: 3.75               qW: 0.7846 qX: -0.5838 qY: 0.1779 qZ: -0.1091           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=1
+X: -2.17 Y: -4.75 Z: 3.41               qW: 0.8046 qX: -0.5635 qY: 0.0919 qZ: -0.1631           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=1
+X: 3.30 Y: -7.28 Z: 3.37                qW: 0.7639 qX: -0.6096 qY: 0.0331 qZ: -0.2092           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=1
+X: 3.14 Y: -10.15 Z: 0.18               qW: 0.6669 qX: -0.7025 qY: -0.0023 qZ: -0.2487          CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: 3.79 Y: -6.22 Z: -6.28               qW: 0.4072 qX: -0.8848 qY: 0.0732 qZ: -0.2145           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: 2.82 Y: -4.19 Z: -8.43               qW: 0.1180 qX: -0.9681 qY: 0.1429 qZ: -0.1686           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: 3.13 Y: -2.58 Z: -11.08              qW: -0.0377 qX: -0.9713 qY: 0.1961 qZ: -0.1292          CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: 2.26 Y: -2.14 Z: -10.78              qW: -0.0831 qX: -0.9616 qY: 0.2602 qZ: -0.0275          CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: -0.66 Y: 4.23 Z: -7.34               qW: -0.1416 qX: -0.9263 qY: 0.3230 qZ: 0.1330           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: -2.32 Y: 7.76 Z: -7.70               qW: -0.3467 qX: -0.8343 qY: 0.3429 qZ: 0.2571           CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: -3.67 Y: 7.19 Z: -7.40               qW: 0.3309 qX: 0.2907 qY: 0.8440 qZ: 0.3061             CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: -5.41 Y: 5.94 Z: -6.47               qW: 0.4117 qX: 0.3622 qY: 0.8287 qZ: 0.1125             CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=2
+X: -5.98 Y: 4.45 Z: -2.11               qW: 0.3923 qX: 0.4189 qY: 0.7975 qZ: -0.1860            CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=3
+X: -6.11 Y: -1.18 Z: -7.09              qW: 0.2739 qX: 0.3588 qY: 0.8419 qZ: -0.2957            CALIBRATION: Sys=0 Gyro=3 Accel=1 Mag=3
+X: -1.68 Y: -7.59 Z: 5.59               qW: 0.1204 qX: 0.1794 qY: 0.6834 qZ: -0.6973            CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: -2.13 Y: -8.60 Z: -1.19              qW: 0.0568 qX: 0.1020 qY: 0.7191 qZ: -0.6850            CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: -0.73 Y: -10.41 Z: 0.77              qW: 0.0504 qX: 0.0496 qY: 0.7462 qZ: -0.6619            CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: -2.21 Y: -7.07 Z: -2.45              qW: 0.0265 qX: 0.0391 qY: 0.7928 qZ: -0.6076            CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: 0.52 Y: -9.74 Z: -0.91               qW: -0.0568 qX: -0.0266 qY: 0.7898 qZ: -0.6102          CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: 1.39 Y: -9.83 Z: -2.79               qW: -0.0883 qX: -0.0206 qY: 0.7974 qZ: -0.5966          CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: 0.16 Y: -5.61 Z: -2.11               qW: -0.0670 qX: -0.0170 qY: 0.8210 qZ: -0.5667          CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: 0.55 Y: -8.85 Z: -4.44               qW: -0.0605 qX: -0.0074 qY: 0.8372 qZ: -0.5434          CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: 0.47 Y: -8.77 Z: -4.41               qW: -0.0576 qX: -0.0034 qY: 0.8464 qZ: -0.5293          CALIBRATION: Sys=2 Gyro=3 Accel=1 Mag=3
+X: 0.39 Y: -8.73 Z: -4.83               qW: -0.0525 qX: 0.0012 qY: 0.8510 qZ: -0.5226           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.30 Y: -8.67 Z: -4.43               qW: -0.0482 qX: -0.0023 qY: 0.8489 qZ: -0.5264          CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.45 Y: -8.89 Z: -4.02               qW: -0.0450 qX: -0.0068 qY: 0.8361 qZ: -0.5466          CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.41 Y: -9.00 Z: -3.73               qW: -0.0436 qX: -0.0082 qY: 0.8297 qZ: -0.5565          CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.37 Y: -9.06 Z: -3.70               qW: -0.0416 qX: -0.0103 qY: 0.8281 qZ: -0.5589          CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.34 Y: -8.95 Z: -3.89               qW: -0.0390 qX: -0.0101 qY: 0.8335 qZ: -0.5510          CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.30 Y: -8.77 Z: -4.45               qW: -0.0354 qX: -0.0081 qY: 0.8471 qZ: -0.5302          CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.21 Y: -8.28 Z: -4.96               qW: -0.0345 qX: -0.0032 qY: 0.8688 qZ: -0.4940          CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.02 Y: -7.51 Z: -5.81               qW: -0.0233 qX: 0.0104 qY: 0.9041 qZ: -0.4265           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.43 Y: -5.28 Z: -8.88              qW: -0.0231 qX: 0.0400 qY: 0.9485 qZ: -0.3133           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.05 Y: -5.82 Z: -6.60              qW: -0.0165 qX: 0.0381 qY: 0.9498 qZ: -0.3099           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.12 Y: -5.61 Z: -7.64              qW: -0.0189 qX: 0.0408 qY: 0.9532 qZ: -0.2990           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.16 Y: -6.10 Z: -7.62              qW: -0.0204 qX: 0.0375 qY: 0.9438 qZ: -0.3276           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.03 Y: -6.30 Z: -7.05               qW: -0.0213 qX: 0.0311 qY: 0.9393 qZ: -0.3410           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.05 Y: -6.27 Z: -7.83               qW: -0.0256 qX: 0.0302 qY: 0.9426 qZ: -0.3317           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.09 Y: -6.19 Z: -7.53               qW: -0.0249 qX: 0.0276 qY: 0.9417 qZ: -0.3346           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.02 Y: -6.22 Z: -7.81               qW: -0.0240 qX: 0.0273 qY: 0.9406 qZ: -0.3376           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.01 Y: -6.51 Z: -7.60               qW: -0.0225 qX: 0.0240 qY: 0.9373 qZ: -0.3469           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.09 Y: -6.47 Z: -7.29              qW: -0.0207 qX: 0.0199 qY: 0.9336 qZ: -0.3572           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.05 Y: -6.47 Z: -7.22              qW: -0.0203 qX: 0.0181 qY: 0.9318 qZ: -0.3618           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.05 Y: -6.70 Z: -7.33               qW: -0.0190 qX: 0.0156 qY: 0.9308 qZ: -0.3647           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.02 Y: -6.68 Z: -7.17              qW: -0.0169 qX: 0.0142 qY: 0.9297 qZ: -0.3677           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.02 Y: -6.75 Z: -7.17               qW: -0.0164 qX: 0.0143 qY: 0.9286 qZ: -0.3703           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.08 Y: -6.60 Z: -7.15              qW: -0.0148 qX: 0.0179 qY: 0.9312 qZ: -0.3639           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: 0.01 Y: -5.69 Z: -8.32               qW: -0.0144 qX: 0.0224 qY: 0.9514 qZ: -0.3068           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.06 Y: -4.62 Z: -8.30              qW: -0.0078 qX: 0.0292 qY: 0.9713 qZ: -0.2360           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.12 Y: -2.58 Z: -9.43              qW: -0.0023 qX: 0.0454 qY: 0.9921 qZ: -0.1170           CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.14 Y: -0.14 Z: -9.69              qW: 0.0022 qX: 0.0654 qY: 0.9979 qZ: -0.0011            CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.41 Y: 2.31 Z: -10.73              qW: 0.0283 qX: 0.0735 qY: 0.9927 qZ: 0.0909             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.34 Y: 1.66 Z: -9.36               qW: 0.0363 qX: 0.0737 qY: 0.9920 qZ: 0.0959             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.58 Y: 1.76 Z: -9.56               qW: 0.0360 qX: 0.0742 qY: 0.9919 qZ: 0.0960             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.46 Y: 1.71 Z: -9.58               qW: 0.0341 qX: 0.0753 qY: 0.9921 qZ: 0.0950             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.45 Y: 1.77 Z: -9.53               qW: 0.0338 qX: 0.0756 qY: 0.9921 qZ: 0.0945             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.47 Y: 1.76 Z: -9.57               qW: 0.0333 qX: 0.0756 qY: 0.9921 qZ: 0.0940             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.45 Y: 1.75 Z: -9.59               qW: 0.0333 qX: 0.0750 qY: 0.9922 qZ: 0.0936             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.48 Y: 1.77 Z: -9.62               qW: 0.0337 qX: 0.0750 qY: 0.9922 qZ: 0.0939             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.54 Y: 1.97 Z: -9.83               qW: 0.0313 qX: 0.0767 qY: 0.9921 qZ: 0.0941             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.47 Y: 1.94 Z: -9.44               qW: 0.0364 qX: 0.0743 qY: 0.9908 qZ: 0.1064             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -0.79 Y: 2.64 Z: -9.31               qW: 0.0487 qX: 0.0758 qY: 0.9871 qZ: 0.1326             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+X: -1.35 Y: 3.38 Z: -8.96               qW: 0.0658 qX: 0.0727 qY: 0.9756 qZ: 0.1967             CALIBRATION: Sys=3 Gyro=3 Accel=1 Mag=3
+done!
+---------------------------------------
+
+Initializing XTSD card...done!
+Testing XTSD Card...
+SD Card Size: 990MB
+Listing directory: /
+  FILE: test.txt  SIZE: 1048576
+  FILE: foo.txt  SIZE: 14
+Creating Dir: /mydir
+Dir created
+Listing directory: /
+  FILE: test.txt  SIZE: 1048576
+  FILE: foo.txt  SIZE: 14
+  DIR : mydir
+Removing Dir: /mydir
+Dir removed
+Listing directory: /
+  FILE: test.txt  SIZE: 1048576
+  FILE: foo.txt  SIZE: 14
+Writing file: /hello.txt
+File written
+Appending to file: /hello.txt
+Message appended
+Read from file: Hello World!
+Deleting file: /foo.txt
+File deleted
+Renaming file /hello.txt to /foo.txt
+File renamed
+Read from file: Hello World!
+1048576 bytes read for 206848 ms
+1048576 bytes written for 207806 ms
+Total space: 989MB
+Used space: 1MB
+done!
+---------------------------------------
+
+Unit test complete

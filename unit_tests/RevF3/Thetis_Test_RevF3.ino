@@ -108,7 +108,7 @@ const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
 const uint32_t AMBER    =  pixel.Color(0, 191, 255);
 const uint32_t CYAN     =  pixel.Color(255, 255, 0);
 const uint32_t LIME     =  pixel.Color(0, 255, 125);
-const uint8_t brightness = 0.1;
+const float brightness = 0.1;
 uint8_t pixelState = 0;
 bool brightnessInc = true; 
 
@@ -129,12 +129,12 @@ void setup() {
     pinMode(LOG_EN_PIN, INPUT);
     attachInterrupt(LOG_EN_PIN, logEnableISR, FALLING);
     
-    Serial.println("Testing LOG_EN button...");
-    long startTime = millis();
-    while(millis() < startTime + TEST_TIME); // Do nothing for the TEST_TIME
-    Serial.println("done!");
-    Serial.println("---------------------------------------");
-    Serial.println();
+    // Serial.println("Testing LOG_EN button...");
+    // long startTime = millis();
+    // while(millis() < startTime + TEST_TIME); // Do nothing for the TEST_TIME
+    // Serial.println("done!");
+    // Serial.println("---------------------------------------");
+    // Serial.println();
     
     initNeoPixel();
     testNeoPixel();
@@ -275,7 +275,8 @@ void initIMU() {
     }
     bno.setExtCrystalUse(true);
 
-    pinMode(BNO_RST_PIN, OUTPUT);
+    // pinMode(BNO_RST_PIN, OUTPUT);
+    // digitalWrite(BNO_RST_PIN, HIGH);
 
     Serial.println("done!"); // DEBUG
 }
@@ -283,7 +284,7 @@ void initIMU() {
 void testIMU() {
     Serial.println("Testing IMU...");
     long startTime = millis();
-    while (millis() < startTime + TEST_TIME) { // For TEST_TIME, read off IMU data and update LEDs at SAMPLE_RATE
+    while (millis() < startTime + TEST_TIME) { // For TEST_TIME, read off IMU data at SAMPLE_RATE
         // Possible vector values can be:
         // - VECTOR_ACCELEROMETER - m/s^2
         // - VECTOR_MAGNETOMETER  - uT
@@ -551,27 +552,33 @@ void testNeoPixel() {
     Serial.println("Testing NeoPixel...");
     Serial.print("Blinking error code...");
     blinkCode(IMU_ERROR_CODE, GREEN);
-    Serial.println("done")
+    Serial.println("done");
 
     Serial.print("Rainbow...");
     long startTime = millis();
-    while(millis() < startTime + TEST_TIME) rainbow();
+    while(millis() < startTime + TEST_TIME) {
+        rainbow(); 
+        delay(10);
+    }
     Serial.println("done");
 
     Serial.print("Pulsing...");
+    pixelState = 0;
     startTime = millis();
-    while(millis() < startTime + TEST_TIME) pulseLED(BLUE);
+    while(millis() < startTime + TEST_TIME) {
+        pulseLED(BLUE);
+        delay(10);
+    }
     pixel.setPixelColor(0, OFF);
     pixel.show(); // Turn off NeoPixel
     Serial.println("done");
-    
+
     Serial.println("done!");
     Serial.println("---------------------------------------");
     Serial.println();
 }
 
 void pulseLED(uint32_t color) {
-    pixelState = 0;
     pixel.setBrightness(pixelState);
     pixel.setPixelColor(0, color);
     pixel.show();
