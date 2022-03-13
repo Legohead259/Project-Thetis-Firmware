@@ -1,17 +1,53 @@
 // General definitions
-#include <Poseidon_Util.h>
+#define LOG_EN_PIN 0
 #define BATT_MON_PIN 1
-#define LOG_EN_PIN 12
 #define ACT_LED_PIN 13
-#define MCAL_LED_PIN 14
-#define GCAL_LED_PIN 15
-#define ACAL_LED_PIN 16
+
+struct Telemetry {
+    float voltage;              // Battery voltage in V
+    uint8_t month;              // Month from GPS data 
+    uint8_t day;                // Day from GPS data
+    uint16_t year;              // Year from GPS data
+    char timestamp[32];         // Timestamp in UTC obtained from GPS satellites
+    bool GPSFix;                // If GPS has positive fix on location
+    uint8_t numSats;            // Number of satellites GPS is communicating with
+    uint8_t HDOP;               // Accuracy of GPS reading. Lower is better. In tenths (divide by 10. when displaying)
+    long latitude;              // In millionths of a degree (divide by 1000000. when displaying)
+    long longitude;             // In millionths of a degree (divide by 1000000. when displaying)
+    long GPSSpeed;              // In thousandths of a knot (divide by 1000. when displaying)
+    long GPSCourse;             // In thousandths of a degree (divide by 1000. when displaying)
+    double bmpTemp;             // °Celsius from the BMP388
+    double pressure;            // Pa
+    float altitude;             // In meters Above Ground Level
+    uint8_t sysCal = 0;         // IMU system calibration, 0-3 with 3 being fully calibrated
+    uint8_t gyroCal = 0;        // IMU gyroscope calibration, 0-3 with 3 being fully calibrated
+    uint8_t accelCal = 0;       // IMU accelerometer calibration, 0-3 with 3 being fully calibrated
+    uint8_t magCal = 0;         // IMU magnetometer calibration, 0-3 with 3 being fully calibrated
+    float accelX;               // m/s^2
+    float accelY;               // m/s^2
+    float accelZ;               // m/s^2
+    float gyroX;                // rad/s
+    float gyroY;                // rad/s
+    float gyroZ;                // rad/s
+    float roll;                 // degrees
+    float pitch;                // degrees
+    float yaw;                  // degrees
+    float linAccelX;            // m/s^2
+    float linAccelY;            // m/s^2
+    float linAccelZ;            // m/s^2
+    float imuTemp;              // °Celsius from the IMU
+    float shtTemp;              // °Celsius (ambient) from the SHT31-D sensor
+    float humdity;              // % from the SHT31-D sensor
+    Status state;               // State reported by the launchsonde.
+    uint8_t packetSize;         // The size of the telemetry packet. Used as a debug tool for ground station/launchsonde comms.
+};
+Telemetry data;
+
 
 // GPS instantiation
 #include <MicroNMEA.h>
 #define GPS_PPS_PIN 42
-#define GPS_FIX_PIN 43
-HardwareSerial& GPS = Serial0;
+HardwareSerial GPS(0);
 char nmeaBuffer[100];
 MicroNMEA nmea(nmeaBuffer, sizeof(nmeaBuffer));
 bool ledState = LOW;
@@ -26,17 +62,96 @@ float curMSecond = 0;
 #include <Adafruit_BNO055.h>
 #include <utility/imumaths.h>
 #include <Wire.h>
-#define SAMPLE_RATE 32 // Hz
 #define BNO_RST_PIN 5
 #define BNO_SDA_PIN 26
 #define BNO_SCL_PIN 33
+#define SAMPLE_RATE 32 // Hz
 Adafruit_BNO055 bno = Adafruit_BNO055(0x28); // Create BNO object with I2C addr 0x28
 
 // XTSD instantiation
 #include <SPI.h>
 #include <SD.h>
-#include "FS.h"
+#include <FS.h>
 uint64_t cardSize;
+
+// Neopixel instantiation
+#include <Adafruit_NeoPixel.h>
+#define NEO_EN_PIN 14
+#define NEO_DATA_PIN 15
+#define DASH_ON 250
+#define DOT_ON 125
+#define BLINK_INTERVAL 125
+#define MESSAGE_INTERVAL 1000
+#define MAXIMUM_BRIGHTNESS 32
+#define NUM_STEPS 16
+#define BRIGHTNESS_STEP MAXIMUM_BRIGHTNESS/NUM_STEPS
+
+/*
+Status Table:
+Status          |  Color  |  Indication  
+----------------|---------|--------------
+Error           |   RED   |   Pulsing     
+Logging, No GPS |  BLUE   |    Solid      
+Logging, GPS    |  GREEN  |    Solid      
+Ready, No GPS   |  BLUE   |   Pulsing     
+Ready, GPS      |  GREEN  |   Pulsing     
+Standby         |  AMBER  |    Solid      
+Booting         |  NONE   |     N/A       
+*/
+
+enum Status {
+    ERROR_STATE = -1,       // Thetis has encountered some error
+    LOGGING_NO_GPS,         // Thetis is logging, but does not have a GPS fix
+    LOGGING_GPS,            // Thetis is logging with a GPS fix
+    READY_NO_GPS,           // Accelerometer is calibrated but no GPS fix
+    READY_GPS,              // Accelerometer is calibrated and there is a GPS fix
+    STANDBY,                // Accelerometer is not calibrated yet
+    BOOTING                 // Board is booting up
+};
+
+/*
+Code Table:
+Error       |  DOT  |  DASH  |  DOT  |  DASH  |  CODE  |  COLOR  
+------------|-------|--------|-------|--------|--------|---------
+General     |   0   |   0    |   0   |    1   |  B0001 |   RED    
+XTSD Mount  |   0   |   0    |   1   |    0   |  B0010 |   RED    
+Card Type   |   0   |   0    |   1   |    1   |  B0011 |   RED    
+File Write  |   0   |   1    |   0   |    0   |  B0100 |   RED    
+Radio       |   0   |   1    |   0   |    1   |  B0101 |   RED    
+GPS         |   0   |   1    |   1   |    0   |  B0110 |   RED    
+IMU         |   0   |   1    |   1   |    1   |  B0111 |   RED    
+Low Battery |   1   |   0    |   0   |    0   |  B1000 |  AMBER   
+
+A dot is 125 ms on, 125 ms off
+A dash is 250 ms on, 250 ms off
+Space between codes is 1 sec
+*/
+
+enum ErrorCode {
+    GEN_ERROR_CODE          = 0b0001,    // Unknown, but critical failure
+    XTSD_MOUNT_ERROR_CODE   = 0b0010,    // XTSD filesystem fails to mount
+    CARD_TYPE_ERROR_CODE    = 0b0011,    // XTSD initializes, but reports a bad type
+    FILE_ERROR_CODE         = 0b0100,    // Datalog file fails to open
+    RADIO_ERROR_CODE        = 0b0101,    // ESP32 radio fails to initialize/encounters error
+    GPS_ERROR_CODE          = 0b0110,    // GPS radio fails to initialize
+    IMU_ERROR_CODE          = 0b0111,    // IMU fails to initialize
+    LOW_BATT_ERROR_CODE     = 0b1000     // Battery voltage is below 3.0V
+};
+uint8_t currentState = STANDBY;
+
+Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_RGB + NEO_KHZ800);
+const uint32_t OFF      =  pixel.Color(0, 0, 0);       // BGR
+const uint32_t WHITE    =  pixel.Color(255, 255, 255);
+const uint32_t BLUE     =  pixel.Color(255, 0, 0);
+const uint32_t RED      =  pixel.Color(0, 0, 255);
+const uint32_t GREEN    =  pixel.Color(0, 255, 0);
+const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
+const uint32_t AMBER    =  pixel.Color(0, 191, 255);
+const uint32_t CYAN     =  pixel.Color(255, 255, 0);
+const uint32_t LIME     =  pixel.Color(0, 255, 125);
+const float brightness = 0.1;
+uint8_t pixelState = 0;
+bool brightnessInc = true;
 
 // DEBUG flags
 #define DEBUG_MODE false // Enable debugging to serial console - note, this will hang the code execution until serial port opened
@@ -60,29 +175,9 @@ void loop() {
     
 }
 
-// ==============================
-// ===INITIALIZATION FUNCTIONS===
-// ==============================
-
-void initGPS() {
-    Serial.print("Initializing GPS..."); // DEBUG
-    GPS.begin(9600); // Begin talking with GPS at 9600 baud
-    if (!GPS) {
-        Serial.println("Failed to initialize GPS"); // DEBUG
-        while (true); // Block further code execution
-            // TODO: Blink error code on activity LED
-    }
-    nmea.setUnknownSentenceHandler(printUnknownSentence); // Set interrupt Routine for unrecognized sentences
-    MicroNMEA::sendSentence(GPS, "$PORZB"); // Clear the list of messages which are sent
-    MicroNMEA::sendSentence(GPS, "$PORZB,RMC,1,GGA,1"); // Send only RMC (minimum recommended data) and GGA (fix data) including altitude
-    MicroNMEA::sendSentence(GPS, "$PNVGNME,2,9,1"); // Disable compatability mode (NV08C-CSM proprietary message) and adjust precision of time and position fields
-
-    pinMode(GPS_PPS_PIN, INPUT);
-    pinMode(GPS_FIX_PIN, INPUT);
-    attachInterrupt(GPS_PPS_PIN, ppsHandler, RISING);
-
-    Serial.println("done!"); // DEBUG
-}
+// ====================
+// === IMU FUNCTIONS===
+// ====================
 
 void initIMU() {
     Serial.println("Initializing IMU..."); // DEBUG
@@ -94,29 +189,68 @@ void initIMU() {
     }
     bno.setExtCrystalUse(true);
 
-    pinMode(MCAL_LED_PIN, OUTPUT);
-    pinMode(GCAL_LED_PIN, OUTPUT);
-    pinMode(ACAL_LED_PIN, OUTPUT);
     pinMode(BNO_RST_PIN, OUTPUT);
 
     Serial.println("done!"); // DEBUG
 }
 
-void initXTSD() {
-    if (!SD.begin()) { // Check if SD card is present
-        Serial.println("Card mount failed!");
-        while(true); // Block further code execution
+void pollIMU() {
+    bno.getCalibration(&data.sysCal, &data.gyroCal, &data.accelCal, &data.magCal);
+    if (bno.isFullyCalibrated()) { //Don't read IMU data unless sensors are calibrated
+        imu::Vector<3> accel = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);    // - m/s^2
+        imu::Vector<3> gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);         // - rad/s
+        imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);            // - degrees
+        imu::Vector<3> linaccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);   // - m/s^2
+
+        //Add accelerometer data to data packet            
+        data.accelX = accel.x();
+        data.accelY = accel.y();
+        data.accelZ = accel.z();
+
+        //Add gyroscope data to data packet
+        data.gyroX = gyro.x();
+        data.gyroY = gyro.y();
+        data.gyroZ = gyro.z();
+        
+        //Add euler rotation data to data packet
+        data.roll = euler.z();
+        data.pitch = euler.y();
+        data.yaw = euler.x();
+
+        //Add linear accleration data to data packet
+        data.linAccelX = linaccel.x();
+        data.linAccelY = linaccel.y();
+        data.linAccelZ = linaccel.z();
     }
-    if (SD.cardType() == CARD_NONE) { // Check if SD card is of readable type
-        Serial.println("No SD card attached");
-        while(true); // Block further code execution
-    }
-    // TODO: Implement check for available storage space
+
+    data.imuTemp = bno.getTemp();
 }
 
-// =======================
-// ===POLLING FUNCTIONS===
-// =======================
+
+// =====================
+// === GPS FUNCTIONS ===
+// =====================
+
+
+void initGPS() {
+    Serial.print("Initializing GPS..."); // DEBUG
+    GPS.begin(9600); // Begin talking with GPS at 9600 baud
+    if (!GPS) {
+        Serial.println("Failed to initialize GPS"); // DEBUG
+        while (true); // Block further code execution
+            // TODO: Blink error code on activity LED
+    }
+    // nmea.setUnknownSentenceHandler(printUnknownSentence); // Set interrupt Routine for unrecognized sentences
+    MicroNMEA::sendSentence(GPS, "$PORZB"); // Clear the list of messages which are sent
+    MicroNMEA::sendSentence(GPS, "$PORZB,RMC,1,GGA,1"); // Send only RMC (minimum recommended data) and GGA (fix data) including altitude
+    MicroNMEA::sendSentence(GPS, "$PNVGNME,2,9,1"); // Disable compatability mode (NV08C-CSM proprietary message) and adjust precision of time and position fields
+
+    pinMode(GPS_PPS_PIN, INPUT);
+    // pinMode(GPS_FIX_PIN, INPUT);
+    attachInterrupt(GPS_PPS_PIN, ppsHandler, RISING);
+
+    Serial.println("done!"); // DEBUG
+}
 
 void pollGPS() {
     //Parse milliseconds for timestamp
@@ -153,66 +287,110 @@ void pollGPS() {
     }
 
     while (!ppsTriggered && GPS.available()) {
-        char c = gps.read();
+        char c = GPS.read();
         nmea.process(c);
     }
 }
-
-void pollIMU() {
-    bno.getCalibration(&data.sysCal, &data.gyroCal, &data.accelCal, &data.magCal);
-    if (bno.isFullyCalibrated()) { //Don't read IMU data unless sensors are calibrated
-        imu::Vector<3> accel = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);    // - m/s^2
-        imu::Vector<3> gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);         // - rad/s
-        imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);            // - degrees
-        imu::Vector<3> linaccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);   // - m/s^2
-
-        //Add accelerometer data to data packet            
-        data.accelX = accel.x();
-        data.accelY = accel.y();
-        data.accelZ = accel.z();
-
-        //Add gyroscope data to data packet
-        data.gyroX = gyro.x();
-        data.gyroY = gyro.y();
-        data.gyroZ = gyro.z();
-        
-        //Add euler rotation data to data packet
-        data.roll = euler.z();
-        data.pitch = euler.y();
-        data.yaw = euler.x();
-
-        //Add linear accleration data to data packet
-        data.linAccelX = linaccel.x();
-        data.linAccelY = linaccel.y();
-        data.linAccelZ = linaccel.z();
-    }
-
-    data.imuTemp = bno.getTemp();
-}
-
-// =======================
-// ===UTILITY FUNCTIONS===
-// =======================
 
 void ppsHandler(void) {
 	ppsTriggered = true;
 	// Serial.println(\triggered!"); //DEBUG
 }
 
-void printUnknownSentence(const MicroNMEA& nmea) {
-    // Needed for MicroNMEA library. Does not necessarily need to be used.
+void printUnknownSentence(MicroNMEA& nmea) {
+    Serial.println();
+	Serial.print("Unknown sentence: ");
+	Serial.println(nmea.getSentence());
 }
 
-void updateStatusLEDs() {
-    
+
+// ======================
+// === XTSD FUNCTIONS ===
+// ======================
+
+
+void initXTSD() {
+    Serial.print("Initializing XTSD card...");
+    if(!SD.begin()){
+        Serial.println("Card Mount Failed");
+        while(true) blinkCode(XTSD_MOUNT_ERROR_CODE, RED); // Block further code execution and flash error code
+    }
+    uint8_t cardType = SD.cardType();
+
+    if(cardType == CARD_NONE) {
+        Serial.println("No SD card attached");
+        while(true) blinkCode(CARD_TYPE_ERROR_CODE, RED); // Block further code execution and flash error code
+    }
+    Serial.println("done!");
 }
 
-// ====================
-// ===XTSD FUNCTIONS===
-// ====================
+void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
+    Serial.printf("Listing directory: %s\n\r", dirname);
+
+    File root = fs.open(dirname);
+    if(!root){
+        Serial.println("Failed to open directory");
+        return;
+    }
+    if(!root.isDirectory()){
+        Serial.println("Not a directory");
+        return;
+    }
+
+    File file = root.openNextFile();
+    while(file){
+        if(file.isDirectory()){
+            Serial.print("  DIR : ");
+            Serial.println(file.name());
+            if(levels){
+                listDir(fs, file.path(), levels -1);
+            }
+        } else {
+            Serial.print("  FILE: ");
+            Serial.print(file.name());
+            Serial.print("  SIZE: ");
+            Serial.println(file.size());
+        }
+        file = root.openNextFile();
+    }
+}
+
+void createDir(fs::FS &fs, const char * path){
+    Serial.printf("Creating Dir: %s\n\r", path);
+    if(fs.mkdir(path)){
+        Serial.println("Dir created");
+    } else {
+        Serial.println("mkdir failed");
+    }
+}
+
+void removeDir(fs::FS &fs, const char * path){
+    Serial.printf("Removing Dir: %s\n\r", path);
+    if(fs.rmdir(path)){
+        Serial.println("Dir removed");
+    } else {
+        Serial.println("rmdir failed");
+    }
+}
+
+void readFile(fs::FS &fs, const char * path){
+    Serial.printf("Reading file: %s\r", path);
+
+    File file = fs.open(path);
+    if(!file){
+        Serial.println("Failed to open file for reading");
+        return;
+    }
+
+    Serial.print("Read from file: ");
+    while(file.available()){
+        Serial.write(file.read());
+    }
+    file.close();
+}
 
 void writeFile(fs::FS &fs, const char * path, const char * message){
-    Serial.printf("Writing file: %s\n", path);
+    Serial.printf("Writing file: %s\n\r", path);
 
     File file = fs.open(path, FILE_WRITE);
     if(!file){
@@ -228,7 +406,7 @@ void writeFile(fs::FS &fs, const char * path, const char * message){
 }
 
 void appendFile(fs::FS &fs, const char * path, const char * message){
-    Serial.printf("Appending to file: %s\n", path);
+    Serial.printf("Appending to file: %s\n\r", path);
 
     File file = fs.open(path, FILE_APPEND);
     if(!file){
@@ -242,6 +420,146 @@ void appendFile(fs::FS &fs, const char * path, const char * message){
     }
     file.close();
 }
+
+void renameFile(fs::FS &fs, const char * path1, const char * path2){
+    Serial.printf("Renaming file %s to %s\n\r", path1, path2);
+    if (fs.rename(path1, path2)) {
+        Serial.println("File renamed");
+    } else {
+        Serial.println("Rename failed");
+    }
+}
+
+void deleteFile(fs::FS &fs, const char * path){
+    Serial.printf("Deleting file: %s\n\r", path);
+    if(fs.remove(path)){
+        Serial.println("File deleted");
+    } else {
+        Serial.println("Delete failed");
+    }
+}
+
+
+// ========================
+// ===NEOPIXEL FUNCTIONS===
+// ========================
+
+void initNeoPixel() {
+    Serial.print("Initializing NeoPixel...");
+    pinMode(NEO_EN_PIN, OUTPUT);
+    digitalWrite(NEO_EN_PIN, LOW); // Enable NeoPixel
+    pixel.begin(); // Initialize pins for output
+    pixel.setBrightness(50);
+    pixel.show();  // Turn all LEDs off ASAP
+    Serial.println("done!");
+}
+
+void testNeoPixel() {
+    Serial.println("Testing NeoPixel...");
+    Serial.print("Blinking error code...");
+    blinkCode(IMU_ERROR_CODE, GREEN);
+    Serial.println("done");
+
+    Serial.print("Rainbow...");
+    long startTime = millis();
+    while(millis() < startTime + TEST_TIME) {
+        rainbow(); 
+        delay(10);
+    }
+    Serial.println("done");
+
+    Serial.print("Pulsing...");
+    pixelState = 0;
+    startTime = millis();
+    while(millis() < startTime + TEST_TIME) {
+        pulseLED(BLUE);
+        delay(10);
+    }
+    pixel.setPixelColor(0, OFF);
+    pixel.show(); // Turn off NeoPixel
+    Serial.println("done");
+
+    Serial.println("done!");
+    Serial.println("---------------------------------------");
+    Serial.println();
+}
+
+void pulseLED(uint32_t color) {
+    pixel.setBrightness(pixelState);
+    pixel.setPixelColor(0, color);
+    pixel.show();
+    brightnessInc ? pixelState += BRIGHTNESS_STEP : pixelState -= BRIGHTNESS_STEP;
+    if (pixelState >= MAXIMUM_BRIGHTNESS || pixelState <= 0) brightnessInc = !brightnessInc;
+}
+
+void rainbow(){
+    pixel.setPixelColor(0, Wheel(&pixel,pixelState));
+    pixel.show();
+    pixelState++;
+    if (pixelState >= 255) pixelState = 0;
+}
+
+uint32_t Wheel(Adafruit_NeoPixel *strip, byte WheelPos) {
+    WheelPos = 255 - WheelPos;
+    if(WheelPos < 85) {
+        return strip->Color((255 - WheelPos * 3)*brightness, 0, WheelPos * 3*brightness);
+    }
+    if(WheelPos < 170) {
+        WheelPos -= 85;
+        return strip->Color(0, WheelPos * 3 * brightness, (255 - WheelPos * 3)*brightness);
+    }
+    WheelPos -= 170;
+    return strip->Color(WheelPos * 3 * brightness, (255 - WheelPos * 3)*brightness, 0);
+}
+
+void blinkCode(byte code, uint32_t color) {
+    bool dash = true;
+    for (int n=0; n<4; n++) {
+        if (bitRead(code, n)) {
+            if (dash) {
+                pixel.setPixelColor(0, color); pixel.show();
+                delay(DASH_ON);
+                pixel.setPixelColor(0, OFF); pixel.show();
+                delay(BLINK_INTERVAL);
+            }
+            else {
+                pixel.setPixelColor(0, color); pixel.show();
+                delay(DOT_ON);
+                pixel.setPixelColor(0, OFF); pixel.show();
+                delay(BLINK_INTERVAL);
+            }
+        }
+        else {
+            if (dash) delay(DASH_ON+BLINK_INTERVAL);
+            else delay(DOT_ON+BLINK_INTERVAL);
+        }
+        dash = !dash;
+    }
+    delay(MESSAGE_INTERVAL);
+}
+
+
+// =======================
+// ===GENERAL FUNCTIONS===
+// =======================
+
+void testBatteryMon() {
+    Serial.println("Testing battery voltage monitoring...");
+    long startTime = millis();
+    while(millis() < startTime + TEST_TIME) { // For TEST_TIME, read the battery voltage every 500 ms
+        Serial.printf("Battery voltage: %03f V\n\r", analogReadMilliVolts(BATT_MON_PIN)/1000);
+        delay(500);
+    }
+    Serial.println("done!");
+    Serial.println("---------------------------------------");
+    Serial.println();
+}
+
+void logEnableISR() {
+    logEnablePresses++;
+    Serial.printf("Log button pressed: %d times\n\r", logEnablePresses);
+}
+
 
 // =====================
 // ===DEBUG FUNCTIONS===

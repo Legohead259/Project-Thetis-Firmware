@@ -9,6 +9,7 @@ int logEnablePresses = 0;
 #include <MicroNMEA.h>
 #define GPS_PPS_PIN 42
 #define GPS_FIX_PIN 43
+// HardwareSerial GPS(0);
 HardwareSerial& GPS = Serial0;
 char nmeaBuffer[100];
 MicroNMEA nmea(nmeaBuffer, sizeof(nmeaBuffer));
@@ -99,15 +100,15 @@ enum Status {
 uint8_t currentState = STANDBY;
 
 Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_RGB + NEO_KHZ800);
-const uint32_t OFF      =  pixel.Color(0, 0, 0);       // BGR
+const uint32_t OFF      =  pixel.Color(0, 0, 0);       // GRB
 const uint32_t WHITE    =  pixel.Color(255, 255, 255);
-const uint32_t BLUE     =  pixel.Color(255, 0, 0);
-const uint32_t RED      =  pixel.Color(0, 0, 255);
-const uint32_t GREEN    =  pixel.Color(0, 255, 0);
-const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
-const uint32_t AMBER    =  pixel.Color(0, 191, 255);
-const uint32_t CYAN     =  pixel.Color(255, 255, 0);
-const uint32_t LIME     =  pixel.Color(0, 255, 125);
+const uint32_t BLUE     =  pixel.Color(0, 0, 255);
+const uint32_t RED      =  pixel.Color(0, 255, 0);
+const uint32_t GREEN    =  pixel.Color(255, 0, 0);
+const uint32_t PURPLE   =  pixel.Color(0, 255, 255);
+const uint32_t AMBER    =  pixel.Color(191, 255, 0);
+const uint32_t CYAN     =  pixel.Color(255, 0, 255);
+const uint32_t LIME     =  pixel.Color(125, 0, 255);
 const float brightness = 0.1;
 uint8_t pixelState = 0;
 bool brightnessInc = true; 
