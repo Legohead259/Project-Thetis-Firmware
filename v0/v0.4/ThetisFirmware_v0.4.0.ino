@@ -58,11 +58,8 @@ enum ErrorCode {
 };
 
 struct Telemetry {
-    float voltage;              // Battery voltage in V
-    uint8_t month;              // Month from GPS data 
-    uint8_t day;                // Day from GPS data
-    uint16_t year;              // Year from GPS data
     char timestamp[32];         // Timestamp in UTC obtained from GPS satellites
+    float voltage;              // Battery voltage in V
     bool GPSFix;                // If GPS has positive fix on location
     uint8_t numSats;            // Number of satellites GPS is communicating with
     uint8_t HDOP;               // Accuracy of GPS reading. Lower is better. In tenths (divide by 10. when displaying)
@@ -127,6 +124,7 @@ Adafruit_BNO055 bno = Adafruit_BNO055(0x28); // Create BNO object with I2C addr 
 #include <SD.h>
 #include <FS.h>
 uint64_t cardSize;
+char filename[12];
 
 // Neopixel instantiation
 #include <Adafruit_NeoPixel.h>
@@ -169,6 +167,8 @@ void setup() {
         while (!Serial); // Wait for serial port to open
     }
 
+    attachInterrupt(LOG_EN_PIN, logEnableISR, FALLING);
+
     initNeoPixel();
     initGPS();
     initIMU();
@@ -178,12 +178,12 @@ void setup() {
 void loop() {
     updateSystemState();
     updateSystemLED();
-    data.voltage = analogReadMilliVolts(BATT_MON_PIN) / 1000.0; // Update battery voltage
+    data.voltage = map(analogReadMilliVolts(BATT_MON_PIN), 0, 3016, 0, 4200) / 1000.0; // Update battery voltage
     pollIMU();
     pollGPS();
-    data.state = currentState;
     data.packetSize = sizeof(data);
 
+    writeTelemetryDataToFile();
     printTelemetryData();
     delay(1250);
 }
@@ -206,40 +206,38 @@ void initIMU() {
 
 void pollIMU() {
     bno.getCalibration(&data.sysCal, &data.gyroCal, &data.accelCal, &data.magCal);
-    isIMUCalibrated = bno.isFullyCalibrated();
-    if (isIMUCalibrated) { // Don't read IMU data unless sensors are calibrated
-        imu::Vector<3> accel = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);    // - m/s^2
-        imu::Vector<3> gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);         // - rad/s
-        imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);            // - degrees
-        imu::Vector<3> linaccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);   // - m/s^2
+    isIMUCalibrated = data.gyroCal == 3 && data.accelCal == 3 && data.magCal == 3; // Check if IMU has full calibration
+    imu::Vector<3> accel = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);    // - m/s^2
+    imu::Vector<3> gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);         // - rad/s
+    imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);            // - degrees
+    imu::Vector<3> linaccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);   // - m/s^2
 
-        // Add accelerometer data to data packet            
-        data.accelX = accel.x();
-        data.accelY = accel.y();
-        data.accelZ = accel.z();
+    // Add accelerometer data to data packet            
+    data.accelX = accel.x();
+    data.accelY = accel.y();
+    data.accelZ = accel.z();
 
-        // Add gyroscope data to data packet
-        data.gyroX = gyro.x();
-        data.gyroY = gyro.y();
-        data.gyroZ = gyro.z();
-        
-        // Add euler rotation data to data packet
-        data.roll = euler.z();
-        data.pitch = euler.y();
-        data.yaw = euler.x();
+    // Add gyroscope data to data packet
+    data.gyroX = gyro.x();
+    data.gyroY = gyro.y();
+    data.gyroZ = gyro.z();
+    
+    // Add euler rotation data to data packet
+    data.roll = euler.z();
+    data.pitch = euler.y();
+    data.yaw = euler.x();
 
-        // Add linear accleration data to data packet
-        data.linAccelX = linaccel.x();
-        data.linAccelY = linaccel.y();
-        data.linAccelZ = linaccel.z();
+    // Add linear accleration data to data packet
+    data.linAccelX = linaccel.x();
+    data.linAccelY = linaccel.y();
+    data.linAccelZ = linaccel.z();
 
-        // Add Quaternion data to packet
-        imu::Quaternion quat = bno.getQuat();
-        data.quatW = quat.w();
-        data.quatX = quat.x();
-        data.quatY = quat.y();
-        data.quatZ = quat.z();
-    }
+    // Add Quaternion data to packet
+    imu::Quaternion quat = bno.getQuat();
+    data.quatW = quat.w();
+    data.quatX = quat.x();
+    data.quatY = quat.y();
+    data.quatZ = quat.z();
 
     data.imuTemp = bno.getTemp();
 }
@@ -286,7 +284,7 @@ void pollGPS() {
     }
 
     //Parse timestamp
-    sprintf(data.timestamp, "%02d:%02d:%02d:%03d", nmea.getHour(), nmea.getMinute(), nmea.getSecond(), (int) curMSecond);
+    sprintf(data.timestamp, "%04d-%02d-%02dT%02d:%02d:%02d.%03d", nmea.getYear(), nmea.getMonth(), nmea.getDay(), nmea.getHour(), nmea.getMinute(), nmea.getSecond(), (int) curMSecond);
 
     if (ppsTriggered) { //Update NMEA string based on PPS pulse from GPS. By default refresh rate is 1Hz
         ppsTriggered = false;
@@ -328,7 +326,7 @@ void printUnknownSentence(MicroNMEA& nmea) {
 
 void initXTSD() {
     Serial.print("Initializing XTSD card...");
-    if(!SD.begin()){
+    if (!SD.begin()){
         Serial.println("Card Mount Failed");
         while(true) blinkCode(XTSD_MOUNT_ERROR_CODE, RED); // Block further code execution and flash error code
     }
@@ -339,121 +337,66 @@ void initXTSD() {
         while(true) blinkCode(CARD_TYPE_ERROR_CODE, RED); // Block further code execution and flash error code
     }
     Serial.println("done!");
+
+    for (int i=0; i<255; i++) {
+        sprintf(filename, "/Log_%03d.csv", i);
+        if (!SD.exists(filename)) 
+            break;
+    }
+    Serial.printf("Logging to: %s\n\r", filename);
+    
+    File _dataFile = SD.open(filename, FILE_WRITE);
+    if (!_dataFile) {
+        Serial.printf("Could not create %s", filename);
+        while (true) blinkCode(FILE_ERROR_CODE, RED); // Block further code execution
+    }
+    _dataFile.print("ISO 8601 Time,Battery Voltage (V),GPS Fix,# of Satellites,HDOP,Lat (deg),Lon (deg),Speed (kts),Course (kts),System Cal,Gyro Cal,Accel Cal,Mag Cal,Ax (m/s/s),Ay (m/s/s),Az (m/s/s),Gx (rad/s),Gy (rad/s),Gz (rad/s),Roll (deg),Pitch (deg),Yaw (deg),linAx (m/s/s),linAy (m/s/s),linAz (m/s/s),Qw,Qx,Qy,Qz,Temp (degC),State,Packet Size"); // Print header to file
+    _dataFile.println();
+    _dataFile.close();
 }
 
-void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
-    Serial.printf("Listing directory: %s\n\r", dirname);
-
-    File root = fs.open(dirname);
-    if(!root){
-        Serial.println("Failed to open directory");
-        return;
-    }
-    if(!root.isDirectory()){
-        Serial.println("Not a directory");
-        return;
+void writeTelemetryDataToFile() {
+    File _dataFile = SD.open(filename, FILE_APPEND);
+    if (!_dataFile) {
+        Serial.printf("Could not create %s", filename);
+        while (true) blinkCode(FILE_ERROR_CODE, RED); // Block further code execution
     }
 
-    File file = root.openNextFile();
-    while(file){
-        if(file.isDirectory()){
-            Serial.print("  DIR : ");
-            Serial.println(file.name());
-            if(levels){
-                listDir(fs, file.path(), levels -1);
-            }
-        } else {
-            Serial.print("  FILE: ");
-            Serial.print(file.name());
-            Serial.print("  SIZE: ");
-            Serial.println(file.size());
-        }
-        file = root.openNextFile();
-    }
-}
+    _dataFile.printf("%s,", data.timestamp);
+    _dataFile.printf("%0.3f,", data.voltage);
+    _dataFile.printf("%d,", data.GPSFix);
+    _dataFile.printf("%d,", data.numSats);
+    _dataFile.printf("%d,", data.HDOP);
+    _dataFile.printf("%0.3f,", data.latitude / 1E6);
+    _dataFile.printf("%0.3f,", data.longitude / 1E6);
+    _dataFile.printf("%0.3f,", data.GPSSpeed / 1E3);
+    _dataFile.printf("%0.3f,", data.GPSCourse / 1E3);
+    _dataFile.printf("%d,", data.sysCal);
+    _dataFile.printf("%d,", data.gyroCal);
+    _dataFile.printf("%d,", data.accelCal);
+    _dataFile.printf("%d,", data.magCal);
+    _dataFile.printf("%0.3f,", data.accelX);
+    _dataFile.printf("%0.3f,", data.accelY);
+    _dataFile.printf("%0.3f,", data.accelZ);
+    _dataFile.printf("%0.3f,", data.gyroX);
+    _dataFile.printf("%0.3f,", data.gyroY);
+    _dataFile.printf("%0.3f,", data.gyroZ);
+    _dataFile.printf("%0.3f,", data.roll);
+    _dataFile.printf("%0.3f,", data.pitch);
+    _dataFile.printf("%0.3f,", data.yaw);
+    _dataFile.printf("%0.3f,", data.linAccelX);
+    _dataFile.printf("%0.3f,", data.linAccelY);
+    _dataFile.printf("%0.3f,", data.linAccelZ);
+    _dataFile.printf("%0.3f,", data.quatW);
+    _dataFile.printf("%0.3f,", data.quatX);
+    _dataFile.printf("%0.3f,", data.quatY);
+    _dataFile.printf("%0.3f,", data.quatZ);
+    _dataFile.printf("%0.3f,", data.imuTemp);
+    _dataFile.printf("%d,", data.state);
+    _dataFile.printf("%d", data.packetSize);
+    _dataFile.println();
 
-void createDir(fs::FS &fs, const char * path){
-    Serial.printf("Creating Dir: %s\n\r", path);
-    if(fs.mkdir(path)){
-        Serial.println("Dir created");
-    } else {
-        Serial.println("mkdir failed");
-    }
-}
-
-void removeDir(fs::FS &fs, const char * path){
-    Serial.printf("Removing Dir: %s\n\r", path);
-    if(fs.rmdir(path)){
-        Serial.println("Dir removed");
-    } else {
-        Serial.println("rmdir failed");
-    }
-}
-
-void readFile(fs::FS &fs, const char * path){
-    Serial.printf("Reading file: %s\r", path);
-
-    File file = fs.open(path);
-    if(!file){
-        Serial.println("Failed to open file for reading");
-        return;
-    }
-
-    Serial.print("Read from file: ");
-    while(file.available()){
-        Serial.write(file.read());
-    }
-    file.close();
-}
-
-void writeFile(fs::FS &fs, const char * path, const char * message){
-    Serial.printf("Writing file: %s\n\r", path);
-
-    File file = fs.open(path, FILE_WRITE);
-    if(!file){
-        Serial.println("Failed to open file for writing");
-        return;
-    }
-    if(file.print(message)){
-        Serial.println("File written");
-    } else {
-        Serial.println("Write failed");
-    }
-    file.close();
-}
-
-void appendFile(fs::FS &fs, const char * path, const char * message){
-    Serial.printf("Appending to file: %s\n\r", path);
-
-    File file = fs.open(path, FILE_APPEND);
-    if(!file){
-        Serial.println("Failed to open file for appending");
-        return;
-    }
-    if(file.print(message)){
-        Serial.println("Message appended");
-    } else {
-        Serial.println("Append failed");
-    }
-    file.close();
-}
-
-void renameFile(fs::FS &fs, const char * path1, const char * path2){
-    Serial.printf("Renaming file %s to %s\n\r", path1, path2);
-    if (fs.rename(path1, path2)) {
-        Serial.println("File renamed");
-    } else {
-        Serial.println("Rename failed");
-    }
-}
-
-void deleteFile(fs::FS &fs, const char * path){
-    Serial.printf("Deleting file: %s\n\r", path);
-    if(fs.remove(path)){
-        Serial.println("File deleted");
-    } else {
-        Serial.println("Delete failed");
-    }
+    _dataFile.close();
 }
 
 
@@ -533,9 +476,14 @@ void blinkCode(byte code, uint32_t color) {
 
 
 void logEnableISR() {
-    // TODO: Implement software button debounce
-    isLogging = !isLogging;
-    isLogging ? Serial.printf("Logging enabled!\n\r") : Serial.printf("Logging disabled!\n\r");
+    static unsigned long last_interrupt_time = 0;
+    unsigned long interrupt_time = millis();
+    // If interrupts come faster than 100ms, assume it's a bounce and ignore
+    if (interrupt_time - last_interrupt_time > 100) {
+        isLogging = !isLogging;
+        Serial.printf("Logging %s\n\r", isLogging ? "enabled!" : "disabled!");
+    }
+    last_interrupt_time = interrupt_time;
 }
 
 void updateSystemState() {
@@ -545,6 +493,7 @@ void updateSystemState() {
     else if (isIMUCalibrated && !data.GPSFix && isLogging)      currentState = LOGGING_NO_GPS;
     else if (isIMUCalibrated && data.GPSFix && isLogging)       currentState = LOGGING_GPS;
     else                                                        currentState = ERROR_STATE;
+    data.state = currentState;
 }
 
 void updateSystemLED() {
@@ -613,11 +562,9 @@ static void getStateString(char* outStr, uint8_t s) {
 
 void printTelemetryData() {
     char _statestr[16]; getStateString(_statestr, data.state);
-    Serial.printf("Battery Voltage:             %0.3f V\n\r", data.voltage);
-    Serial.printf("Month:                       %d\n\r", data.month);
-    Serial.printf("Day:                         %d\n\r", data.day);
-    Serial.printf("Year:                        %d\n\r", data.year);
+    Serial.printf("Printing to:                 %s\n\r", filename);
     Serial.printf("Timestamp:                   %s\n\r", data.timestamp);
+    Serial.printf("Battery Voltage:             %0.3f V\n\r", data.voltage);
     Serial.printf("GPS Fix:                     %s\n\r", data.GPSFix ? "true" : "false");
     Serial.printf("Number of Satellites:        %d\n\r", data.numSats);
     Serial.printf("HDOP:                        %d\n\r", data.HDOP);
