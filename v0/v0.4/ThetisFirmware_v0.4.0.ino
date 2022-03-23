@@ -18,7 +18,7 @@ Booting         |  NONE   |     N/A
 */
 
 enum State {
-    ERROR_STATE = -1,       // Thetis has encountered some error
+    ERROR_STATE,            // Thetis has encountered some error
     LOGGING_NO_GPS,         // Thetis is logging, but does not have a GPS fix
     LOGGING_GPS,            // Thetis is logging with a GPS fix
     READY_NO_GPS,           // Accelerometer is calibrated but no GPS fix
@@ -64,7 +64,7 @@ struct Telemetry {
     uint16_t year;              // Year from GPS data
     char timestamp[32];         // Timestamp in UTC obtained from GPS satellites
     bool GPSFix;                // If GPS has positive fix on location
-    // uint8_t numSats;            // Number of satellites GPS is communicating with
+    uint8_t numSats;            // Number of satellites GPS is communicating with
     uint8_t HDOP;               // Accuracy of GPS reading. Lower is better. In tenths (divide by 10. when displaying)
     long latitude;              // In millionths of a degree (divide by 1000000. when displaying)
     long longitude;             // In millionths of a degree (divide by 1000000. when displaying)
@@ -74,23 +74,23 @@ struct Telemetry {
     uint8_t gyroCal = 0;        // IMU gyroscope calibration, 0-3 with 3 being fully calibrated
     uint8_t accelCal = 0;       // IMU accelerometer calibration, 0-3 with 3 being fully calibrated
     uint8_t magCal = 0;         // IMU magnetometer calibration, 0-3 with 3 being fully calibrated
-    // float accelX;               // m/s^2
-    // float accelY;               // m/s^2
-    // float accelZ;               // m/s^2
-    // float gyroX;                // rad/s
-    // float gyroY;                // rad/s
-    // float gyroZ;                // rad/s
+    float accelX;               // m/s^2
+    float accelY;               // m/s^2
+    float accelZ;               // m/s^2
+    float gyroX;                // rad/s
+    float gyroY;                // rad/s
+    float gyroZ;                // rad/s
     float roll;                 // degrees
     float pitch;                // degrees
     float yaw;                  // degrees
     float linAccelX;            // m/s^2
     float linAccelY;            // m/s^2
     float linAccelZ;            // m/s^2
-    // float quatW;                //
-    // float quatX;                //
-    // float quatY;                //
-    // float quatZ;                //
-    // float imuTemp;              // °Celsius from the IMU
+    float quatW;                //
+    float quatX;                //
+    float quatY;                //
+    float quatZ;                //
+    float imuTemp;              // °Celsius from the IMU
     uint8_t state;              // State reported by the package.
     uint8_t packetSize;         // The size of the telemetry packet. Used as a debug tool for ground station/thetis comms.
 };
@@ -140,14 +140,14 @@ uint64_t cardSize;
 #define NUM_STEPS 16
 #define BRIGHTNESS_STEP MAXIMUM_BRIGHTNESS/NUM_STEPS
 
-Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_GRB + NEO_KHZ800);
-const uint32_t OFF      =  pixel.Color(0, 0, 0);       // GRB?
+Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_RGB + NEO_KHZ800);
+const uint32_t OFF      =  pixel.Color(0, 0, 0);
 const uint32_t WHITE    =  pixel.Color(255, 255, 255);
 const uint32_t BLUE     =  pixel.Color(255, 0, 0);
 const uint32_t RED      =  pixel.Color(0, 255, 0);
 const uint32_t GREEN    =  pixel.Color(0, 255, 0);
 const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
-const uint32_t AMBER    =  pixel.Color(0, 255, 0);
+const uint32_t AMBER    =  pixel.Color(255, 191, 0);
 const uint32_t CYAN     =  pixel.Color(255, 255, 0);
 const uint32_t LIME     =  pixel.Color(0, 255, 125);
 const float brightness = 0.1;
@@ -213,35 +213,35 @@ void pollIMU() {
         imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);            // - degrees
         imu::Vector<3> linaccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);   // - m/s^2
 
-        //Add accelerometer data to data packet            
-        // data.accelX = accel.x();
-        // data.accelY = accel.y();
-        // data.accelZ = accel.z();
+        // Add accelerometer data to data packet            
+        data.accelX = accel.x();
+        data.accelY = accel.y();
+        data.accelZ = accel.z();
 
-        //Add gyroscope data to data packet
-        // data.gyroX = gyro.x();
-        // data.gyroY = gyro.y();
-        // data.gyroZ = gyro.z();
+        // Add gyroscope data to data packet
+        data.gyroX = gyro.x();
+        data.gyroY = gyro.y();
+        data.gyroZ = gyro.z();
         
-        //Add euler rotation data to data packet
+        // Add euler rotation data to data packet
         data.roll = euler.z();
         data.pitch = euler.y();
         data.yaw = euler.x();
 
-        //Add linear accleration data to data packet
+        // Add linear accleration data to data packet
         data.linAccelX = linaccel.x();
         data.linAccelY = linaccel.y();
         data.linAccelZ = linaccel.z();
 
         // Add Quaternion data to packet
-        // imu::Quaternion quat = bno.getQuat();
-        // data.quatW = quat.w();
-        // data.quatX = quat.x();
-        // data.quatY = quat.y();
-        // data.quatZ = quat.z();
+        imu::Quaternion quat = bno.getQuat();
+        data.quatW = quat.w();
+        data.quatX = quat.x();
+        data.quatY = quat.y();
+        data.quatZ = quat.z();
     }
 
-    // data.imuTemp = bno.getTemp();
+    data.imuTemp = bno.getTemp();
 }
 
 
@@ -294,7 +294,7 @@ void pollGPS() {
         digitalWrite(ACT_LED_PIN, ledState);
 
         data.GPSFix = nmea.isValid();
-        // data.numSats = nmea.getNumSatellites();
+        data.numSats = nmea.getNumSatellites();
         data.HDOP = nmea.getHDOP();
         data.latitude = nmea.getLatitude();
         data.longitude = nmea.getLongitude();
@@ -565,7 +565,7 @@ void updateSystemLED() {
             pulseLED(GREEN); // Pulse green
             break;
         case STANDBY:
-            pixel.setPixelColor(0, AMBER); pixel.show(); // Glow solid amber
+            pixel.setPixelColor(0, 255, 191, 0); pixel.show(); // Glow solid amber
             break;
         case BOOTING:
             pulseLED(PURPLE); // Pulse purple
@@ -619,7 +619,7 @@ void printTelemetryData() {
     Serial.printf("Year:                        %d\n\r", data.year);
     Serial.printf("Timestamp:                   %s\n\r", data.timestamp);
     Serial.printf("GPS Fix:                     %s\n\r", data.GPSFix ? "true" : "false");
-    // Serial.printf("Number of Satellites:        %d\n\r", data.numSats);
+    Serial.printf("Number of Satellites:        %d\n\r", data.numSats);
     Serial.printf("HDOP:                        %d\n\r", data.HDOP);
     Serial.printf("Latitude:                    %0.6f°\n\r", data.longitude/1E6);
     Serial.printf("Longitude:                   %0.6f°\n\r", data.latitude/1E6);
@@ -629,23 +629,23 @@ void printTelemetryData() {
     Serial.printf("Gyroscope Calibration:       %d\n\r", data.gyroCal);
     Serial.printf("Accelerometer Calibration:   %d\n\r", data.accelCal);
     Serial.printf("Magnetometer Calibration:    %d\n\r", data.magCal);
-    // Serial.printf("Acceleration X:              %0.3f m/s/s\n\r", data.accelX);
-    // Serial.printf("             Y:              %0.3f m/s/s\n\r", data.accelY);
-    // Serial.printf("             Z:              %0.3f m/s/s\n\r", data.accelZ);
-    // Serial.printf("Gyroscope X:                 %0.3f rad/s\n\r", data.gyroX);
-    // Serial.printf("          Y:                 %0.3f rad/s\n\r", data.gyroY);
-    // Serial.printf("          Z:                 %0.3f rad/s\n\r", data.gyroZ);
+    Serial.printf("Acceleration X:              %0.3f m/s/s\n\r", data.accelX);
+    Serial.printf("             Y:              %0.3f m/s/s\n\r", data.accelY);
+    Serial.printf("             Z:              %0.3f m/s/s\n\r", data.accelZ);
+    Serial.printf("Gyroscope X:                 %0.3f rad/s\n\r", data.gyroX);
+    Serial.printf("          Y:                 %0.3f rad/s\n\r", data.gyroY);
+    Serial.printf("          Z:                 %0.3f rad/s\n\r", data.gyroZ);
     Serial.printf("Roll:                        %0.3f°\n\r", data.roll);
     Serial.printf("Pitch:                       %0.3f°\n\r", data.pitch);
     Serial.printf("Yaw:                         %0.3f°\n\r", data.yaw);
     Serial.printf("Linear Acceleration X:       %0.3f m/s/s\n\r", data.linAccelX);
     Serial.printf("                    Y:       %0.3f m/s/s\n\r", data.linAccelY);
     Serial.printf("                    Z:       %0.3f m/s/s\n\r", data.linAccelZ);
-    // Serial.printf("Quaternion W:                %0.3f\n\r", data.quatW);
-    // Serial.printf("           X:                %0.3f\n\r", data.quatX);
-    // Serial.printf("           Y:                %0.3f\n\r", data.quatY);
-    // Serial.printf("           Z:                %0.3f\n\r", data.quatZ);
-    // Serial.printf("IMU Temperature:             %0.3f°C\n\r", data.imuTemp);
+    Serial.printf("Quaternion W:                %0.3f\n\r", data.quatW);
+    Serial.printf("           X:                %0.3f\n\r", data.quatX);
+    Serial.printf("           Y:                %0.3f\n\r", data.quatY);
+    Serial.printf("           Z:                %0.3f\n\r", data.quatZ);
+    Serial.printf("IMU Temperature:             %0.3f°C\n\r", data.imuTemp);
     Serial.printf("Thetis State:                %s\n\r", _statestr);
     Serial.printf("Packet Size:                 %d\n\r", data.packetSize);
     Serial.print("\n\n\r");
