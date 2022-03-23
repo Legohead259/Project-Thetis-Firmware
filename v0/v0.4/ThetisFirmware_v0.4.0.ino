@@ -2,7 +2,7 @@
 #define LOG_EN_PIN 0
 #define BATT_MON_PIN 1
 #define ACT_LED_PIN 13
-bool logEnabled = false;
+bool isLogging = false;
 
 /*
 State Table:
@@ -64,7 +64,7 @@ struct Telemetry {
     uint16_t year;              // Year from GPS data
     char timestamp[32];         // Timestamp in UTC obtained from GPS satellites
     bool GPSFix;                // If GPS has positive fix on location
-    uint8_t numSats;            // Number of satellites GPS is communicating with
+    // uint8_t numSats;            // Number of satellites GPS is communicating with
     uint8_t HDOP;               // Accuracy of GPS reading. Lower is better. In tenths (divide by 10. when displaying)
     long latitude;              // In millionths of a degree (divide by 1000000. when displaying)
     long longitude;             // In millionths of a degree (divide by 1000000. when displaying)
@@ -74,24 +74,24 @@ struct Telemetry {
     uint8_t gyroCal = 0;        // IMU gyroscope calibration, 0-3 with 3 being fully calibrated
     uint8_t accelCal = 0;       // IMU accelerometer calibration, 0-3 with 3 being fully calibrated
     uint8_t magCal = 0;         // IMU magnetometer calibration, 0-3 with 3 being fully calibrated
-    float accelX;               // m/s^2
-    float accelY;               // m/s^2
-    float accelZ;               // m/s^2
-    float gyroX;                // rad/s
-    float gyroY;                // rad/s
-    float gyroZ;                // rad/s
+    // float accelX;               // m/s^2
+    // float accelY;               // m/s^2
+    // float accelZ;               // m/s^2
+    // float gyroX;                // rad/s
+    // float gyroY;                // rad/s
+    // float gyroZ;                // rad/s
     float roll;                 // degrees
     float pitch;                // degrees
     float yaw;                  // degrees
     float linAccelX;            // m/s^2
     float linAccelY;            // m/s^2
     float linAccelZ;            // m/s^2
-    float quatW;                //
-    float quatX;                //
-    float quatY;                //
-    float quatZ;                //
-    float imuTemp;              // °Celsius from the IMU
-    State state;                // State reported by the launchsonde.
+    // float quatW;                //
+    // float quatX;                //
+    // float quatY;                //
+    // float quatZ;                //
+    // float imuTemp;              // °Celsius from the IMU
+    uint8_t state;              // State reported by the package.
     uint8_t packetSize;         // The size of the telemetry packet. Used as a debug tool for ground station/thetis comms.
 };
 Telemetry data;
@@ -119,6 +119,7 @@ float curMSecond = 0;
 #define BNO_SDA_PIN 26
 #define BNO_SCL_PIN 33
 #define SAMPLE_RATE 32 // Hz
+volatile bool isIMUCalibrated = false; // IMU Calibration flag
 Adafruit_BNO055 bno = Adafruit_BNO055(0x28); // Create BNO object with I2C addr 0x28
 
 // XTSD instantiation
@@ -139,14 +140,14 @@ uint64_t cardSize;
 #define NUM_STEPS 16
 #define BRIGHTNESS_STEP MAXIMUM_BRIGHTNESS/NUM_STEPS
 
-Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_RGB + NEO_KHZ800);
+Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_GRB + NEO_KHZ800);
 const uint32_t OFF      =  pixel.Color(0, 0, 0);       // GRB?
 const uint32_t WHITE    =  pixel.Color(255, 255, 255);
 const uint32_t BLUE     =  pixel.Color(255, 0, 0);
 const uint32_t RED      =  pixel.Color(0, 255, 0);
 const uint32_t GREEN    =  pixel.Color(0, 255, 0);
 const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
-const uint32_t AMBER    =  pixel.Color(0, 191, 255);
+const uint32_t AMBER    =  pixel.Color(0, 255, 0);
 const uint32_t CYAN     =  pixel.Color(255, 255, 0);
 const uint32_t LIME     =  pixel.Color(0, 255, 125);
 const float brightness = 0.1;
@@ -175,9 +176,14 @@ void setup() {
 }
 
 void loop() {
+    updateSystemState();
     updateSystemLED();
+    data.voltage = analogReadMilliVolts(BATT_MON_PIN) / 1000.0; // Update battery voltage
     pollIMU();
     pollGPS();
+    data.state = currentState;
+    data.packetSize = sizeof(data);
+
     printTelemetryData();
     delay(1250);
 }
@@ -200,21 +206,22 @@ void initIMU() {
 
 void pollIMU() {
     bno.getCalibration(&data.sysCal, &data.gyroCal, &data.accelCal, &data.magCal);
-    if (bno.isFullyCalibrated()) { //Don't read IMU data unless sensors are calibrated
+    isIMUCalibrated = bno.isFullyCalibrated();
+    if (isIMUCalibrated) { // Don't read IMU data unless sensors are calibrated
         imu::Vector<3> accel = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);    // - m/s^2
         imu::Vector<3> gyro = bno.getVector(Adafruit_BNO055::VECTOR_GYROSCOPE);         // - rad/s
         imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);            // - degrees
         imu::Vector<3> linaccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);   // - m/s^2
 
         //Add accelerometer data to data packet            
-        data.accelX = accel.x();
-        data.accelY = accel.y();
-        data.accelZ = accel.z();
+        // data.accelX = accel.x();
+        // data.accelY = accel.y();
+        // data.accelZ = accel.z();
 
         //Add gyroscope data to data packet
-        data.gyroX = gyro.x();
-        data.gyroY = gyro.y();
-        data.gyroZ = gyro.z();
+        // data.gyroX = gyro.x();
+        // data.gyroY = gyro.y();
+        // data.gyroZ = gyro.z();
         
         //Add euler rotation data to data packet
         data.roll = euler.z();
@@ -227,14 +234,14 @@ void pollIMU() {
         data.linAccelZ = linaccel.z();
 
         // Add Quaternion data to packet
-        imu::Quaternion quat = bno.getQuat();
-        data.quatW = quat.w();
-        data.quatX = quat.x();
-        data.quatY = quat.y();
-        data.quatZ = quat.z();
+        // imu::Quaternion quat = bno.getQuat();
+        // data.quatW = quat.w();
+        // data.quatX = quat.x();
+        // data.quatY = quat.y();
+        // data.quatZ = quat.z();
     }
 
-    data.imuTemp = bno.getTemp();
+    // data.imuTemp = bno.getTemp();
 }
 
 
@@ -281,14 +288,13 @@ void pollGPS() {
     //Parse timestamp
     sprintf(data.timestamp, "%02d:%02d:%02d:%03d", nmea.getHour(), nmea.getMinute(), nmea.getSecond(), (int) curMSecond);
 
-    //Update NMEA string based on PPS pulse from GPS. By default refresh rate is 1Hz
-    if (ppsTriggered) {
+    if (ppsTriggered) { //Update NMEA string based on PPS pulse from GPS. By default refresh rate is 1Hz
         ppsTriggered = false;
         ledState = !ledState;
         digitalWrite(ACT_LED_PIN, ledState);
 
         data.GPSFix = nmea.isValid();
-        data.numSats = nmea.getNumSatellites();
+        // data.numSats = nmea.getNumSatellites();
         data.HDOP = nmea.getHDOP();
         data.latitude = nmea.getLatitude();
         data.longitude = nmea.getLongitude();
@@ -528,21 +534,29 @@ void blinkCode(byte code, uint32_t color) {
 
 void logEnableISR() {
     // TODO: Implement software button debounce
-    logEnabled = !logEnabled;
-    logEnabled ? Serial.printf("Logging enabled!\n\r") : Serial.printf("Logging disabled!\n\r");
+    isLogging = !isLogging;
+    isLogging ? Serial.printf("Logging enabled!\n\r") : Serial.printf("Logging disabled!\n\r");
+}
+
+void updateSystemState() {
+    if (!isIMUCalibrated && !data.GPSFix && !isLogging)         currentState = STANDBY;
+    else if (isIMUCalibrated && !data.GPSFix && !isLogging)     currentState = READY_NO_GPS;
+    else if (isIMUCalibrated && data.GPSFix && !isLogging)      currentState = READY_GPS;
+    else if (isIMUCalibrated && !data.GPSFix && isLogging)      currentState = LOGGING_NO_GPS;
+    else if (isIMUCalibrated && data.GPSFix && isLogging)       currentState = LOGGING_GPS;
+    else                                                        currentState = ERROR_STATE;
 }
 
 void updateSystemLED() {
     switch (currentState) {
         case ERROR_STATE:
             // Inidividual errors will update the LED themselves
-            continue;
             break;
         case LOGGING_NO_GPS:
-            pixel.setPixelColor(0, BLUE); // Glow solid blue
+            pixel.setPixelColor(0, BLUE); pixel.show(); // Glow solid blue
             break;
         case LOGGING_GPS:
-            pixel.setPixelColor(0, GREEN); // Glow solid green
+            pixel.setPixelColor(0, GREEN); pixel.show(); // Glow solid green
             break;
         case READY_NO_GPS:
             pulseLED(BLUE); // Pulse blue
@@ -551,13 +565,13 @@ void updateSystemLED() {
             pulseLED(GREEN); // Pulse green
             break;
         case STANDBY:
-            pixel.setPixelColor(0, AMBER); // Glow solid amber
+            pixel.setPixelColor(0, AMBER); pixel.show(); // Glow solid amber
             break;
         case BOOTING:
             pulseLED(PURPLE); // Pulse purple
             break;
         default:
-            pixel.setPixelColor(0, OFF); // Turn off LED
+            pixel.setPixelColor(0, RED); pixel.show(); // Turn off LED
             break;
     }
 }
@@ -568,7 +582,7 @@ void updateSystemLED() {
 // =====================
 
 
-static void getStateString(char* outStr, State s) {
+static void getStateString(char* outStr, uint8_t s) {
     switch(s) {
         case ERROR_STATE:
             strcpy(outStr, "ERROR");
@@ -605,7 +619,7 @@ void printTelemetryData() {
     Serial.printf("Year:                        %d\n\r", data.year);
     Serial.printf("Timestamp:                   %s\n\r", data.timestamp);
     Serial.printf("GPS Fix:                     %s\n\r", data.GPSFix ? "true" : "false");
-    Serial.printf("Number of Satellites:        %d\n\r", data.numSats);
+    // Serial.printf("Number of Satellites:        %d\n\r", data.numSats);
     Serial.printf("HDOP:                        %d\n\r", data.HDOP);
     Serial.printf("Latitude:                    %0.6f°\n\r", data.longitude/1E6);
     Serial.printf("Longitude:                   %0.6f°\n\r", data.latitude/1E6);
@@ -615,23 +629,23 @@ void printTelemetryData() {
     Serial.printf("Gyroscope Calibration:       %d\n\r", data.gyroCal);
     Serial.printf("Accelerometer Calibration:   %d\n\r", data.accelCal);
     Serial.printf("Magnetometer Calibration:    %d\n\r", data.magCal);
-    Serial.printf("Acceleration X:              %0.3f m/s/s\n\r", data.accelX);
-    Serial.printf("             Y:              %0.3f m/s/s\n\r", data.accelY);
-    Serial.printf("             Z:              %0.3f m/s/s\n\r", data.accelZ);
-    Serial.printf("Gyroscope X:                 %0.3f rad/s\n\r", data.gyroX);
-    Serial.printf("          Y:                 %0.3f rad/s\n\r", data.gyroY);
-    Serial.printf("          Z:                 %0.3f rad/s\n\r", data.gyroZ);
+    // Serial.printf("Acceleration X:              %0.3f m/s/s\n\r", data.accelX);
+    // Serial.printf("             Y:              %0.3f m/s/s\n\r", data.accelY);
+    // Serial.printf("             Z:              %0.3f m/s/s\n\r", data.accelZ);
+    // Serial.printf("Gyroscope X:                 %0.3f rad/s\n\r", data.gyroX);
+    // Serial.printf("          Y:                 %0.3f rad/s\n\r", data.gyroY);
+    // Serial.printf("          Z:                 %0.3f rad/s\n\r", data.gyroZ);
     Serial.printf("Roll:                        %0.3f°\n\r", data.roll);
     Serial.printf("Pitch:                       %0.3f°\n\r", data.pitch);
     Serial.printf("Yaw:                         %0.3f°\n\r", data.yaw);
     Serial.printf("Linear Acceleration X:       %0.3f m/s/s\n\r", data.linAccelX);
     Serial.printf("                    Y:       %0.3f m/s/s\n\r", data.linAccelY);
     Serial.printf("                    Z:       %0.3f m/s/s\n\r", data.linAccelZ);
-    Serial.printf("Quaternion W:                %0.3f\n\r", data.quatW);
-    Serial.printf("           X:                %0.3f\n\r", data.quatX);
-    Serial.printf("           Y:                %0.3f\n\r", data.quatY);
-    Serial.printf("           Z:                %0.3f\n\r", data.quatZ);
-    Serial.printf("IMU Temperature:             %0.3f°C\n\r", data.imuTemp);
+    // Serial.printf("Quaternion W:                %0.3f\n\r", data.quatW);
+    // Serial.printf("           X:                %0.3f\n\r", data.quatX);
+    // Serial.printf("           Y:                %0.3f\n\r", data.quatY);
+    // Serial.printf("           Z:                %0.3f\n\r", data.quatZ);
+    // Serial.printf("IMU Temperature:             %0.3f°C\n\r", data.imuTemp);
     Serial.printf("Thetis State:                %s\n\r", _statestr);
     Serial.printf("Packet Size:                 %d\n\r", data.packetSize);
     Serial.print("\n\n\r");
