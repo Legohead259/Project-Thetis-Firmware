@@ -2,6 +2,60 @@
 #define LOG_EN_PIN 0
 #define BATT_MON_PIN 1
 #define ACT_LED_PIN 13
+bool logEnabled = false;
+
+/*
+State Table:
+State           |  Color  |  Indication  
+----------------|---------|--------------
+Error           |   RED   |   Pulsing     
+Logging, No GPS |  BLUE   |    Solid      
+Logging, GPS    |  GREEN  |    Solid      
+Ready, No GPS   |  BLUE   |   Pulsing     
+Ready, GPS      |  GREEN  |   Pulsing     
+Standby         |  AMBER  |    Solid      
+Booting         |  NONE   |     N/A       
+*/
+
+enum State {
+    ERROR_STATE = -1,       // Thetis has encountered some error
+    LOGGING_NO_GPS,         // Thetis is logging, but does not have a GPS fix
+    LOGGING_GPS,            // Thetis is logging with a GPS fix
+    READY_NO_GPS,           // Accelerometer is calibrated but no GPS fix
+    READY_GPS,              // Accelerometer is calibrated and there is a GPS fix
+    STANDBY,                // Accelerometer is not calibrated yet
+    BOOTING                 // Board is booting up
+};
+uint8_t currentState = BOOTING;
+
+/*
+Code Table:
+Error       |  DOT  |  DASH  |  DOT  |  DASH  |  CODE  |  COLOR  
+------------|-------|--------|-------|--------|--------|---------
+General     |   0   |   0    |   0   |    1   |  B0001 |   RED    
+XTSD Mount  |   0   |   0    |   1   |    0   |  B0010 |   RED    
+Card Type   |   0   |   0    |   1   |    1   |  B0011 |   RED    
+File Write  |   0   |   1    |   0   |    0   |  B0100 |   RED    
+Radio       |   0   |   1    |   0   |    1   |  B0101 |   RED    
+GPS         |   0   |   1    |   1   |    0   |  B0110 |   RED    
+IMU         |   0   |   1    |   1   |    1   |  B0111 |   RED    
+Low Battery |   1   |   0    |   0   |    0   |  B1000 |  AMBER   
+
+A dot is 125 ms on, 125 ms off
+A dash is 500 ms on, 500 ms off
+Space between codes is 1 sec
+*/
+
+enum ErrorCode {
+    GEN_ERROR_CODE          = 0b0001,    // Unknown, but critical failure
+    XTSD_MOUNT_ERROR_CODE   = 0b0010,    // XTSD filesystem fails to mount
+    CARD_TYPE_ERROR_CODE    = 0b0011,    // XTSD initializes, but reports a bad type
+    FILE_ERROR_CODE         = 0b0100,    // Datalog file fails to open
+    RADIO_ERROR_CODE        = 0b0101,    // ESP32 radio fails to initialize/encounters error
+    GPS_ERROR_CODE          = 0b0110,    // GPS radio fails to initialize
+    IMU_ERROR_CODE          = 0b0111,    // IMU fails to initialize
+    LOW_BATT_ERROR_CODE     = 0b1000     // Battery voltage is below 3.0V
+};
 
 struct Telemetry {
     float voltage;              // Battery voltage in V
@@ -16,9 +70,6 @@ struct Telemetry {
     long longitude;             // In millionths of a degree (divide by 1000000. when displaying)
     long GPSSpeed;              // In thousandths of a knot (divide by 1000. when displaying)
     long GPSCourse;             // In thousandths of a degree (divide by 1000. when displaying)
-    double bmpTemp;             // °Celsius from the BMP388
-    double pressure;            // Pa
-    float altitude;             // In meters Above Ground Level
     uint8_t sysCal = 0;         // IMU system calibration, 0-3 with 3 being fully calibrated
     uint8_t gyroCal = 0;        // IMU gyroscope calibration, 0-3 with 3 being fully calibrated
     uint8_t accelCal = 0;       // IMU accelerometer calibration, 0-3 with 3 being fully calibrated
@@ -35,11 +86,13 @@ struct Telemetry {
     float linAccelX;            // m/s^2
     float linAccelY;            // m/s^2
     float linAccelZ;            // m/s^2
+    float quatW;                //
+    float quatX;                //
+    float quatY;                //
+    float quatZ;                //
     float imuTemp;              // °Celsius from the IMU
-    float shtTemp;              // °Celsius (ambient) from the SHT31-D sensor
-    float humdity;              // % from the SHT31-D sensor
-    Status state;               // State reported by the launchsonde.
-    uint8_t packetSize;         // The size of the telemetry packet. Used as a debug tool for ground station/launchsonde comms.
+    State state;                // State reported by the launchsonde.
+    uint8_t packetSize;         // The size of the telemetry packet. Used as a debug tool for ground station/thetis comms.
 };
 Telemetry data;
 
@@ -78,72 +131,19 @@ uint64_t cardSize;
 #include <Adafruit_NeoPixel.h>
 #define NEO_EN_PIN 14
 #define NEO_DATA_PIN 15
-#define DASH_ON 250
+#define DASH_ON 500
 #define DOT_ON 125
-#define BLINK_INTERVAL 125
+#define BLINK_INTERVAL 250
 #define MESSAGE_INTERVAL 1000
 #define MAXIMUM_BRIGHTNESS 32
 #define NUM_STEPS 16
 #define BRIGHTNESS_STEP MAXIMUM_BRIGHTNESS/NUM_STEPS
 
-/*
-Status Table:
-Status          |  Color  |  Indication  
-----------------|---------|--------------
-Error           |   RED   |   Pulsing     
-Logging, No GPS |  BLUE   |    Solid      
-Logging, GPS    |  GREEN  |    Solid      
-Ready, No GPS   |  BLUE   |   Pulsing     
-Ready, GPS      |  GREEN  |   Pulsing     
-Standby         |  AMBER  |    Solid      
-Booting         |  NONE   |     N/A       
-*/
-
-enum Status {
-    ERROR_STATE = -1,       // Thetis has encountered some error
-    LOGGING_NO_GPS,         // Thetis is logging, but does not have a GPS fix
-    LOGGING_GPS,            // Thetis is logging with a GPS fix
-    READY_NO_GPS,           // Accelerometer is calibrated but no GPS fix
-    READY_GPS,              // Accelerometer is calibrated and there is a GPS fix
-    STANDBY,                // Accelerometer is not calibrated yet
-    BOOTING                 // Board is booting up
-};
-
-/*
-Code Table:
-Error       |  DOT  |  DASH  |  DOT  |  DASH  |  CODE  |  COLOR  
-------------|-------|--------|-------|--------|--------|---------
-General     |   0   |   0    |   0   |    1   |  B0001 |   RED    
-XTSD Mount  |   0   |   0    |   1   |    0   |  B0010 |   RED    
-Card Type   |   0   |   0    |   1   |    1   |  B0011 |   RED    
-File Write  |   0   |   1    |   0   |    0   |  B0100 |   RED    
-Radio       |   0   |   1    |   0   |    1   |  B0101 |   RED    
-GPS         |   0   |   1    |   1   |    0   |  B0110 |   RED    
-IMU         |   0   |   1    |   1   |    1   |  B0111 |   RED    
-Low Battery |   1   |   0    |   0   |    0   |  B1000 |  AMBER   
-
-A dot is 125 ms on, 125 ms off
-A dash is 250 ms on, 250 ms off
-Space between codes is 1 sec
-*/
-
-enum ErrorCode {
-    GEN_ERROR_CODE          = 0b0001,    // Unknown, but critical failure
-    XTSD_MOUNT_ERROR_CODE   = 0b0010,    // XTSD filesystem fails to mount
-    CARD_TYPE_ERROR_CODE    = 0b0011,    // XTSD initializes, but reports a bad type
-    FILE_ERROR_CODE         = 0b0100,    // Datalog file fails to open
-    RADIO_ERROR_CODE        = 0b0101,    // ESP32 radio fails to initialize/encounters error
-    GPS_ERROR_CODE          = 0b0110,    // GPS radio fails to initialize
-    IMU_ERROR_CODE          = 0b0111,    // IMU fails to initialize
-    LOW_BATT_ERROR_CODE     = 0b1000     // Battery voltage is below 3.0V
-};
-uint8_t currentState = STANDBY;
-
 Adafruit_NeoPixel pixel(1, NEO_DATA_PIN, NEO_RGB + NEO_KHZ800);
-const uint32_t OFF      =  pixel.Color(0, 0, 0);       // BGR
+const uint32_t OFF      =  pixel.Color(0, 0, 0);       // GRB?
 const uint32_t WHITE    =  pixel.Color(255, 255, 255);
 const uint32_t BLUE     =  pixel.Color(255, 0, 0);
-const uint32_t RED      =  pixel.Color(0, 0, 255);
+const uint32_t RED      =  pixel.Color(0, 255, 0);
 const uint32_t GREEN    =  pixel.Color(0, 255, 0);
 const uint32_t PURPLE   =  pixel.Color(255, 0, 255);
 const uint32_t AMBER    =  pixel.Color(0, 191, 255);
@@ -154,7 +154,7 @@ uint8_t pixelState = 0;
 bool brightnessInc = true;
 
 // DEBUG flags
-#define DEBUG_MODE false // Enable debugging to serial console - note, this will hang the code execution until serial port opened
+#define DEBUG_MODE true // Enable debugging to serial console - note, this will hang the code execution until serial port opened
 #define GPSECHO false // Print GPS data verbose to serial port
 
 void setup() {
@@ -163,16 +163,23 @@ void setup() {
     pinMode(LOG_EN_PIN, INPUT);
     pinMode(ACT_LED_PIN, OUTPUT);
 
-    Serial.begin(115200);
-    while(!Serial); // Wait for serial port to open
+    if (DEBUG_MODE) {
+        Serial.begin(115200);
+        while (!Serial); // Wait for serial port to open
+    }
 
+    initNeoPixel();
     initGPS();
     initIMU();
     initXTSD();
 }
 
 void loop() {
-    
+    updateSystemLED();
+    pollIMU();
+    pollGPS();
+    printTelemetryData();
+    delay(1250);
 }
 
 // ====================
@@ -180,16 +187,13 @@ void loop() {
 // ====================
 
 void initIMU() {
-    Serial.println("Initializing IMU..."); // DEBUG
+    Serial.print("Initializing IMU...");
     Wire.begin(BNO_SDA_PIN, BNO_SCL_PIN); // Initialize I2C bus with correct wires
     if (!bno.begin()) {
-        Serial.println("Failed to initialize BNO055"); // DEBUG
-        while (true); // Block further code execution
-            // TODO: Blink error code on activity LED
+        Serial.println("Failed to initialize BNO055");
+        while (true) blinkCode(IMU_ERROR_CODE, RED);
     }
     bno.setExtCrystalUse(true);
-
-    pinMode(BNO_RST_PIN, OUTPUT);
 
     Serial.println("done!"); // DEBUG
 }
@@ -221,6 +225,13 @@ void pollIMU() {
         data.linAccelX = linaccel.x();
         data.linAccelY = linaccel.y();
         data.linAccelZ = linaccel.z();
+
+        // Add Quaternion data to packet
+        imu::Quaternion quat = bno.getQuat();
+        data.quatW = quat.w();
+        data.quatX = quat.x();
+        data.quatY = quat.y();
+        data.quatZ = quat.z();
     }
 
     data.imuTemp = bno.getTemp();
@@ -444,44 +455,15 @@ void deleteFile(fs::FS &fs, const char * path){
 // ===NEOPIXEL FUNCTIONS===
 // ========================
 
+
 void initNeoPixel() {
     Serial.print("Initializing NeoPixel...");
     pinMode(NEO_EN_PIN, OUTPUT);
     digitalWrite(NEO_EN_PIN, LOW); // Enable NeoPixel
     pixel.begin(); // Initialize pins for output
-    pixel.setBrightness(50);
+    pixel.setBrightness(25);
     pixel.show();  // Turn all LEDs off ASAP
     Serial.println("done!");
-}
-
-void testNeoPixel() {
-    Serial.println("Testing NeoPixel...");
-    Serial.print("Blinking error code...");
-    blinkCode(IMU_ERROR_CODE, GREEN);
-    Serial.println("done");
-
-    Serial.print("Rainbow...");
-    long startTime = millis();
-    while(millis() < startTime + TEST_TIME) {
-        rainbow(); 
-        delay(10);
-    }
-    Serial.println("done");
-
-    Serial.print("Pulsing...");
-    pixelState = 0;
-    startTime = millis();
-    while(millis() < startTime + TEST_TIME) {
-        pulseLED(BLUE);
-        delay(10);
-    }
-    pixel.setPixelColor(0, OFF);
-    pixel.show(); // Turn off NeoPixel
-    Serial.println("done");
-
-    Serial.println("done!");
-    Serial.println("---------------------------------------");
-    Serial.println();
 }
 
 void pulseLED(uint32_t color) {
@@ -543,24 +525,114 @@ void blinkCode(byte code, uint32_t color) {
 // ===GENERAL FUNCTIONS===
 // =======================
 
-void testBatteryMon() {
-    Serial.println("Testing battery voltage monitoring...");
-    long startTime = millis();
-    while(millis() < startTime + TEST_TIME) { // For TEST_TIME, read the battery voltage every 500 ms
-        Serial.printf("Battery voltage: %03f V\n\r", analogReadMilliVolts(BATT_MON_PIN)/1000);
-        delay(500);
-    }
-    Serial.println("done!");
-    Serial.println("---------------------------------------");
-    Serial.println();
-}
 
 void logEnableISR() {
-    logEnablePresses++;
-    Serial.printf("Log button pressed: %d times\n\r", logEnablePresses);
+    // TODO: Implement software button debounce
+    logEnabled = !logEnabled;
+    logEnabled ? Serial.printf("Logging enabled!\n\r") : Serial.printf("Logging disabled!\n\r");
+}
+
+void updateSystemLED() {
+    switch (currentState) {
+        case ERROR_STATE:
+            // Inidividual errors will update the LED themselves
+            continue;
+            break;
+        case LOGGING_NO_GPS:
+            pixel.setPixelColor(0, BLUE); // Glow solid blue
+            break;
+        case LOGGING_GPS:
+            pixel.setPixelColor(0, GREEN); // Glow solid green
+            break;
+        case READY_NO_GPS:
+            pulseLED(BLUE); // Pulse blue
+            break;
+        case READY_GPS:
+            pulseLED(GREEN); // Pulse green
+            break;
+        case STANDBY:
+            pixel.setPixelColor(0, AMBER); // Glow solid amber
+            break;
+        case BOOTING:
+            pulseLED(PURPLE); // Pulse purple
+            break;
+        default:
+            pixel.setPixelColor(0, OFF); // Turn off LED
+            break;
+    }
 }
 
 
 // =====================
 // ===DEBUG FUNCTIONS===
 // =====================
+
+
+static void getStateString(char* outStr, State s) {
+    switch(s) {
+        case ERROR_STATE:
+            strcpy(outStr, "ERROR");
+            break;
+        case LOGGING_NO_GPS:
+            strcpy(outStr, "LOGGING_NO_GPS");
+            break;
+        case LOGGING_GPS:
+            strcpy(outStr, "LOGGING_GPS");
+            break;
+        case READY_NO_GPS:
+            strcpy(outStr, "READY_NO_GPS");
+            break;
+        case READY_GPS:
+            strcpy(outStr, "READY_GPS");
+            break;
+        case STANDBY:
+            strcpy(outStr, "STANDBY");
+            break;
+        case BOOTING:
+            strcpy(outStr, "BOOTING");
+            break;
+        default:
+            strcpy(outStr, "DINGUS");
+            break;
+    }
+}
+
+void printTelemetryData() {
+    char _statestr[16]; getStateString(_statestr, data.state);
+    Serial.printf("Battery Voltage:             %0.3f V\n\r", data.voltage);
+    Serial.printf("Month:                       %d\n\r", data.month);
+    Serial.printf("Day:                         %d\n\r", data.day);
+    Serial.printf("Year:                        %d\n\r", data.year);
+    Serial.printf("Timestamp:                   %s\n\r", data.timestamp);
+    Serial.printf("GPS Fix:                     %s\n\r", data.GPSFix ? "true" : "false");
+    Serial.printf("Number of Satellites:        %d\n\r", data.numSats);
+    Serial.printf("HDOP:                        %d\n\r", data.HDOP);
+    Serial.printf("Latitude:                    %0.6f°\n\r", data.longitude/1E6);
+    Serial.printf("Longitude:                   %0.6f°\n\r", data.latitude/1E6);
+    Serial.printf("GPS Speed:                   %0.3f kts\n\r", data.GPSSpeed/1E3);
+    Serial.printf("GPS Course:                  %0.3f°\n\r", data.GPSCourse);
+    Serial.printf("System Calibration:          %d\n\r", data.sysCal);
+    Serial.printf("Gyroscope Calibration:       %d\n\r", data.gyroCal);
+    Serial.printf("Accelerometer Calibration:   %d\n\r", data.accelCal);
+    Serial.printf("Magnetometer Calibration:    %d\n\r", data.magCal);
+    Serial.printf("Acceleration X:              %0.3f m/s/s\n\r", data.accelX);
+    Serial.printf("             Y:              %0.3f m/s/s\n\r", data.accelY);
+    Serial.printf("             Z:              %0.3f m/s/s\n\r", data.accelZ);
+    Serial.printf("Gyroscope X:                 %0.3f rad/s\n\r", data.gyroX);
+    Serial.printf("          Y:                 %0.3f rad/s\n\r", data.gyroY);
+    Serial.printf("          Z:                 %0.3f rad/s\n\r", data.gyroZ);
+    Serial.printf("Roll:                        %0.3f°\n\r", data.roll);
+    Serial.printf("Pitch:                       %0.3f°\n\r", data.pitch);
+    Serial.printf("Yaw:                         %0.3f°\n\r", data.yaw);
+    Serial.printf("Linear Acceleration X:       %0.3f m/s/s\n\r", data.linAccelX);
+    Serial.printf("                    Y:       %0.3f m/s/s\n\r", data.linAccelY);
+    Serial.printf("                    Z:       %0.3f m/s/s\n\r", data.linAccelZ);
+    Serial.printf("Quaternion W:                %0.3f\n\r", data.quatW);
+    Serial.printf("           X:                %0.3f\n\r", data.quatX);
+    Serial.printf("           Y:                %0.3f\n\r", data.quatY);
+    Serial.printf("           Z:                %0.3f\n\r", data.quatZ);
+    Serial.printf("IMU Temperature:             %0.3f°C\n\r", data.imuTemp);
+    Serial.printf("Thetis State:                %s\n\r", _statestr);
+    Serial.printf("Packet Size:                 %d\n\r", data.packetSize);
+    Serial.print("\n\n\r");
+}
