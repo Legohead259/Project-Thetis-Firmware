@@ -33,9 +33,13 @@ float curMSecond = 0;
 Adafruit_BNO055 bno = Adafruit_BNO055(0x28); // Create BNO object with I2C addr 0x28
 
 // XTSD instantiation
-#include <SPI.h>
-#include <SD.h>
-#include "FS.h"
+#if defined(ESP32) || defined(ARDUINO_ARCH_ESP32)
+    #include <SPI.h>
+    #include <SD.h>
+    #include <FS.h>
+#elif defined(ARDUINO_ARCH_SAMD)
+    #include <SD.h>
+#endif
 uint64_t cardSize;
 
 // Neopixel instantiation
@@ -268,6 +272,8 @@ void printUnknownSentence(MicroNMEA& nmea) {
 
 void initIMU() {
     Serial.print("Initializing IMU...");
+    pinMode(BNO_RST_PIN, OUTPUT);
+    digitalWrite(BNO_RST_PIN, HIGH);
     Wire.begin(BNO_SDA_PIN, BNO_SCL_PIN); // Initialize I2C bus with correct wires
     if (!bno.begin()) {
         Serial.println("Failed to initialize BNO055");
@@ -275,9 +281,6 @@ void initIMU() {
             blinkCode(IMU_ERROR_CODE, RED);
     }
     bno.setExtCrystalUse(true);
-
-    // pinMode(BNO_RST_PIN, OUTPUT);
-    // digitalWrite(BNO_RST_PIN, HIGH);
 
     Serial.println("done!"); // DEBUG
 }

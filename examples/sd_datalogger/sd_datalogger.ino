@@ -23,7 +23,7 @@
 #include <SPI.h>
 #include <SD.h>
 
-const int chipSelect = A5;
+const int chipSelect = A1;
 
 void setup() {
   // Open serial communications and wait for port to open:

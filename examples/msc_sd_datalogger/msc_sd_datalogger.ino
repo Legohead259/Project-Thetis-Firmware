@@ -24,73 +24,80 @@
 #include "SD.h"
 #include "Adafruit_TinyUSB.h"
 
-// const int chipSelect = A5;
+const int chipSelect = A1;
 Adafruit_USBD_MSC usb_msc;
+Sd2Card card;
+SdVolume volume;
 
 void setup() {
     // Set disk vendor id, product id and revision with string up to 8, 16, 4 characters respectively
-    usb_msc.setID("Adafruit", "SD Card", "1.0");
+    // usb_msc.setID("Adafruit", "SD Card", "1.0");
 
     // Set read write callback
-    usb_msc.setReadWriteCallback(msc_read_cb, msc_write_cb, msc_flush_cb);
+    // usb_msc.setReadWriteCallback(msc_read_cb, msc_write_cb, msc_flush_cb);
 
     // Still initialize MSC but tell usb stack that MSC is not ready to read/write
     // If we don't initialize, board will be enumerated as CDC only
-    usb_msc.setUnitReady(false);
-    usb_msc.begin();
+    // usb_msc.setUnitReady(false);
+    // usb_msc.begin();
 
     Serial.begin(115200);
-    while ( !Serial ) delay(10);   // wait for native usb
+    while (!Serial) delay(10);   // wait for native usb
 
     Serial.println("Adafruit TinyUSB Mass Storage SD Card example");
 
     Serial.print("\nInitializing SD card...");
 
-    if(!SD.begin()){
-        Serial.println("Card Mount Failed");
+    if (!card.init(SPI_HALF_SPEED, chipSelect)) { // Try to initialize SD card
+        Serial.println("initialization failed. Things to check:");
         Serial.println("* is a card inserted?");
         Serial.println("* is your wiring correct?");
         Serial.println("* did you change the chipSelect pin to match your shield or module?");
-        while(true); // Block further code execution
+        while (1) delay(1);
     }
-    uint8_t cardType = SD.cardType();
-
-    if(cardType == CARD_NONE){
-        Serial.println("No SD card attached");
-        return;
+    if (!volume.init(card)) { // Now we will try to open the 'volume'/'partition' - it should be FAT16 or FAT32
+        Serial.println("Could not find FAT16/FAT32 partition.\nMake sure you've formatted the card");
+        while (1) delay(1);
     }
+    Serial.println("done!");
 
-    // if ( !card.init() )
-    // {
-    //     Serial.println("initialization failed. Things to check:");
-    //     Serial.println("* is a card inserted?");
-    //     Serial.println("* is your wiring correct?");
-    //     Serial.println("* did you change the chipSelect pin to match your shield or module?");
-    //     while (1) delay(1);
-    // }
-
-    // // Now we will try to open the 'volume'/'partition' - it should be FAT16 or FAT32
-    // if (!volume.init(card)) {
-    //     Serial.println("Could not find FAT16/FAT32 partition.\nMake sure you've formatted the card");
-    //     while (1) delay(1);
-    // }
-    // Serial.println("done!");
-
-    uint32_t block_count = SD.blocksPerCluster()*SD.clusterCount();
+    uint32_t block_count = volume.blocksPerCluster()*volume.clusterCount();
 
     Serial.print("Volume size (MB):  ");
     Serial.println((block_count/2) / 1024);
-    // Set disk size, SD block size is always 512
-    usb_msc.setCapacity(block_count, 512);
 
-    usb_msc.setUnitReady(true); // Enable USB MSC read/write
+    // // Set disk size, SD block size is always 512
+    // usb_msc.setCapacity(block_count, 512);
 }
 
 void loop() {
-    // if (millis() > 10000) { // After 10 seconds, allow USB port to open
-    //     // usb_msc.begin();
-    //     usb_msc.setUnitReady(true);
-    // }
+    // make a string for assembling the data to log:
+    String dataString = "";
+
+    // read three sensors and append to the string:
+    for (int analogPin = 0; analogPin < 3; analogPin++) {
+        int sensor = analogRead(analogPin);
+        dataString += String(sensor);
+        if (analogPin < 2) {
+            dataString += ",";
+        }
+    }
+    // Serial.println(dataString); // Debug
+
+    // open the file. note that only one file can be open at a time,
+    // so you have to close this one before opening another.
+    File dataFile = SD.open("root/test2.txt", FILE_WRITE);
+
+    if (dataFile) { // if the file is available, write to it:
+        dataFile.println(dataString);
+        dataFile.close();
+        // print to the serial port too:
+        Serial.println(dataString);
+    }
+    else { // if the file isn't open, pop up an error:
+        Serial.println("error opening datalog.txt");
+        delay(500);
+    }
 }
 
 // ----- USB MSC CALLBACKS -----
@@ -98,8 +105,7 @@ void loop() {
 // Callback invoked when received READ10 command.
 // Copy disk's data to buffer (up to bufsize) and
 // return number of copied bytes (must be multiple of block size)
-int32_t msc_read_cb (uint32_t lba, void* buffer, uint32_t bufsize)
-{
+int32_t msc_read_cb (uint32_t lba, void* buffer, uint32_t bufsize) {
     (void) bufsize;
     return card.readBlock(lba, (uint8_t*) buffer) ? 512 : -1;
 }
@@ -107,15 +113,13 @@ int32_t msc_read_cb (uint32_t lba, void* buffer, uint32_t bufsize)
 // Callback invoked when received WRITE10 command.
 // Process data in buffer to disk's storage and 
 // return number of written bytes (must be multiple of block size)
-int32_t msc_write_cb (uint32_t lba, uint8_t* buffer, uint32_t bufsize)
-{
+int32_t msc_write_cb (uint32_t lba, uint8_t* buffer, uint32_t bufsize) {
     (void) bufsize;
     return card.writeBlock(lba, buffer) ? 512 : -1;
 }
 
 // Callback invoked when WRITE10 command is completed (status received and accepted by host).
 // used to flush any pending cache.
-void msc_flush_cb (void)
-{
+void msc_flush_cb (void) {
     // nothing to do
 }
