@@ -83,13 +83,13 @@ struct Telemetry {
     float linAccelX;            // m/s^2
     float linAccelY;            // m/s^2
     float linAccelZ;            // m/s^2
-    float quatW;                //
-    float quatX;                //
-    float quatY;                //
-    float quatZ;                //
-    float imuTemp;              // °Celsius from the IMU
+    // float quatW;                //
+    // float quatX;                //
+    // float quatY;                //
+    // float quatZ;                //
+    // float imuTemp;              // °Celsius from the IMU
     uint8_t state;              // State reported by the package.
-    uint8_t packetSize;         // The size of the telemetry packet. Used as a debug tool for ground station/thetis comms.
+    // uint8_t packetSize;         // The size of the telemetry packet. Used as a debug tool for ground station/thetis comms.
 };
 Telemetry data;
 
@@ -154,7 +154,7 @@ bool brightnessInc = true;
 
 // DEBUG flags
 #define DEBUG_MODE true // Enable debugging to serial console - note, this will hang the code execution until serial port opened
-#define GPSECHO false // Print GPS data verbose to serial port
+#define GPSECHO false   // Print GPS data verbose to serial port
 
 void setup() {
     // Set pin modes
@@ -182,10 +182,8 @@ void loop() {
     pollIMU();
     pollGPS();
     data.packetSize = sizeof(data);
-
-    writeTelemetryDataToFile();
-    printTelemetryData();
-    delay(1250);
+    writeTelemetryDataToFile(SD, filename);
+    // if (DEBUG_MODE) printTelemetryData();
 }
 
 // ====================
@@ -326,12 +324,12 @@ void printUnknownSentence(MicroNMEA& nmea) {
 
 void initXTSD() {
     Serial.print("Initializing XTSD card...");
-    if (!SD.begin()){
+    if (!SD.begin(34)){
         Serial.println("Card Mount Failed");
         while(true) blinkCode(XTSD_MOUNT_ERROR_CODE, RED); // Block further code execution and flash error code
     }
-    uint8_t cardType = SD.cardType();
 
+    uint8_t cardType = SD.cardType();
     if(cardType == CARD_NONE) {
         Serial.println("No SD card attached");
         while(true) blinkCode(CARD_TYPE_ERROR_CODE, RED); // Block further code execution and flash error code
@@ -350,19 +348,22 @@ void initXTSD() {
         Serial.printf("Could not create %s", filename);
         while (true) blinkCode(FILE_ERROR_CODE, RED); // Block further code execution
     }
-    _dataFile.print("ISO 8601 Time,Battery Voltage (V),GPS Fix,# of Satellites,HDOP,Lat (deg),Lon (deg),Speed (kts),Course (kts),System Cal,Gyro Cal,Accel Cal,Mag Cal,Ax (m/s/s),Ay (m/s/s),Az (m/s/s),Gx (rad/s),Gy (rad/s),Gz (rad/s),Roll (deg),Pitch (deg),Yaw (deg),linAx (m/s/s),linAy (m/s/s),linAz (m/s/s),Qw,Qx,Qy,Qz,Temp (degC),State,Packet Size"); // Print header to file
-    _dataFile.println();
+    _dataFile.println("ISO 8601 Time,Battery Voltage (V),GPS Fix,# of Satellites,HDOP,Lat (deg),Lon (deg),Speed (kts),Course (kts),System Cal,Gyro Cal,Accel Cal,Mag Cal,Ax (m/s/s),Ay (m/s/s),Az (m/s/s),Gx (rad/s),Gy (rad/s),Gz (rad/s),Roll (deg),Pitch (deg),Yaw (deg),linAx (m/s/s),linAy (m/s/s),linAz (m/s/s),Qw,Qx,Qy,Qz,Temp (degC),State,Packet Size"); // Print header to file
     _dataFile.close();
 }
 
-void writeTelemetryDataToFile() {
-    File _dataFile = SD.open(filename, FILE_APPEND);
+
+void writeTelemetryDataToFile(fs::FS &fs, const char * path) {
+    File _dataFile = fs.open(path, FILE_APPEND);
     if (!_dataFile) {
-        Serial.printf("Could not create %s", filename);
+        Serial.printf("Could not create %s", path);
         while (true) blinkCode(FILE_ERROR_CODE, RED); // Block further code execution
     }
+    else {
+        Serial.printf("Wrote to: %s", path);
+    }
 
-    _dataFile.printf("%s,", data.timestamp);
+    _dataFile.print(data.timestamp);
     _dataFile.printf("%0.3f,", data.voltage);
     _dataFile.printf("%d,", data.GPSFix);
     _dataFile.printf("%d,", data.numSats);
@@ -393,9 +394,8 @@ void writeTelemetryDataToFile() {
     _dataFile.printf("%0.3f,", data.quatZ);
     _dataFile.printf("%0.3f,", data.imuTemp);
     _dataFile.printf("%d,", data.state);
-    _dataFile.printf("%d", data.packetSize);
+    _dataFile.print(data.packetSize);
     _dataFile.println();
-
     _dataFile.close();
 }
 
