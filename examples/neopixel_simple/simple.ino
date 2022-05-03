@@ -1,13 +1,14 @@
 #include <Adafruit_NeoPixel.h>
 
 #define LED_COUNT 1
-#define LED_PIN   15
+#define NEO_DATA_PIN 40
+#define NEO_EN_PIN 39
 #define DASH_ON 250
 #define DOT_ON 125
 #define BLINK_INTERVAL 125
 #define MESSAGE_INTERVAL 1000
 
-Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip(LED_COUNT, LED_COUNT, NEO_GRB + NEO_KHZ800);
 const uint32_t OFF      =  strip.Color(0, 0, 0);       // RGB
 const uint32_t WHITE    =  strip.Color(255, 255, 255);
 const uint32_t BLUE     =  strip.Color(0, 0, 255);
@@ -19,8 +20,8 @@ const uint32_t CYAN     =  strip.Color(0, 255, 255);
 const uint32_t LIME     =  strip.Color(125, 255, 0);
 
 void setup() {
-  pinMode(14, OUTPUT);
-  digitalWrite(14, LOW); // Enable Neopixel
+  pinMode(NEO_EN_PIN, OUTPUT);
+  digitalWrite(NEO_EN_PIN, LOW); // Enable Neopixel
 
   strip.begin();
   strip.show();

@@ -177,6 +177,7 @@ void setup(){
     Serial.begin(115200);
     while(!Serial); // Wait for COM port to open
     
+    Serial.println("Starting SD card..."); // DEBUG
     if(!SD.begin(26)){
         Serial.println("Card Mount Failed");
         while(1);
