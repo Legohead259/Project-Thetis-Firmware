@@ -33,13 +33,11 @@ float curMSecond = 0;
 Adafruit_BNO055 bno = Adafruit_BNO055(0x28); // Create BNO object with I2C addr 0x28
 
 // XTSD instantiation
-#if defined(ESP32) || defined(ARDUINO_ARCH_ESP32)
-    #include <SPI.h>
-    #include <SD.h>
-    #include <FS.h>
-#elif defined(ARDUINO_ARCH_SAMD)
-    #include <SD.h>
-#endif
+#include <SPI.h>
+#include <SD.h>
+#include <FS.h>
+#include <FFat.h>
+
 uint64_t cardSize;
 
 // Neopixel instantiation
@@ -152,8 +150,11 @@ void setup() {
     initIMU();
     testIMU();
 
-    initXTSD();
-    testXTSD();
+    // initXTSD();
+    // testXTSD();
+
+    initFileSystem();
+    testFFat();
 
     Serial.println("Unit test complete");
 }
@@ -272,8 +273,8 @@ void printUnknownSentence(MicroNMEA& nmea) {
 
 void initIMU() {
     Serial.print("Initializing IMU...");
-    pinMode(BNO_RST_PIN, OUTPUT);
-    digitalWrite(BNO_RST_PIN, HIGH);
+    // pinMode(BNO_RST_PIN, OUTPUT);
+    // digitalWrite(BNO_RST_PIN, HIGH);
     Wire.begin(BNO_SDA_PIN, BNO_SCL_PIN); // Initialize I2C bus with correct wires
     if (!bno.begin()) {
         Serial.println("Failed to initialize BNO055");
@@ -357,6 +358,15 @@ void initXTSD() {
     Serial.println("done!");
 }
 
+void initFileSystem() {
+    Serial.print("Initializing storage system...");
+    if (!FFat.begin()){
+        Serial.println("Storage system initialization Failed");
+        while(true) blinkCode(XTSD_MOUNT_ERROR_CODE, RED); // Block further code execution and flash error code
+    }
+    Serial.println("done!");
+}
+
 void testXTSD() {
     Serial.println("Testing XTSD Card...");
     uint64_t cardSize = SD.cardSize() / (1024 * 1024);
@@ -379,6 +389,22 @@ void testXTSD() {
     Serial.println("done!");
     Serial.println("---------------------------------------");
     Serial.println();
+}
+
+void testFFat() {
+    Serial.printf("Total space: %10u\n", FFat.totalBytes());
+    Serial.printf("Free space: %10u\n", FFat.freeBytes());
+    listDir(FFat, "/", 0);
+    writeFile(FFat, "/hello.txt", "Hello ");
+    appendFile(FFat, "/hello.txt", "World!\r\n");
+    readFile(FFat, "/hello.txt");
+    renameFile(FFat, "/hello.txt", "/foo.txt");
+    readFile(FFat, "/foo.txt");
+    deleteFile(FFat, "/foo.txt");
+    testFileIO(FFat, "/test.txt");
+    Serial.printf("Free space: %10u\n", FFat.freeBytes());
+    deleteFile(FFat, "/test.txt");
+    Serial.println( "Test complete" );
 }
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
@@ -644,7 +670,7 @@ void testBatteryMon() {
     Serial.println("Testing battery voltage monitoring...");
     long startTime = millis();
     while(millis() < startTime + TEST_TIME) { // For TEST_TIME, read the battery voltage every 500 ms
-        Serial.printf("Battery voltage: %03f V\n\r", analogReadMilliVolts(BATT_MON_PIN)/1000);
+        Serial.printf("Battery voltage: %03f V\n\r", map(analogReadMilliVolts(BATT_MON_PIN), 0, 1800, 0, 4200) / 1000.0);
         delay(500);
     }
     Serial.println("done!");

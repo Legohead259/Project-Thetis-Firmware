@@ -29,11 +29,10 @@ SdVolume volume;
 SdFile root;
 
 // change this to match your SD shield or module;
-// Arduino Ethernet shield: pin 4
-// Adafruit SD shields and modules: pin 10
-// Sparkfun SD shield: pin 8
-// MKRZero SD: SDCARD_SS_PIN
-const int chipSelect = A5; // A5 for Thetis Breadboard Prototype
+// Thetis breadboard: A5
+// Thetis RevF4:      26
+
+const int chipSelect = 26;
 
 void setup() {
   // Open serial communications and wait for port to open:
