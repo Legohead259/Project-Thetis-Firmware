@@ -32,6 +32,8 @@
 
 void setup()
 {
+  // (26, 33) for Thetis Rev F3
+  // (33, 34) for Thetis Rev F4
   Wire.begin(33, 34);
 
   Serial.begin(9600);
