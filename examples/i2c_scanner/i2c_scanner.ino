@@ -34,7 +34,7 @@ void setup()
 {
   // (26, 33) for Thetis Rev F3
   // (33, 34) for Thetis Rev F4
-//  Wire.begin(33, 34);
+  Wire.begin(33, 34);
 
   Serial.begin(115200);
   while (!Serial);             // Leonardo: wait for serial monitor
