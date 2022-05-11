@@ -12,9 +12,15 @@
  *    D0       MISO
  *    D1       -
  */
+#define MOSI_PIN    35
+#define MISO_PIN    37
+#define SCK_PIN     36
+#define SD_CS_PIN   26 // Note: broken on ESP2-S2N4 chips due to PSRAM
+
 #include "FS.h"
 #include "SD.h"
 #include "SPI.h"
+// SPIClass SPI(FSPI);
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
     Serial.printf("Listing directory: %s\n", dirname);
@@ -177,8 +183,9 @@ void setup(){
     Serial.begin(115200);
     while(!Serial); // Wait for COM port to open
     
+    // SPI.begin(SCK_PIN, MISO_PIN, MOSI_PIN, -1); // Begin SPI bus
     Serial.println("Starting SD card..."); // DEBUG
-    if(!SD.begin(26)){
+    if(!SD.begin()){
         Serial.println("Card Mount Failed");
         while(1);
     }

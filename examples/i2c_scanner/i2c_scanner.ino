@@ -34,11 +34,11 @@ void setup()
 {
   // (26, 33) for Thetis Rev F3
   // (33, 34) for Thetis Rev F4
-  Wire.begin(33, 34);
+//  Wire.begin(33, 34);
 
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial);             // Leonardo: wait for serial monitor
-  Serial.println("\nI2C Scanner");
+  Serial.println("I2C Scanner");
 }
 
 
@@ -57,7 +57,7 @@ void loop()
     // a device did acknowledge to the address.
     Wire.beginTransmission(address);
     error = Wire.endTransmission();
-
+    
     if (error == 0)
     {
       Serial.print("I2C device found at address 0x");
