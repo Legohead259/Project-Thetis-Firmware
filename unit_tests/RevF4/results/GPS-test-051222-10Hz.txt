@@ -1,0 +1,1082 @@
+Initializing GPS...done!
+Testing GPS...
+$GPGGA,002856.200,,,,,0,00,,,M,,M,,*73
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002856.200,V,,,,,0.00,0.00,060180,,,N*49
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$PNVGNME,2,9,1*5F
+
+Unknown sentence: $PNVGNME,2,9,1*5F
+���������	
+
+ ���$PMTK001,220,3*30
+$GPGGA,002856.400,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002856.400,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002856.500,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002856.500,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002856.599,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002856.599,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002856.700,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002856.700,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002856.799,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002856.799,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002856.900,,,,,0,00,,,M,,M,,*78
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002856.900,V,,,,,0.00,0.00,060180,,,N*42
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.000,,,,,0,00,,,M,,M,,*70
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002857.000,V,,,,,0.00,0.00,060180,,,N*4A
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.099,,,,,0,00,,,M,,M,,*70
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002857.099,V,,,,,0.00,0.00,060180,,,N*4A
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.200,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002857.200,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.299,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002857.299,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.400,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002857.400,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.500,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002857.500,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.599,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002857.599,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.700,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002857.700,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.799,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002857.799,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002857.900,,,,,0,00,,,M,,M,,*79
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002857.900,V,,,,,0.00,0.00,060180,,,N*43
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.000,,,,,0,00,,,M,,M,,*7F
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002858.000,V,,,,,0.00,0.00,060180,,,N*45
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.099,,,,,0,00,,,M,,M,,*7F
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002858.099,V,,,,,0.00,0.00,060180,,,N*45
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.200,,,,,0,00,,,M,,M,,*7D
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002858.200,V,,,,,0.00,0.00,060180,,,N*47
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.299,,,,,0,00,,,M,,M,,*7D
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002858.299,V,,,,,0.00,0.00,060180,,,N*47
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.400,,,,,0,00,,,M,,M,,*7B
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002858.400,V,,,,,0.00,0.00,060180,,,N*41
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.500,,,,,0,00,,,M,,M,,*7A
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002858.500,V,,,,,0.00,0.00,060180,,,N*40
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.599,,,,,0,00,,,M,,M,,*7A
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002858.599,V,,,,,0.00,0.00,060180,,,N*40
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.700,,,,,0,00,,,M,,M,,*78
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002858.700,V,,,,,0.00,0.00,060180,,,N*42
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.799,,,,,0,00,,,M,,M,,*78
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002858.799,V,,,,,0.00,0.00,060180,,,N*42
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002858.900,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002858.900,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.000,,,,,0,00,,,M,,M,,*7E
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002859.000,V,,,,,0.00,0.00,060180,,,N*44
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.099,,,,,0,00,,,M,,M,,*7E
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002859.099,V,,,,,0.00,0.00,060180,,,N*44
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.200,,,,,0,00,,,M,,M,,*7C
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002859.200,V,,,,,0.00,0.00,060180,,,N*46
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.299,,,,,0,00,,,M,,M,,*7C
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002859.299,V,,,,,0.00,0.00,060180,,,N*46
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.400,,,,,0,00,,,M,,M,,*7A
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002859.400,V,,,,,0.00,0.00,060180,,,N*40
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.500,,,,,0,00,,,M,,M,,*7B
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002859.500,V,,,,,0.00,0.00,060180,,,N*41
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.599,,,,,0,00,,,M,,M,,*7B
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002859.599,V,,,,,0.00,0.00,060180,,,N*41
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.700,,,,,0,00,,,M,,M,,*79
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002859.700,V,,,,,0.00,0.00,060180,,,N*43
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.799,,,,,0,00,,,M,,M,,*79
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002859.799,V,,,,,0.00,0.00,060180,,,N*43
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002859.900,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002859.900,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.000,,,,,0,00,,,M,,M,,*73
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002900.000,V,,,,,0.00,0.00,060180,,,N*49
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.099,,,,,0,00,,,M,,M,,*73
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002900.099,V,,,,,0.00,0.00,060180,,,N*49
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.200,,,,,0,00,,,M,,M,,*71
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002900.200,V,,,,,0.00,0.00,060180,,,N*4B
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.299,,,,,0,00,,,M,,M,,*71
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002900.299,V,,,,,0.00,0.00,060180,,,N*4B
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.400,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002900.400,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.500,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002900.500,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.599,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002900.599,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.700,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002900.700,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.799,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002900.799,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002900.900,,,,,0,00,,,M,,M,,*7A
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002900.900,V,,,,,0.00,0.00,060180,,,N*40
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.000,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002901.000,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.099,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002901.099,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.200,,,,,0,00,,,M,,M,,*70
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002901.200,V,,,,,0.00,0.00,060180,,,N*4A
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.299,,,,,0,00,,,M,,M,,*70
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002901.299,V,,,,,0.00,0.00,060180,,,N*4A
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.400,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002901.400,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.500,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002901.500,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.599,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002901.599,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.700,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002901.700,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.799,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002901.799,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002901.900,,,,,0,00,,,M,,M,,*7B
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002901.900,V,,,,,0.00,0.00,060180,,,N*41
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.000,,,,,0,00,,,M,,M,,*71
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002902.000,V,,,,,0.00,0.00,060180,,,N*4B
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.099,,,,,0,00,,,M,,M,,*71
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002902.099,V,,,,,0.00,0.00,060180,,,N*4B
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.200,,,,,0,00,,,M,,M,,*73
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002902.200,V,,,,,0.00,0.00,060180,,,N*49
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.299,,,,,0,00,,,M,,M,,*73
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002902.299,V,,,,,0.00,0.00,060180,,,N*49
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.400,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002902.400,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.500,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002902.500,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.599,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002902.599,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.700,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002902.700,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.799,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002902.799,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002902.900,,,,,0,00,,,M,,M,,*78
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002902.900,V,,,,,0.00,0.00,060180,,,N*42
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.000,,,,,0,00,,,M,,M,,*70
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002903.000,V,,,,,0.00,0.00,060180,,,N*4A
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.099,,,,,0,00,,,M,,M,,*70
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002903.099,V,,,,,0.00,0.00,060180,,,N*4A
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.200,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002903.200,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.299,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002903.299,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.400,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002903.400,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.500,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002903.500,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.599,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002903.599,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.700,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002903.700,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.799,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002903.799,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002903.900,,,,,0,00,,,M,,M,,*79
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002903.900,V,,,,,0.00,0.00,060180,,,N*43
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.000,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002904.000,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.099,,,,,0,00,,,M,,M,,*77
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002904.099,V,,,,,0.00,0.00,060180,,,N*4D
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.200,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002904.200,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.299,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002904.299,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.400,,,,,0,00,,,M,,M,,*73
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002904.400,V,,,,,0.00,0.00,060180,,,N*49
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.500,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002904.500,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.599,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002904.599,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.700,,,,,0,00,,,M,,M,,*70
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002904.700,V,,,,,0.00,0.00,060180,,,N*4A
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.799,,,,,0,00,,,M,,M,,*70
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002904.799,V,,,,,0.00,0.00,060180,,,N*4A
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002904.900,,,,,0,00,,,M,,M,,*7E
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002904.900,V,,,,,0.00,0.00,060180,,,N*44
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.000,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002905.000,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.099,,,,,0,00,,,M,,M,,*76
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002905.099,V,,,,,0.00,0.00,060180,,,N*4C
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.200,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002905.200,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.299,,,,,0,00,,,M,,M,,*74
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002905.299,V,,,,,0.00,0.00,060180,,,N*4E
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.400,,,,,0,00,,,M,,M,,*72
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002905.400,V,,,,,0.00,0.00,060180,,,N*48
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.500,,,,,0,00,,,M,,M,,*73
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002905.500,V,,,,,0.00,0.00,060180,,,N*49
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.599,,,,,0,00,,,M,,M,,*73
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002905.599,V,,,,,0.00,0.00,060180,,,N*49
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.700,,,,,0,00,,,M,,M,,*71
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002905.700,V,,,,,0.00,0.00,060180,,,N*4B
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.799,,,,,0,00,,,M,,M,,*71
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002905.799,V,,,,,0.00,0.00,060180,,,N*4B
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002905.900,,,,,0,00,,,M,,M,,*7F
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPGSV,1,1,00*79
+
+Unknown sentence: $GPGSV,1,1,00*79
+
+$GPRMC,002905.900,V,,,,,0.00,0.00,060180,,,N*45
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002906.000,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002906.000,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+$GPGGA,002906.099,,,,,0,00,,,M,,M,,*75
+$GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+Unknown sentence: $GPGSA,A,1,,,,,,,,,,,,,,,*1E
+
+$GPRMC,002906.099,V,,,,,0.00,0.00,060180,,,N*4F
+$GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+Unknown sentence: $GPVTG,0.00,T,,M,0.00,N,0.00,K,N*32
+
+done!
+---------------------------------------
+
+Unit test complete
