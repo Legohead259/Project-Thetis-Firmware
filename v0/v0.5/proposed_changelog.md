@@ -12,9 +12,10 @@ Version 0.5 will be an update to implement features found in the Thetis RevF4 in
 ## CHANGED FEATURES:
 
 - Changed GPS refresh rate to 10 Hz from 1 Hz
+- Changed GPS data strings to only GGA
 - Changed timestamp field in data packet to individual values
   - Data written to debug console or log file will still be displayed as ISO1806 (e.g. YYYY-MM-DDTHH:MM:SS.sssZ)
--  
+-  Minor refractoring
 
 ## ADDED FEATURES:
 
