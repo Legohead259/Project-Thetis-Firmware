@@ -1,0 +1,10154 @@
+---------------------------------------
+        Project Thetis Unit Test       
+                 REV F4                
+---------------------------------------
+Testing LOG_EN button...
+Log button pressed: 1 times
+
+Logging is enabled!
+Log button pressed: 2 times
+
+Log button pressed: 3 times
+
+Logging is disabled!
+Log button pressed: 4 times
+
+done!
+---------------------------------------
+
+Initializing NeoPixel...done!
+Testing NeoPixel...
+Blinking error code...done
+Rainbow...done
+Pulsing...done
+done!
+---------------------------------------
+
+Testing battery voltage monitoring...
+Measured battery voltage: 4.119V
+
+done!
+---------------------------------------
+
+Initializing GPS...done!
+Testing GPS...
+$PMTK001,314,3*36
+
+Unknown sentence: $PMTK001,314,3*36
+
+$PMTK001,220,3*30
+
+Unknown sentence: $PMTK001,220,3*30
+
+$GPGGA,000054.799,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000054.900,,,,,0,00,,,M,,M,,*70
+$GPGGA,000055.000,,,,,0,00,,,M,,M,,*78
+$GPGGA,000055.099,,,,,0,00,,,M,,M,,*78
+$GPGGA,000055.200,,,,,0,00,,,M,,M,,*7A
+$GPGGA,000055.299,,,,,0,00,,,M,,M,,*7A
+$GPGGA,000055.400,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000055.500,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000055.599,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000055.700,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000055.799,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000055.900,,,,,0,00,,,M,,M,,*71
+$GPGGA,000056.000,,,,,0,00,,,M,,M,,*7B
+$GPGGA,000056.099,,,,,0,00,,,M,,M,,*7B
+$GPGGA,000056.200,,,,,0,00,,,M,,M,,*79
+$GPGGA,000056.299,,,,,0,00,,,M,,M,,*79
+$GPGGA,000056.400,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000056.500,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000056.599,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000056.700,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000056.799,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000056.900,,,,,0,00,,,M,,M,,*72
+$GPGGA,000057.000,,,,,0,00,,,M,,M,,*7A
+$GPGGA,000057.099,,,,,0,00,,,M,,M,,*7A
+$GPGGA,000057.200,,,,,0,00,,,M,,M,,*78
+$GPGGA,000057.299,,,,,0,00,,,M,,M,,*78
+$GPGGA,000057.400,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000057.500,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000057.599,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000057.700,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000057.799,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000057.900,,,,,0,00,,,M,,M,,*73
+$GPGGA,000058.000,,,,,0,00,,,M,,M,,*75
+$GPGGA,000058.099,,,,,0,00,,,M,,M,,*75
+$GPGGA,000058.200,,,,,0,00,,,M,,M,,*77
+$GPGGA,000058.299,,,,,0,00,,,M,,M,,*77
+$GPGGA,000058.400,,,,,0,00,,,M,,M,,*71
+$GPGGA,000058.500,,,,,0,00,,,M,,M,,*70
+$GPGGA,000058.599,,,,,0,00,,,M,,M,,*70
+$GPGGA,000058.700,,,,,0,00,,,M,,M,,*72
+$GPGGA,000058.799,,,,,0,00,,,M,,M,,*72
+$GPGGA,000058.900,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000059.000,,,,,0,00,,,M,,M,,*74
+$GPGGA,000059.099,,,,,0,00,,,M,,M,,*74
+$GPGGA,000059.200,,,,,0,00,,,M,,M,,*76
+$GPGGA,000059.299,,,,,0,00,,,M,,M,,*76
+$GPGGA,000059.400,,,,,0,00,,,M,,M,,*70
+$GPGGA,000059.500,,,,,0,00,,,M,,M,,*71
+$GPGGA,000059.599,,,,,0,00,,,M,,M,,*71
+$GPGGA,000059.700,,,,,0,00,,,M,,M,,*73
+$GPGGA,000059.799,,,,,0,00,,,M,,M,,*73
+$GPGGA,000059.900,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000100.000,,,,,0,00,,,M,,M,,*79
+$GPGGA,000100.099,,,,,0,00,,,M,,M,,*79
+$GPGGA,000100.200,,,,,0,00,,,M,,M,,*7B
+$GPGGA,000100.299,,,,,0,00,,,M,,M,,*7B
+$GPGGA,000100.400,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000100.500,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000100.599,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000100.700,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000100.799,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000100.900,,,,,0,00,,,M,,M,,*70
+$GPGGA,000101.000,,,,,0,00,,,M,,M,,*78
+$GPGGA,000101.099,,,,,0,00,,,M,,M,,*78
+$GPGGA,000101.200,,,,,0,00,,,M,,M,,*7A
+$GPGGA,000101.299,,,,,0,00,,,M,,M,,*7A
+$GPGGA,000101.400,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000101.500,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000101.599,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000101.700,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000101.799,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000101.900,,,,,0,00,,,M,,M,,*71
+$GPGGA,000102.000,,,,,0,00,,,M,,M,,*7B
+$GPGGA,000102.099,,,,,0,00,,,M,,M,,*7B
+$GPGGA,000102.200,,,,,0,00,,,M,,M,,*79
+$GPGGA,000102.299,,,,,0,00,,,M,,M,,*79
+$GPGGA,000102.400,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000102.500,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000102.599,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000102.700,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000102.799,,,,,0,00,,,M,,M,,*7C
+$GPGGA,000102.900,,,,,0,00,,,M,,M,,*72
+$GPGGA,000103.000,,,,,0,00,,,M,,M,,*7A
+$GPGGA,000103.099,,,,,0,00,,,M,,M,,*7A
+$GPGGA,000103.200,,,,,0,00,,,M,,M,,*78
+$GPGGA,000103.299,,,,,0,00,,,M,,M,,*78
+$GPGGA,000103.400,,,,,0,00,,,M,,M,,*7E
+$GPGGA,000103.500,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000103.599,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000103.700,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000103.799,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000103.900,,,,,0,00,,,M,,M,,*73
+$GPGGA,000104.000,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000104.099,,,,,0,00,,,M,,M,,*7D
+$GPGGA,000104.200,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000104.299,,,,,0,00,,,M,,M,,*7F
+$GPGGA,000104.400,,,,,0,00,,,M,,M,,*79
+$GPGGA,000104.500,,,,,0,00,,,M,,M,,*78
+$GPGGA,000104.599,,,,,0,00,,,M,,M,,*78
+$GPGGA,000104.700,,,,,0,00,,,M,,M,,*7A
+done!
+---------------------------------------
+
+Initializing BNO055...Failed to initialize BNO055
+Initializing DSO32 IMU...done!
+Accel X: -1.077 	Y: -0.208 	Z: 9.765 m/s/s
+
+ Gyro X: -0.018 	Y: -0.189 	Z: 0.071 rad/s
+
+Temperature: 26.730 °C
+
+
+Accel X: -1.077 	Y: -0.208 	Z: 9.765 m/s/s
+
+ Gyro X: -0.018 	Y: -0.189 	Z: 0.071 rad/s
+
+Temperature: 26.730 °C
+
+
+Accel X: -1.077 	Y: -0.208 	Z: 9.765 m/s/s
+
+ Gyro X: -0.018 	Y: -0.189 	Z: 0.071 rad/s
+
+Temperature: 26.730 °C
+
+
+Accel X: -1.065 	Y: -0.230 	Z: 9.720 m/s/s
+
+ Gyro X: 1.188 	Y: -1.604 	Z: -2.806 rad/s
+
+Temperature: 26.789 °C
+
+
+Accel X: -1.065 	Y: -0.230 	Z: 9.720 m/s/s
+
+ Gyro X: 1.188 	Y: -1.604 	Z: -2.806 rad/s
+
+Temperature: 26.789 °C
+
+
+Accel X: -1.065 	Y: -0.230 	Z: 9.758 m/s/s
+
+ Gyro X: 1.188 	Y: -1.604 	Z: -2.806 rad/s
+
+Temperature: 26.789 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.758 m/s/s
+
+ Gyro X: -0.002 	Y: -0.032 	Z: 0.000 rad/s
+
+Temperature: 26.789 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.758 m/s/s
+
+ Gyro X: -0.002 	Y: -0.032 	Z: 0.000 rad/s
+
+Temperature: 26.789 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.772 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.789 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.772 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.758 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.772 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.758 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.765 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.797 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.765 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.797 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.765 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.797 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.768 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.746 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.768 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.746 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.768 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.746 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.772 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.777 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.772 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.777 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.772 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.777 °C
+
+
+Accel X: -1.072 	Y: -0.225 	Z: 9.775 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.785 °C
+
+
+Accel X: -1.072 	Y: -0.225 	Z: 9.775 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.785 °C
+
+
+Accel X: -1.072 	Y: -0.225 	Z: 9.775 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.785 °C
+
+
+Accel X: -1.077 	Y: -0.220 	Z: 9.768 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.816 °C
+
+
+Accel X: -1.077 	Y: -0.220 	Z: 9.768 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.816 °C
+
+
+Accel X: -1.077 	Y: -0.220 	Z: 9.768 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.816 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.779 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.820 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.779 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.820 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.779 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.820 °C
+
+
+Accel X: -1.055 	Y: -0.223 	Z: 9.775 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.777 °C
+
+
+Accel X: -1.055 	Y: -0.223 	Z: 9.775 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.777 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.772 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.777 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.772 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.820 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.772 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.820 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.770 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.812 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.770 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.812 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.770 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.812 °C
+
+
+Accel X: -1.074 	Y: -0.213 	Z: 9.787 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.812 °C
+
+
+Accel X: -1.074 	Y: -0.213 	Z: 9.787 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.812 °C
+
+
+Accel X: -1.074 	Y: -0.213 	Z: 9.787 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.812 °C
+
+
+Accel X: -1.072 	Y: -0.220 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.816 °C
+
+
+Accel X: -1.072 	Y: -0.220 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.816 °C
+
+
+Accel X: -1.072 	Y: -0.220 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.816 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.797 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.797 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.797 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 26.863 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 26.863 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 26.863 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.820 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.820 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.820 °C
+
+
+Accel X: -1.072 	Y: -0.220 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.875 °C
+
+
+Accel X: -1.072 	Y: -0.220 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.875 °C
+
+
+Accel X: -1.072 	Y: -0.220 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.875 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.887 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 26.887 °C
+
+
+Accel X: -1.058 	Y: -0.230 	Z: 9.779 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.887 °C
+
+
+Accel X: -1.058 	Y: -0.230 	Z: 9.779 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.852 °C
+
+
+Accel X: -1.058 	Y: -0.230 	Z: 9.779 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.852 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.867 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.867 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.867 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 26.859 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 26.859 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 26.859 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.844 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.844 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.844 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.871 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.871 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.871 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.836 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.836 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.836 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.852 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.852 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.777 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.852 °C
+
+
+Accel X: -1.074 	Y: -0.227 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.875 °C
+
+
+Accel X: -1.074 	Y: -0.227 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.875 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.875 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.879 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.879 °C
+
+
+Accel X: -1.062 	Y: -0.223 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.906 °C
+
+
+Accel X: -1.062 	Y: -0.223 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.906 °C
+
+
+Accel X: -1.062 	Y: -0.223 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.906 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.867 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.867 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.867 °C
+
+
+Accel X: -1.072 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.072 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.072 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.062 	Y: -0.234 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.062 	Y: -0.234 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.062 	Y: -0.234 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.922 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.922 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.922 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.883 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.883 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.883 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.883 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.883 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.883 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.906 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.906 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.902 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.902 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.902 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.782 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.910 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.782 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.910 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.782 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.910 °C
+
+
+Accel X: -1.065 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.941 °C
+
+
+Accel X: -1.065 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.941 °C
+
+
+Accel X: -1.065 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.941 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.918 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.918 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.918 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.977 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.977 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.977 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.779 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.926 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.779 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.926 °C
+
+
+Accel X: -1.079 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.926 °C
+
+
+Accel X: -1.079 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.941 °C
+
+
+Accel X: -1.079 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.941 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.941 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.941 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.941 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.926 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.926 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.926 °C
+
+
+Accel X: -1.089 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.945 °C
+
+
+Accel X: -1.089 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.945 °C
+
+
+Accel X: -1.089 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.945 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.953 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.953 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.953 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.945 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.945 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.945 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.891 °C
+
+
+Accel X: -1.050 	Y: -0.225 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.938 °C
+
+
+Accel X: -1.050 	Y: -0.225 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.938 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.938 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.922 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.922 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.938 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.938 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.938 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.977 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.977 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.977 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.918 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.918 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.918 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.973 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.973 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.973 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.077 	Y: -0.218 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.077 	Y: -0.218 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.992 °C
+
+
+Accel X: -1.077 	Y: -0.218 	Z: 9.782 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.992 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.949 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.988 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.988 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.988 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.988 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.988 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.988 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.969 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.969 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.969 °C
+
+
+Accel X: -1.067 	Y: -0.220 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.969 °C
+
+
+Accel X: -1.067 	Y: -0.220 	Z: 9.784 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.969 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.969 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.039 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.039 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.957 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.957 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.957 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.980 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.980 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.980 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.000 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.000 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.000 °C
+
+
+Accel X: -1.079 	Y: -0.223 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.007 rad/s
+
+Temperature: 26.996 °C
+
+
+Accel X: -1.079 	Y: -0.223 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.007 rad/s
+
+Temperature: 26.996 °C
+
+
+Accel X: -1.079 	Y: -0.223 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.007 rad/s
+
+Temperature: 26.996 °C
+
+
+Accel X: -1.065 	Y: -0.230 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.065 	Y: -0.230 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.065 	Y: -0.230 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.084 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.992 °C
+
+
+Accel X: -1.084 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.992 °C
+
+
+Accel X: -1.084 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.992 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.953 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.953 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.953 °C
+
+
+Accel X: -1.060 	Y: -0.227 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.060 	Y: -0.227 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.004 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.004 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.072 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.930 °C
+
+
+Accel X: -1.072 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.930 °C
+
+
+Accel X: -1.072 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.930 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.055 	Y: -0.227 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.016 °C
+
+
+Accel X: -1.055 	Y: -0.227 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.016 °C
+
+
+Accel X: -1.055 	Y: -0.227 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.016 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 26.961 °C
+
+
+Accel X: -1.077 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.077 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.067 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.004 °C
+
+
+Accel X: -1.067 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.004 °C
+
+
+Accel X: -1.067 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.004 °C
+
+
+Accel X: -1.062 	Y: -0.232 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.055 °C
+
+
+Accel X: -1.062 	Y: -0.232 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.055 °C
+
+
+Accel X: -1.062 	Y: -0.232 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.055 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.004 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.004 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.004 °C
+
+
+Accel X: -1.082 	Y: -0.213 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.082 	Y: -0.213 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.082 	Y: -0.213 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.074 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.074 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.074 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.035 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.035 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.035 °C
+
+
+Accel X: -1.048 	Y: -0.225 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.048 	Y: -0.225 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.008 °C
+
+
+Accel X: -1.065 	Y: -0.203 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.065 	Y: -0.203 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.065 	Y: -0.203 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.047 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.047 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.047 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.066 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.066 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.066 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.065 	Y: -0.227 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.065 	Y: -0.227 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.053 	Y: -0.227 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.053 	Y: -0.227 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.053 	Y: -0.227 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.062 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.062 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.062 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.031 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.070 	Y: -0.225 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.012 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.094 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.094 °C
+
+
+Accel X: -1.077 	Y: -0.201 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.077 	Y: -0.201 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.077 	Y: -0.201 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.027 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.818 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.818 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.051 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.067 	Y: -0.201 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.067 	Y: -0.201 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.067 	Y: -0.201 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.086 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.086 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.086 °C
+
+
+Accel X: -1.072 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.043 °C
+
+
+Accel X: -1.072 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.043 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.043 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.043 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.043 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.090 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.090 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.090 °C
+
+
+Accel X: -1.067 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.067 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.067 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.086 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.086 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.086 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.082 °C
+
+
+Accel X: -1.072 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.105 °C
+
+
+Accel X: -1.072 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.105 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.105 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.078 °C
+
+
+Accel X: -1.074 	Y: -0.208 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.094 °C
+
+
+Accel X: -1.074 	Y: -0.208 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.094 °C
+
+
+Accel X: -1.074 	Y: -0.208 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.094 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.070 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.070 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.070 °C
+
+
+Accel X: -1.072 	Y: -0.206 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.072 	Y: -0.206 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.072 	Y: -0.206 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.077 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.077 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.077 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.070 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.070 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.070 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.048 	Y: -0.206 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.048 	Y: -0.206 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.048 	Y: -0.206 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.059 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.090 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.090 °C
+
+
+Accel X: -1.046 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.090 °C
+
+
+Accel X: -1.046 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.046 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.062 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.062 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.062 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.121 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.074 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.074 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.074 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.094 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.094 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.094 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.060 	Y: -0.227 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.060 	Y: -0.227 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.060 	Y: -0.227 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.113 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.113 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.113 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.102 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.062 	Y: -0.225 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.113 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.113 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.113 °C
+
+
+Accel X: -1.072 	Y: -0.201 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.072 	Y: -0.201 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.072 	Y: -0.201 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.109 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.109 °C
+
+
+Accel X: -1.058 	Y: -0.223 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.109 °C
+
+
+Accel X: -1.058 	Y: -0.223 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.058 	Y: -0.223 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.074 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.050 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.050 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.050 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.060 	Y: -0.225 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.060 	Y: -0.225 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.067 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.067 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.067 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.129 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.050 	Y: -0.211 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.050 	Y: -0.211 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.050 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.160 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.152 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.152 °C
+
+
+Accel X: -1.067 	Y: -0.232 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.152 °C
+
+
+Accel X: -1.067 	Y: -0.232 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.152 °C
+
+
+Accel X: -1.067 	Y: -0.232 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.152 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.133 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.125 °C
+
+
+Accel X: -1.065 	Y: -0.227 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.065 	Y: -0.227 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.065 	Y: -0.227 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.098 °C
+
+
+Accel X: -1.067 	Y: -0.225 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.117 °C
+
+
+Accel X: -1.067 	Y: -0.225 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.117 °C
+
+
+Accel X: -1.067 	Y: -0.225 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.117 °C
+
+
+Accel X: -1.058 	Y: -0.227 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.058 	Y: -0.227 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.058 	Y: -0.227 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.168 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.168 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.168 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.067 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.109 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.109 °C
+
+
+Accel X: -1.070 	Y: -0.223 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.109 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.148 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.145 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.137 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.137 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.137 °C
+
+
+Accel X: -1.055 	Y: -0.232 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.055 	Y: -0.232 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.055 	Y: -0.232 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.164 °C
+
+
+Accel X: -1.067 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.067 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.067 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.084 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.156 °C
+
+
+Accel X: -1.084 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.084 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.072 	Y: -0.225 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.072 	Y: -0.225 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.072 	Y: -0.225 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.152 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.152 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.152 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.067 	Y: -0.230 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.067 	Y: -0.230 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.067 	Y: -0.230 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.074 	Y: -0.225 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.818 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.818 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.818 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.072 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.062 	Y: -0.227 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.062 	Y: -0.227 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.062 	Y: -0.227 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.046 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.046 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.046 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.043 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.043 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.043 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.079 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.079 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.079 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.067 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.211 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.211 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.211 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.055 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.055 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.077 	Y: -0.232 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.077 	Y: -0.232 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.077 	Y: -0.232 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.172 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.050 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.050 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.050 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.077 	Y: -0.218 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.077 	Y: -0.218 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.077 	Y: -0.218 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.195 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.055 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.168 °C
+
+
+Accel X: -1.055 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.168 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.168 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.053 	Y: -0.220 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.053 	Y: -0.220 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.053 	Y: -0.220 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.060 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.060 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.060 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.053 	Y: -0.203 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.211 °C
+
+
+Accel X: -1.053 	Y: -0.203 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.211 °C
+
+
+Accel X: -1.053 	Y: -0.203 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.211 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.285 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.285 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.285 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.074 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.211 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.211 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.203 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.203 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.203 °C
+
+
+Accel X: -1.060 	Y: -0.196 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.060 	Y: -0.196 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.060 	Y: -0.196 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.065 	Y: -0.225 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.065 	Y: -0.225 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.065 	Y: -0.225 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.180 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.219 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.219 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.219 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.176 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.258 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.258 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.258 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.815 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.815 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.815 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.070 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.058 	Y: -0.223 	Z: 9.791 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.058 	Y: -0.223 	Z: 9.791 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.273 °C
+
+
+Accel X: -1.058 	Y: -0.223 	Z: 9.791 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.273 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.203 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.203 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.203 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.067 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.184 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.050 	Y: -0.201 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.050 	Y: -0.201 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.050 	Y: -0.201 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.207 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.082 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.191 °C
+
+
+Accel X: -1.082 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.082 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.258 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.258 °C
+
+
+Accel X: -1.074 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.258 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.215 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.058 	Y: -0.227 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.058 	Y: -0.227 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.058 	Y: -0.227 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.203 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.203 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.230 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.230 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.230 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.188 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.067 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.067 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.055 	Y: -0.196 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.055 	Y: -0.196 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.250 °C
+
+
+Accel X: -1.055 	Y: -0.196 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.250 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.050 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.050 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.050 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.072 	Y: -0.203 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.060 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.060 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.060 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.254 °C
+
+
+Accel X: -1.053 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.053 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.234 °C
+
+
+Accel X: -1.072 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.072 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.072 	Y: -0.223 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.199 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.223 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.219 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.219 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.219 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.227 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.074 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.065 	Y: -0.225 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.065 	Y: -0.225 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.065 	Y: -0.225 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.062 	Y: -0.201 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.062 	Y: -0.201 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.258 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.258 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.070 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.070 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.070 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.230 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.230 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.230 °C
+
+
+Accel X: -1.058 	Y: -0.191 	Z: 9.803 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.058 	Y: -0.191 	Z: 9.803 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.058 	Y: -0.191 	Z: 9.803 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.238 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.062 	Y: -0.227 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.062 	Y: -0.227 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.053 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.266 °C
+
+
+Accel X: -1.053 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.053 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.242 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.062 	Y: -0.218 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.067 	Y: -0.208 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.077 	Y: -0.223 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.077 	Y: -0.223 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.077 	Y: -0.223 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.079 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.079 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.079 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.079 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.079 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.079 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.250 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.250 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.250 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.065 	Y: -0.223 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.058 	Y: -0.199 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.058 	Y: -0.199 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.058 	Y: -0.199 	Z: 9.787 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.055 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.246 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.062 	Y: -0.208 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.070 	Y: -0.191 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.070 	Y: -0.191 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.070 	Y: -0.191 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.067 	Y: -0.203 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.067 	Y: -0.203 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.067 	Y: -0.203 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.277 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.070 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.053 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.053 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.053 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.262 °C
+
+
+Accel X: -1.055 	Y: -0.223 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.055 	Y: -0.223 	Z: 9.791 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.055 	Y: -0.223 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.048 	Y: -0.223 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.048 	Y: -0.223 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.273 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.273 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.273 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.055 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.270 °C
+
+
+Accel X: -1.082 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.082 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.082 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.297 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.060 	Y: -0.218 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.281 °C
+
+
+Accel X: -1.048 	Y: -0.201 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.048 	Y: -0.201 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.048 	Y: -0.201 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.050 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.050 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.050 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.289 °C
+
+
+Accel X: -1.062 	Y: -0.191 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.062 	Y: -0.191 	Z: 9.818 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.050 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.050 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.055 	Y: -0.203 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.060 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.062 	Y: -0.199 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.062 	Y: -0.199 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.062 	Y: -0.199 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.293 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.060 	Y: -0.215 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.055 	Y: -0.201 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.055 	Y: -0.201 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.055 	Y: -0.201 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.060 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.062 	Y: -0.206 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.316 °C
+
+
+Accel X: -1.062 	Y: -0.206 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.316 °C
+
+
+Accel X: -1.062 	Y: -0.206 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.316 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.062 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.060 	Y: -0.223 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.316 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.316 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.316 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.010 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.818 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.818 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.818 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.072 	Y: -0.225 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.072 	Y: -0.225 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.050 	Y: -0.215 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.050 	Y: -0.215 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.050 	Y: -0.215 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.070 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.070 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.070 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.312 °C
+
+
+Accel X: -1.058 	Y: -0.203 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.058 	Y: -0.203 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.058 	Y: -0.203 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.301 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.355 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.355 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.355 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.072 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.050 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.050 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.053 	Y: -0.203 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.053 	Y: -0.203 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.316 °C
+
+
+Accel X: -1.053 	Y: -0.203 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.316 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.055 	Y: -0.201 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.055 	Y: -0.201 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.055 	Y: -0.201 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.058 	Y: -0.218 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.070 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.070 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.070 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.050 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.060 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.060 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.065 	Y: -0.215 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.058 	Y: -0.206 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.332 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.058 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.055 	Y: -0.208 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.055 	Y: -0.208 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.055 	Y: -0.208 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.305 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.046 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.046 	Y: -0.215 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.285 °C
+
+
+Accel X: -1.058 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.285 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.058 	Y: -0.215 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.046 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.355 °C
+
+
+Accel X: -1.046 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.355 °C
+
+
+Accel X: -1.046 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.355 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.053 	Y: -0.218 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.053 	Y: -0.215 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.046 	Y: -0.218 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.046 	Y: -0.218 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.055 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.055 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.055 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.050 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.820 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.820 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.820 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.062 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.309 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.053 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.053 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.053 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.060 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.060 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.067 	Y: -0.206 	Z: 9.811 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.070 	Y: -0.211 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.352 °C
+
+
+Accel X: -1.048 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.048 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.048 	Y: -0.215 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.060 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.060 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.060 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.065 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.065 	Y: -0.208 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.340 °C
+
+
+Accel X: -1.058 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.398 °C
+
+
+Accel X: -1.058 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.398 °C
+
+
+Accel X: -1.048 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.398 °C
+
+
+Accel X: -1.048 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.048 	Y: -0.218 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.324 °C
+
+
+Accel X: -1.048 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.048 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.048 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.046 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.046 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.046 	Y: -0.206 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.379 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.379 °C
+
+
+Accel X: -1.065 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.379 °C
+
+
+Accel X: -1.070 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.070 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.070 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.055 	Y: -0.208 	Z: 9.820 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.055 	Y: -0.208 	Z: 9.820 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.055 	Y: -0.208 	Z: 9.820 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.344 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.055 	Y: -0.206 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.336 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.053 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.430 °C
+
+
+Accel X: -1.053 	Y: -0.211 	Z: 9.799 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.430 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.379 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.379 °C
+
+
+Accel X: -1.055 	Y: -0.211 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.379 °C
+
+
+Accel X: -1.060 	Y: -0.201 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.060 	Y: -0.201 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.060 	Y: -0.201 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.067 	Y: -0.211 	Z: 9.806 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.058 	Y: -0.213 	Z: 9.803 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.077 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.077 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.077 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.320 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.414 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.414 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.414 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.060 	Y: -0.220 	Z: 9.794 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.060 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.060 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.074 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.328 °C
+
+
+Accel X: -1.074 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.398 °C
+
+
+Accel X: -1.074 	Y: -0.218 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.398 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.065 	Y: -0.218 	Z: 9.815 m/s/s
+
+ Gyro X: 0.000 	Y: -0.010 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.074 	Y: -0.223 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.074 	Y: -0.223 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.074 	Y: -0.223 	Z: 9.811 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.348 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.395 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.395 °C
+
+
+Accel X: -1.065 	Y: -0.220 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.395 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.070 	Y: -0.208 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.053 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.070 	Y: -0.220 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.359 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.825 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.070 	Y: -0.213 	Z: 9.825 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.007 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.355 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.808 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.355 °C
+
+
+Accel X: -1.072 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.398 °C
+
+
+Accel X: -1.072 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.398 °C
+
+
+Accel X: -1.072 	Y: -0.211 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.398 °C
+
+
+Accel X: -1.062 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.062 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.062 	Y: -0.203 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.391 °C
+
+
+Accel X: -1.048 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.395 °C
+
+
+Accel X: -1.048 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.395 °C
+
+
+Accel X: -1.048 	Y: -0.203 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.395 °C
+
+
+Accel X: -1.048 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.048 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.048 	Y: -0.215 	Z: 9.796 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.363 °C
+
+
+Accel X: -1.065 	Y: -0.206 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.065 	Y: -0.206 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.065 	Y: -0.206 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.058 	Y: -0.208 	Z: 9.803 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.371 °C
+
+
+Accel X: -1.072 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.072 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.072 	Y: -0.211 	Z: 9.813 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.367 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.055 	Y: -0.213 	Z: 9.801 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.053 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.387 °C
+
+
+Accel X: -1.053 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.402 °C
+
+
+Accel X: -1.053 	Y: -0.201 	Z: 9.806 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.402 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.062 	Y: -0.211 	Z: 9.789 m/s/s
+
+ Gyro X: 0.000 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.383 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+Accel X: -1.062 	Y: -0.213 	Z: 9.808 m/s/s
+
+ Gyro X: -0.001 	Y: -0.011 	Z: -0.009 rad/s
+
+Temperature: 27.375 °C
+
+
+done!
+---------------------------------------
+
+Initializing filesystem...Card Mount Failed
