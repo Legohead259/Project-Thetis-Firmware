@@ -6,7 +6,7 @@ Version 0.5 will be an update to implement features found in the Thetis RevF4 in
 ## BUG FIXES:
 
 - RGB LED colors for GPS lock need to change from RED to BLUE
-- Add native SD card support
+- Add SD card support
 - Fix log enable button interrupt
 
 ## CHANGED FEATURES:

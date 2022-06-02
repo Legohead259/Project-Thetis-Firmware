@@ -205,7 +205,7 @@ void loop() {
 
     updateSystemState();
     updateSystemLED();
-    data.voltage = analogReadMilliVolts(BATT_MON_PIN); // Update battery voltage
+    checkBatteryVoltage();
     if (isBNOAvailable) pollBNO055();
     if (isDSO32Available && !isBNOAvailable) pollDSO32();
     if (isLogging) writeTelemetryData();

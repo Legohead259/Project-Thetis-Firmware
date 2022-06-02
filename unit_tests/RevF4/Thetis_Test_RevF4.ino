@@ -136,36 +136,36 @@ void setup() {
     pinMode(LOG_EN_PIN, INPUT);
     attachInterrupt(LOG_EN_PIN, logEnableISR, FALLING);
     
-    Serial.println("Testing LOG_EN button...");
-    long startTime = millis();
-    while(millis() < startTime + TEST_TIME) {
-        static bool _isLogging = false;
-        static long _oldLogButtonPresses = logButtonPresses;
+    // Serial.println("Testing LOG_EN button...");
+    // long startTime = millis();
+    // while(millis() < startTime + TEST_TIME) {
+    //     static bool _isLogging = false;
+    //     static long _oldLogButtonPresses = logButtonPresses;
 
-        if (logButtonPresses != _oldLogButtonPresses && !digitalRead(LOG_EN_PIN) && millis() >= logButtonStartTime+LOG_PRESS_TIME) { // Check if log button is pressed and has been held
-            _isLogging = !_isLogging;
-            _oldLogButtonPresses = logButtonPresses;
-            Serial.printf("Logging is %s!\r\n", _isLogging ? "enabled" : "disabled");
-        }
-        digitalWrite(ACT_LED_PIN, _isLogging);
-    } 
-    Serial.println("done!");
-    Serial.println("---------------------------------------");
-    Serial.println();
+    //     if (logButtonPresses != _oldLogButtonPresses && !digitalRead(LOG_EN_PIN) && millis() >= logButtonStartTime+LOG_PRESS_TIME) { // Check if log button is pressed and has been held
+    //         _isLogging = !_isLogging;
+    //         _oldLogButtonPresses = logButtonPresses;
+    //         Serial.printf("Logging is %s!\r\n", _isLogging ? "enabled" : "disabled");
+    //     }
+    //     digitalWrite(ACT_LED_PIN, _isLogging);
+    // } 
+    // Serial.println("done!");
+    // Serial.println("---------------------------------------");
+    // Serial.println();
     
-    initNeoPixel();
-    testNeoPixel();
+    // initNeoPixel();
+    // testNeoPixel();
 
-    testBatteryMon();
+    // testBatteryMon();
     
-    initGPS();
-    testGPS();
+    // initGPS();
+    // testGPS();
 
-    if(initBNO055())
-        testBNO055();
+    // if(initBNO055())
+    //     testBNO055();
 
-    if(initDSO32())
-        testDSO32();
+    // if(initDSO32())
+    //     testDSO32();
 
     initFS();
     testFS();
@@ -177,9 +177,9 @@ void loop() {
 
 }
 
-// ===================
-// ===GPS FUNCTIONS===
-// ===================
+// =====================
+// === GPS FUNCTIONS ===
+// =====================
 
 void initGPS() {
     Serial.print("Initializing GPS..."); // DEBUG
