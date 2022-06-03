@@ -1,0 +1,1590 @@
+---------------------------------------
+        Project Thetis Unit Test
+                 v0.4.0
+---------------------------------------
+Initializing NeoPixel...done!
+Testing NeoPixel...
+Blinking error code...done
+Rainbow...done
+Pulsing...done
+done!
+---------------------------------------
+
+Testing LOG_EN button...
+Logging is enabled!
+done!
+---------------------------------------
+
+Initializing GPS...done!
+Testing GPS...
+$GPGGA,201314.100,3856.7731,N,07633.3694,W,1,07,1.57,43.6,M,-33.7,M,,*66
+$GPGSA,A,3,12,06,11,25,20,05,02,,,,,,2.70,1.57Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 0-0-0T20:13:14
+Latitude (deg): 38.946218
+Longitude (deg): -76.556156
+Altitude (m): 43.600
+Speed: -2147483.648
+Course: -2147483.648
+,2.20*03
+$GPRMC,201314.100,A,3856.7731,N,07633.3694,W,0.52,145.22,030622,,,A*79
+$GPVTG,145.22,T,,M,0.52,N,0.97,K,A*34
+$PMTK001,314,3*36
+$PMTK001,220,3*30
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946218
+Longitude (deg): -76.556156
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201314.200,3856.7731,N,07633.3694,W,1,07,1.55,43.6,M,-33.7,M,,*67
+$GPRMC,201314.200,A,3856.7731,N,07633.3694,W,0.52,145.22,030622,,,A*7A
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946218
+Longitude (deg): -76.556156
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201314.300,3856.7731,N,07633.3694,W,1,07,1.55,43.6,M,-33.7,M,,*66
+$GPRMC,201314.300,A,3856.7731,N,07633.3694,W,0.52,145.22,030622,,,A*7B
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946218
+Longitude (deg): -76.556156
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201314.400,3856.7731,N,07633.3693,W,1,07,1.55,43.6,M,-33.7,M,,*66
+$GPRMC,201314.400,A,3856.7731,N,07633.3693,W,0.52,145.22,030622,,,A*7B
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946218
+Longitude (deg): -76.556155
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201314.500,3856.7731,N,07633.3693,W,1,07,1.57,43.6,M,-33.7,M,,*65
+$GPRMC,201314.500,A,3856.7731,N,07633.3693,W,0.52,145.22,030622,,,A*7A
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946218
+Longitude (deg): -76.556155
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201314.600,3856.7731,N,07633.3693,W,1,07,1.57,43.6,M,-33.7,M,,*66
+$GPRMC,201314.600,A,3856.7731,N,07633.3693,W,0.52,145.22,030622,,,A*79
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946218
+Longitude (deg): -76.556155
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201314.700,3856.7731,N,07633.3693,W,1,07,1.57,43.6,M,-33.7,M,,*67
+$GPRMC,201314.700,A,3856.7731,N,07633.3693,W,0.52,145.22,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946218
+Longitude (deg): -76.556155
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201314.800,3856.7730,N,07633.3693,W,1,07,1.57,43.6,M,-33.7,M,,*69
+$GPRMC,201314.800,A,3856.7730,N,07633.3693,W,0.52,145.22,030622,,,A*76
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946216
+Longitude (deg): -76.556155
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201314.900,3856.7730,N,07633.3693,W,1,07,1.57,43.6,M,-33.7,M,,*68
+$GPRMC,201314.900,A,3856.7730,N,07633.3693,W,0.52,145.22,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:14
+Latitude (deg): 38.946216
+Longitude (deg): -76.556155
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201315.000,3856.7730,N,07633.3693,W,1,07,1.57,43.6,M,-33.7,M,,*60
+$GPRMC,201315.000,A,3856.7730,N,07633.3693,W,0.52,145.22,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556155
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201315.100,3856.7730,N,07633.3692,W,1,07,1.57,43.6,M,-33.7,M,,*60
+$GPRMC,201315.100,A,3856.7730,N,07633.3692,W,0.52,145.22,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556153
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201315.200,3856.7730,N,07633.3692,W,1,07,1.55,43.6,M,-33.7,M,,*61
+$GPRMC,201315.200,A,3856.7730,N,07633.3692,W,0.52,145.22,030622,,,A*7C
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556153
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201315.300,3856.7730,N,07633.3692,W,1,07,1.55,43.6,M,-33.7,M,,*60
+$GPRMC,201315.300,A,3856.7730,N,07633.3692,W,0.52,145.22,030622,,,A*7D
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556153
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201315.400,3856.7730,N,07633.3692,W,1,07,1.55,43.6,M,-33.7,M,,*67
+$GPRMC,201315.400,A,3856.7730,N,07633.3692,W,0.52,145.22,030622,,,A*7A
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556153
+Altitude (m): 43.600
+Speed: 0.520
+Course: 145.220
+$GPGGA,201315.500,3856.7730,N,07633.3692,W,1,07,1.57,43.6,M,-33.7,M,,*64
+$GPRMC,201315.500,A,3856.7730,N,07633.3692,W,0.51,145.22,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556153
+Altitude (m): 43.600
+Speed: 0.510
+Course: 145.220
+$GPGGA,201315.600,3856.7730,N,07633.3692,W,1,07,1.57,43.6,M,-33.7,M,,*67
+$GPRMC,201315.600,A,3856.7730,N,07633.3692,W,0.51,145.22,030622,,,A*7B
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556153
+Altitude (m): 43.600
+Speed: 0.510
+Course: 145.220
+$GPGGA,201315.700,3856.7730,N,07633.3692,W,1,07,1.57,43.6,M,-33.7,M,,*66
+$GPRMC,201315.700,A,3856.7730,N,07633.3692,W,0.51,145.22,030622,,,A*7A
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556153
+Altitude (m): 43.600
+Speed: 0.510
+Course: 145.220
+$GPGGA,201315.800,3856.7730,N,07633.3691,W,1,07,1.57,43.6,M,-33.7,M,,*6A
+$GPRMC,201315.800,A,3856.7730,N,07633.3691,W,0.51,145.22,030622,,,A*76
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556151
+Altitude (m): 43.600
+Speed: 0.510
+Course: 145.220
+$GPGGA,201315.900,3856.7730,N,07633.3691,W,1,07,1.57,43.6,M,-33.7,M,,*6B
+$GPRMC,201315.900,A,3856.7730,N,07633.3691,W,0.51,145.22,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:15
+Latitude (deg): 38.946216
+Longitude (deg): -76.556151
+Altitude (m): 43.600
+Speed: 0.510
+Course: 145.220
+$GPGGA,201316.000,3856.7729,N,07633.3691,W,1,07,1.57,43.6,M,-33.7,M,,*69
+$GPRMC,201316.000,A,3856.7729,N,07633.3691,W,0.50,145.22,030622,,,A*74
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556151
+Altitude (m): 43.600
+Speed: 0.500
+Course: 145.220
+$GPGGA,201316.100,3856.7729,N,07633.3691,W,1,07,1.57,43.6,M,-33.7,M,,*68
+$GPRMC,201316.100,A,3856.7729,N,07633.3691,W,0.50,145.22,030622,,,A*75
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556151
+Altitude (m): 43.600
+Speed: 0.500
+Course: 145.220
+$GPGGA,201316.200,3856.7729,N,07633.3691,W,1,07,1.55,43.6,M,-33.7,M,,*69
+$GPRMC,201316.200,A,3856.7729,N,07633.3691,W,0.50,145.22,030622,,,A*76
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556151
+Altitude (m): 43.600
+Speed: 0.500
+Course: 145.220
+$GPGGA,201316.300,3856.7729,N,07633.3691,W,1,07,1.55,43.6,M,-33.7,M,,*68
+$GPRMC,201316.300,A,3856.7729,N,07633.3691,W,0.50,145.22,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556151
+Altitude (m): 43.600
+Speed: 0.500
+Course: 145.220
+$GPGGA,201316.400,3856.7729,N,07633.3691,W,1,07,1.57,43.6,M,-33.7,M,,*6D
+$GPRMC,201316.400,A,3856.7729,N,07633.3691,W,0.49,145.22,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556151
+Altitude (m): 43.600
+Speed: 0.490
+Course: 145.220
+$GPGGA,201316.500,3856.7729,N,07633.3690,W,1,07,1.57,43.6,M,-33.7,M,,*6D
+$GPRMC,201316.500,A,3856.7729,N,07633.3690,W,0.49,145.22,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556150
+Altitude (m): 43.600
+Speed: 0.490
+Course: 145.220
+$GPGGA,201316.600,3856.7729,N,07633.3690,W,1,07,1.57,43.6,M,-33.7,M,,*6E
+$GPRMC,201316.600,A,3856.7729,N,07633.3690,W,0.49,145.22,030622,,,A*7B
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556150
+Altitude (m): 43.600
+Speed: 0.490
+Course: 145.220
+$GPGGA,201316.700,3856.7729,N,07633.3690,W,1,07,1.57,43.6,M,-33.7,M,,*6F
+$GPRMC,201316.700,A,3856.7729,N,07633.3690,W,0.49,145.22,030622,,,A*7A
+Valid fix: yes
+Nav. system: P
+Num. satellites: 7
+HDOP: 1.5
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556150
+Altitude (m): 43.600
+Speed: 0.490
+Course: 145.220
+$GPGGA,201316.800,3856.7729,N,07633.3690,W,1,06,1.71,43.6,M,-33.7,M,,*65
+$GPRMC,201316.800,A,3856.7729,N,07633.3690,W,0.48,145.22,030622,,,A*74
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556150
+Altitude (m): 43.600
+Speed: 0.480
+Course: 145.220
+$GPGGA,201316.900,3856.7729,N,07633.3690,W,1,06,1.71,43.6,M,-33.7,M,,*64
+$GPRMC,201316.900,A,3856.7729,N,07633.3690,W,0.48,145.22,030622,,,A*75
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:16
+Latitude (deg): 38.946215
+Longitude (deg): -76.556150
+Altitude (m): 43.600
+Speed: 0.480
+Course: 145.220
+$GPGGA,201317.000,3856.7729,N,07633.3690,W,1,06,1.71,43.6,M,-33.7,M,,*6C
+$GPRMC,201317.000,A,3856.7729,N,07633.3690,W,0.48,145.22,030622,,,A*7D
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946215
+Longitude (deg): -76.556150
+Altitude (m): 43.600
+Speed: 0.480
+Course: 145.220
+$GPGGA,201317.100,3856.7729,N,07633.3690,W,1,06,1.71,43.6,M,-33.7,M,,*6D
+$GPRMC,201317.100,A,3856.7729,N,07633.3690,W,0.48,145.22,030622,,,A*7C
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946215
+Longitude (deg): -76.556150
+Altitude (m): 43.600
+Speed: 0.480
+Course: 145.220
+$GPGGA,201317.200,3856.7729,N,07633.3689,W,1,06,1.70,43.6,M,-33.7,M,,*67
+$GPRMC,201317.200,A,3856.7729,N,07633.3689,W,0.47,145.22,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946215
+Longitude (deg): -76.556148
+Altitude (m): 43.600
+Speed: 0.470
+Course: 145.220
+$GPGGA,201317.300,3856.7729,N,07633.3689,W,1,06,1.71,43.6,M,-33.7,M,,*67
+$GPRMC,201317.300,A,3856.7729,N,07633.3689,W,0.47,145.22,030622,,,A*79
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946215
+Longitude (deg): -76.556148
+Altitude (m): 43.600
+Speed: 0.470
+Course: 145.220
+$GPGGA,201317.400,3856.7728,N,07633.3689,W,1,06,1.71,43.6,M,-33.7,M,,*61
+$GPRMC,201317.400,A,3856.7728,N,07633.3689,W,0.47,145.22,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946213
+Longitude (deg): -76.556148
+Altitude (m): 43.600
+Speed: 0.470
+Course: 145.220
+$GPGGA,201317.500,3856.7728,N,07633.3689,W,1,06,1.71,43.6,M,-33.7,M,,*60
+$GPRMC,201317.500,A,3856.7728,N,07633.3689,W,0.46,145.22,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946213
+Longitude (deg): -76.556148
+Altitude (m): 43.600
+Speed: 0.460
+Course: 145.220
+$GPGGA,201317.600,3856.7728,N,07633.3689,W,1,06,1.71,43.6,M,-33.7,M,,*63
+$GPRMC,201317.600,A,3856.7728,N,07633.3689,W,0.46,145.22,030622,,,A*7C
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946213
+Longitude (deg): -76.556148
+Altitude (m): 43.600
+Speed: 0.460
+Course: 145.220
+$GPGGA,201317.700,3856.7728,N,07633.3689,W,1,06,1.71,43.6,M,-33.7,M,,*62
+$GPRMC,201317.700,A,3856.7728,N,07633.3689,W,0.46,145.22,030622,,,A*7D
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946213
+Longitude (deg): -76.556148
+Altitude (m): 43.600
+Speed: 0.460
+Course: 145.220
+$GPGGA,201317.800,3856.7728,N,07633.3689,W,1,06,1.71,43.6,M,-33.7,M,,*6D
+$GPRMC,201317.800,A,3856.7728,N,07633.3689,W,0.46,145.22,030622,,,A*72
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946213
+Longitude (deg): -76.556148
+Altitude (m): 43.600
+Speed: 0.460
+Course: 145.220
+$GPGGA,201317.900,3856.7728,N,07633.3689,W,1,06,1.71,43.6,M,-33.7,M,,*6C
+$GPRMC,201317.900,A,3856.7728,N,07633.3689,W,0.45,145.22,030622,,,A*70
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:17
+Latitude (deg): 38.946213
+Longitude (deg): -76.556148
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.000,3856.7728,N,07633.3688,W,1,06,1.71,43.6,M,-33.7,M,,*6B
+$GPRMC,201318.000,A,3856.7728,N,07633.3688,W,0.45,145.22,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946213
+Longitude (deg): -76.556146
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.100,3856.7728,N,07633.3688,W,1,06,1.71,43.6,M,-33.7,M,,*6A
+$GPRMC,201318.100,A,3856.7728,N,07633.3688,W,0.45,145.22,030622,,,A*76
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946213
+Longitude (deg): -76.556146
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.200,3856.7728,N,07633.3688,W,1,06,1.70,43.6,M,-33.7,M,,*68
+$GPRMC,201318.200,A,3856.7728,N,07633.3688,W,0.45,145.22,030622,,,A*75
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946213
+Longitude (deg): -76.556146
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.300,3856.7728,N,07633.3688,W,1,06,1.70,43.6,M,-33.7,M,,*69
+$GPRMC,201318.300,A,3856.7728,N,07633.3688,W,0.45,145.22,030622,,,A*74
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946213
+Longitude (deg): -76.556146
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.400,3856.7728,N,07633.3688,W,1,06,1.71,43.6,M,-33.7,M,,*6F
+$GPRMC,201318.400,A,3856.7728,N,07633.3688,W,0.45,145.22,030622,,,A*73
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946213
+Longitude (deg): -76.556146
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.500,3856.7728,N,07633.3688,W,1,06,1.71,43.6,M,-33.7,M,,*6E
+$GPRMC,201318.500,A,3856.7728,N,07633.3688,W,0.45,145.22,030622,,,A*72
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946213
+Longitude (deg): -76.556146
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.600,3856.7728,N,07633.3688,W,1,06,1.71,43.6,M,-33.7,M,,*6D
+$GPRMC,201318.600,A,3856.7728,N,07633.3688,W,0.45,145.22,030622,,,A*71
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946213
+Longitude (deg): -76.556146
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.700,3856.7728,N,07633.3687,W,1,06,1.71,43.6,M,-33.7,M,,*63
+$GPRMC,201318.700,A,3856.7728,N,07633.3687,W,0.45,145.22,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946213
+Longitude (deg): -76.556145
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.800,3856.7727,N,07633.3687,W,1,06,1.71,43.6,M,-33.7,M,,*63
+$GPRMC,201318.800,A,3856.7727,N,07633.3687,W,0.45,145.22,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946211
+Longitude (deg): -76.556145
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201318.900,3856.7727,N,07633.3687,W,1,06,1.71,43.6,M,-33.7,M,,*62
+$GPRMC,201318.900,A,3856.7727,N,07633.3687,W,0.45,145.22,030622,,,A*7E
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:18
+Latitude (deg): 38.946211
+Longitude (deg): -76.556145
+Altitude (m): 43.600
+Speed: 0.450
+Course: 145.220
+$GPGGA,201319.000,3856.7727,N,07633.3687,W,1,06,1.71,43.6,M,-33.7,M,,*6A
+$GPRMC,201319.000,A,3856.7727,N,07633.3687,W,0.46,145.22,030622,,,A*75
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556145
+Altitude (m): 43.600
+Speed: 0.460
+Course: 145.220
+$GPGGA,201319.100,3856.7727,N,07633.3687,W,1,06,1.71,43.6,M,-33.7,M,,*6B
+$GPRMC,201319.100,A,3856.7727,N,07633.3687,W,0.46,122.19,030622,,,A*7D
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556145
+Altitude (m): 43.600
+Speed: 0.460
+Course: 122.190
+$GPGGA,201319.200,3856.7727,N,07633.3687,W,1,06,1.70,43.6,M,-33.7,M,,*69
+$GPRMC,201319.200,A,3856.7727,N,07633.3687,W,0.46,121.89,030622,,,A*74
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556145
+Altitude (m): 43.600
+Speed: 0.460
+Course: 121.890
+$GPGGA,201319.300,3856.7727,N,07633.3687,W,1,06,1.71,43.6,M,-33.7,M,,*69
+$GPRMC,201319.300,A,3856.7727,N,07633.3687,W,0.46,121.47,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556145
+Altitude (m): 43.600
+Speed: 0.460
+Course: 121.470
+$GPGGA,201319.400,3856.7727,N,07633.3686,W,1,06,1.71,43.6,M,-33.7,M,,*6F
+$GPRMC,201319.400,A,3856.7727,N,07633.3686,W,0.46,121.01,030622,,,A*73
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556143
+Altitude (m): 43.600
+Speed: 0.460
+Course: 121.010
+$GPGGA,201319.500,3856.7727,N,07633.3686,W,1,06,1.71,43.6,M,-33.7,M,,*6E
+$GPRMC,201319.500,A,3856.7727,N,07633.3686,W,0.46,120.49,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556143
+Altitude (m): 43.600
+Speed: 0.460
+Course: 120.490
+$GPGGA,201319.600,3856.7727,N,07633.3686,W,1,06,1.71,43.6,M,-33.7,M,,*6D
+$GPRMC,201319.600,A,3856.7727,N,07633.3686,W,0.46,119.95,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556143
+Altitude (m): 43.600
+Speed: 0.460
+Course: 119.950
+$GPGGA,201319.700,3856.7727,N,07633.3686,W,1,06,1.71,43.6,M,-33.7,M,,*6C
+$GPRMC,201319.700,A,3856.7727,N,07633.3686,W,0.46,119.19,030622,,,A*72
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556143
+Altitude (m): 43.600
+Speed: 0.460
+Course: 119.190
+$GPGGA,201319.800,3856.7727,N,07633.3686,W,1,06,1.71,43.6,M,-33.7,M,,*63
+$GPRMC,201319.800,A,3856.7727,N,07633.3686,W,0.46,118.37,030622,,,A*70
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556143
+Altitude (m): 43.600
+Speed: 0.460
+Course: 118.370
+$GPGGA,201319.900,3856.7727,N,07633.3686,W,1,06,1.71,43.6,M,-33.7,M,,*62
+$GPRMC,201319.900,A,3856.7727,N,07633.3686,W,0.47,117.65,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:19
+Latitude (deg): 38.946211
+Longitude (deg): -76.556143
+Altitude (m): 43.600
+Speed: 0.470
+Course: 117.650
+$GPGGA,201320.000,3856.7727,N,07633.3686,W,1,06,1.71,43.6,M,-33.7,M,,*61
+$GPRMC,201320.000,A,3856.7727,N,07633.3686,W,0.47,117.31,030622,,,A*7A
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946211
+Longitude (deg): -76.556143
+Altitude (m): 43.600
+Speed: 0.470
+Course: 117.310
+$GPGGA,201320.100,3856.7727,N,07633.3685,W,1,06,1.71,43.6,M,-33.7,M,,*63
+$GPRMC,201320.100,A,3856.7727,N,07633.3685,W,0.47,116.85,030622,,,A*76
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946211
+Longitude (deg): -76.556141
+Altitude (m): 43.600
+Speed: 0.470
+Course: 116.850
+$GPGGA,201320.200,3856.7727,N,07633.3685,W,1,06,1.70,43.6,M,-33.7,M,,*61
+$GPRMC,201320.200,A,3856.7727,N,07633.3685,W,0.47,116.58,030622,,,A*75
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946211
+Longitude (deg): -76.556141
+Altitude (m): 43.600
+Speed: 0.470
+Course: 116.580
+$GPGGA,201320.300,3856.7727,N,07633.3685,W,1,06,1.70,43.6,M,-33.7,M,,*60
+$GPRMC,201320.300,A,3856.7727,N,07633.3685,W,0.47,116.20,030622,,,A*7B
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946211
+Longitude (deg): -76.556141
+Altitude (m): 43.600
+Speed: 0.470
+Course: 116.200
+$GPGGA,201320.400,3856.7726,N,07633.3685,W,1,06,1.71,43.6,M,-33.7,M,,*67
+$GPRMC,201320.400,A,3856.7726,N,07633.3685,W,0.47,116.07,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946210
+Longitude (deg): -76.556141
+Altitude (m): 43.600
+Speed: 0.470
+Course: 116.070
+$GPGGA,201320.500,3856.7726,N,07633.3685,W,1,06,1.71,43.6,M,-33.7,M,,*66
+$GPRMC,201320.500,A,3856.7726,N,07633.3685,W,0.47,116.17,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946210
+Longitude (deg): -76.556141
+Altitude (m): 43.600
+Speed: 0.470
+Course: 116.170
+$GPGGA,201320.600,3856.7726,N,07633.3685,W,1,06,1.71,43.6,M,-33.7,M,,*65
+$GPRMC,201320.600,A,3856.7726,N,07633.3685,W,0.48,115.82,030622,,,A*7B
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946210
+Longitude (deg): -76.556141
+Altitude (m): 43.600
+Speed: 0.480
+Course: 115.820
+$GPGGA,201320.700,3856.7726,N,07633.3684,W,1,06,1.71,43.6,M,-33.7,M,,*65
+$GPRMC,201320.700,A,3856.7726,N,07633.3684,W,0.48,115.82,030622,,,A*7B
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946210
+Longitude (deg): -76.556140
+Altitude (m): 43.600
+Speed: 0.480
+Course: 115.820
+$GPGGA,201320.800,3856.7726,N,07633.3684,W,1,06,1.71,43.6,M,-33.7,M,,*6A
+$GPRMC,201320.800,A,3856.7726,N,07633.3684,W,0.48,115.81,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946210
+Longitude (deg): -76.556140
+Altitude (m): 43.600
+Speed: 0.480
+Course: 115.810
+$GPGGA,201320.900,3856.7726,N,07633.3684,W,1,06,1.71,43.6,M,-33.7,M,,*6B
+$GPRMC,201320.900,A,3856.7726,N,07633.3684,W,0.49,115.81,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:20
+Latitude (deg): 38.946210
+Longitude (deg): -76.556140
+Altitude (m): 43.600
+Speed: 0.490
+Course: 115.810
+$GPGGA,201321.000,3856.7726,N,07633.3684,W,1,06,1.71,43.6,M,-33.7,M,,*63
+$GPRMC,201321.000,A,3856.7726,N,07633.3684,W,0.49,115.80,030622,,,A*7E
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556140
+Altitude (m): 43.600
+Speed: 0.490
+Course: 115.800
+$GPGGA,201321.100,3856.7726,N,07633.3684,W,1,06,1.71,43.6,M,-33.7,M,,*62
+$GPRMC,201321.100,A,3856.7726,N,07633.3684,W,0.49,115.80,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556140
+Altitude (m): 43.600
+Speed: 0.490
+Course: 115.800
+$GPGGA,201321.200,3856.7726,N,07633.3684,W,1,06,1.70,43.6,M,-33.7,M,,*60
+$GPRMC,201321.200,A,3856.7726,N,07633.3684,W,0.49,115.80,030622,,,A*7C
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556140
+Altitude (m): 43.600
+Speed: 0.490
+Course: 115.800
+$GPGGA,201321.300,3856.7726,N,07633.3683,W,1,06,1.71,43.6,M,-33.7,M,,*67
+$GPRMC,201321.300,A,3856.7726,N,07633.3683,W,0.49,115.78,030622,,,A*7D
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556138
+Altitude (m): 43.600
+Speed: 0.490
+Course: 115.780
+$GPGGA,201321.400,3856.7726,N,07633.3683,W,1,06,1.71,43.6,M,-33.7,M,,*60
+$GPRMC,201321.400,A,3856.7726,N,07633.3683,W,0.49,115.76,030622,,,A*74
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556138
+Altitude (m): 43.600
+Speed: 0.490
+Course: 115.760
+$GPGGA,201321.500,3856.7726,N,07633.3683,W,1,06,1.71,43.6,M,-33.7,M,,*61
+$GPRMC,201321.500,A,3856.7726,N,07633.3683,W,0.50,115.73,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556138
+Altitude (m): 43.600
+Speed: 0.500
+Course: 115.730
+$GPGGA,201321.600,3856.7726,N,07633.3683,W,1,06,1.71,43.6,M,-33.7,M,,*62
+$GPRMC,201321.600,A,3856.7726,N,07633.3683,W,0.50,115.70,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556138
+Altitude (m): 43.600
+Speed: 0.500
+Course: 115.700
+$GPGGA,201321.700,3856.7726,N,07633.3683,W,1,06,1.71,43.6,M,-33.7,M,,*63
+$GPRMC,201321.700,A,3856.7726,N,07633.3683,W,0.50,115.67,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556138
+Altitude (m): 43.600
+Speed: 0.500
+Course: 115.670
+$GPGGA,201321.800,3856.7726,N,07633.3683,W,1,06,1.71,43.6,M,-33.7,M,,*6C
+$GPRMC,201321.800,A,3856.7726,N,07633.3683,W,0.50,115.65,030622,,,A*72
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556138
+Altitude (m): 43.600
+Speed: 0.500
+Course: 115.650
+$GPGGA,201321.900,3856.7726,N,07633.3682,W,1,06,1.71,43.6,M,-33.7,M,,*6C
+$GPRMC,201321.900,A,3856.7726,N,07633.3682,W,0.51,115.60,030622,,,A*76
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:21
+Latitude (deg): 38.946210
+Longitude (deg): -76.556136
+Altitude (m): 43.600
+Speed: 0.510
+Course: 115.600
+$GPGGA,201322.000,3856.7726,N,07633.3682,W,1,06,1.71,43.6,M,-33.7,M,,*66
+$GPRMC,201322.000,A,3856.7726,N,07633.3682,W,0.51,115.55,030622,,,A*7A
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946210
+Longitude (deg): -76.556136
+Altitude (m): 43.600
+Speed: 0.510
+Course: 115.550
+$GPGGA,201322.100,3856.7725,N,07633.3682,W,1,06,1.71,43.6,M,-33.7,M,,*64
+$GPRMC,201322.100,A,3856.7725,N,07633.3682,W,0.51,115.48,030622,,,A*74
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556136
+Altitude (m): 43.600
+Speed: 0.510
+Course: 115.480
+$GPGGA,201322.200,3856.7725,N,07633.3682,W,1,06,1.70,43.6,M,-33.7,M,,*66
+$GPRMC,201322.200,A,3856.7725,N,07633.3682,W,0.51,115.39,030622,,,A*71
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556136
+Altitude (m): 43.600
+Speed: 0.510
+Course: 115.390
+$GPGGA,201322.300,3856.7725,N,07633.3682,W,1,06,1.70,43.6,M,-33.7,M,,*67
+$GPRMC,201322.300,A,3856.7725,N,07633.3682,W,0.51,115.30,030622,,,A*79
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556136
+Altitude (m): 43.600
+Speed: 0.510
+Course: 115.300
+$GPGGA,201322.400,3856.7725,N,07633.3681,W,1,06,1.71,43.6,M,-33.7,M,,*62
+$GPRMC,201322.400,A,3856.7725,N,07633.3681,W,0.51,115.20,030622,,,A*7C
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556135
+Altitude (m): 43.600
+Speed: 0.510
+Course: 115.200
+$GPGGA,201322.500,3856.7725,N,07633.3681,W,1,06,1.71,43.6,M,-33.7,M,,*63
+$GPRMC,201322.500,A,3856.7725,N,07633.3681,W,0.50,115.09,030622,,,A*77
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556135
+Altitude (m): 43.600
+Speed: 0.500
+Course: 115.090
+$GPGGA,201322.600,3856.7725,N,07633.3681,W,1,06,1.71,43.6,M,-33.7,M,,*60
+$GPRMC,201322.600,A,3856.7725,N,07633.3681,W,0.51,114.95,030622,,,A*71
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556135
+Altitude (m): 43.600
+Speed: 0.510
+Course: 114.950
+$GPGGA,201322.700,3856.7725,N,07633.3681,W,1,06,1.71,43.6,M,-33.7,M,,*61
+$GPRMC,201322.700,A,3856.7725,N,07633.3681,W,0.51,114.80,030622,,,A*74
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556135
+Altitude (m): 43.600
+Speed: 0.510
+Course: 114.800
+$GPGGA,201322.800,3856.7725,N,07633.3681,W,1,06,1.71,43.6,M,-33.7,M,,*6E
+$GPRMC,201322.800,A,3856.7725,N,07633.3681,W,0.51,114.65,030622,,,A*70
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556135
+Altitude (m): 43.600
+Speed: 0.510
+Course: 114.650
+$GPGGA,201322.900,3856.7725,N,07633.3681,W,1,06,1.71,43.6,M,-33.7,M,,*6F
+$GPRMC,201322.900,A,3856.7725,N,07633.3681,W,0.51,114.49,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:22
+Latitude (deg): 38.946208
+Longitude (deg): -76.556135
+Altitude (m): 43.600
+Speed: 0.510
+Course: 114.490
+$GPGGA,201323.000,3856.7725,N,07633.3680,W,1,06,1.71,43.6,M,-33.7,M,,*66
+$GPRMC,201323.000,A,3856.7725,N,07633.3680,W,0.51,114.34,030622,,,A*7C
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556133
+Altitude (m): 43.600
+Speed: 0.510
+Course: 114.340
+$GPGGA,201323.100,3856.7725,N,07633.3680,W,1,06,1.71,43.6,M,-33.7,M,,*67
+$GPRMC,201323.100,A,3856.7725,N,07633.3680,W,0.51,114.19,030622,,,A*72
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556133
+Altitude (m): 43.600
+Speed: 0.510
+Course: 114.190
+$GPGGA,201323.200,3856.7725,N,07633.3680,W,1,06,1.71,43.6,M,-33.7,M,,*64
+$GPRMC,201323.200,A,3856.7725,N,07633.3680,W,0.52,114.05,030622,,,A*7F
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556133
+Altitude (m): 43.600
+Speed: 0.520
+Course: 114.050
+$GPGGA,201323.300,3856.7725,N,07633.3680,W,1,06,1.70,43.6,M,-33.7,M,,*64
+$GPRMC,201323.300,A,3856.7725,N,07633.3680,W,0.52,113.90,030622,,,A*75
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556133
+Altitude (m): 43.600
+Speed: 0.520
+Course: 113.900
+$GPGGA,201323.400,3856.7725,N,07633.3680,W,1,06,1.70,43.6,M,-33.7,M,,*63
+$GPRMC,201323.400,A,3856.7725,N,07633.3680,W,0.52,113.76,030622,,,A*7A
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556133
+Altitude (m): 43.600
+Speed: 0.520
+Course: 113.760
+$GPGGA,201323.500,3856.7725,N,07633.3679,W,1,06,1.71,43.6,M,-33.7,M,,*65
+$GPRMC,201323.500,A,3856.7725,N,07633.3679,W,0.52,113.62,030622,,,A*78
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556131
+Altitude (m): 43.600
+Speed: 0.520
+Course: 113.620
+$GPGGA,201323.600,3856.7725,N,07633.3679,W,1,06,1.71,43.6,M,-33.7,M,,*66
+$GPRMC,201323.600,A,3856.7725,N,07633.3679,W,0.52,113.47,030622,,,A*7C
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556131
+Altitude (m): 43.600
+Speed: 0.520
+Course: 113.470
+$GPGGA,201323.700,3856.7725,N,07633.3679,W,1,06,1.71,43.6,M,-33.7,M,,*67
+$GPRMC,201323.700,A,3856.7725,N,07633.3679,W,0.52,113.33,030622,,,A*7E
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556131
+Altitude (m): 43.600
+Speed: 0.520
+Course: 113.330
+$GPGGA,201323.800,3856.7725,N,07633.3679,W,1,06,1.71,43.6,M,-33.7,M,,*68
+$GPRMC,201323.800,A,3856.7725,N,07633.3679,W,0.52,113.19,030622,,,A*79
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556131
+Altitude (m): 43.600
+Speed: 0.520
+Course: 113.190
+$GPGGA,201323.900,3856.7725,N,07633.3679,W,1,06,1.71,43.6,M,-33.7,M,,*69
+$GPRMC,201323.900,A,3856.7725,N,07633.3679,W,0.52,113.05,030622,,,A*75
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:23
+Latitude (deg): 38.946208
+Longitude (deg): -76.556131
+Altitude (m): 43.600
+Speed: 0.520
+Course: 113.050
+$GPGGA,201324.000,3856.7725,N,07633.3679,W,1,06,1.71,43.6,M,-33.7,M,,*67
+$GPRMC,201324.000,A,3856.7725,N,07633.3679,W,0.52,112.93,030622,,,A*75
+Valid fix: yes
+Nav. system: P
+Num. satellites: 6
+HDOP: 1.7
+Date/time: 2022-6-3T20:13:24
+Latitude (deg): 38.946208
+Longitude (deg): -76.556131
+Altitude (m): 43.600
+Speed: 0.520
+Course: 112.930
+done!
+---------------------------------------
+
+Initializing BNO055...Failed to initialize BNO055
+Initializing DSO32 IMU...done!
+Accel X: -0.500         Y: -1.766       Z: 9.715 m/s/s
+ Gyro X: 0.012  Y: 0.019        Z: -0.008 rad/s
+Temperature: 33.090 °C
+
+Accel X: -0.507         Y: -1.768       Z: 9.715 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.105 °C
+
+Accel X: -0.517         Y: -1.771       Z: 9.724 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.086 °C
+
+Accel X: -0.502         Y: -1.764       Z: 9.705 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.141 °C
+
+Accel X: -0.507         Y: -1.766       Z: 9.715 m/s/s
+ Gyro X: -0.001         Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.090 °C
+
+Accel X: -0.510         Y: -1.783       Z: 9.708 m/s/s
+ Gyro X: -0.002         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.090 °C
+
+Accel X: -0.517         Y: -1.766       Z: 9.715 m/s/s
+ Gyro X: -0.001         Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.125 °C
+
+Accel X: -0.505         Y: -1.766       Z: 9.717 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.113 °C
+
+Accel X: -0.498         Y: -1.773       Z: 9.705 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.074 °C
+
+Accel X: -0.510         Y: -1.766       Z: 9.712 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.059 °C
+
+Accel X: -0.505         Y: -1.773       Z: 9.708 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.102 °C
+
+Accel X: -0.507         Y: -1.761       Z: 9.703 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.098 °C
+
+Accel X: -0.505         Y: -1.780       Z: 9.708 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.137 °C
+
+Accel X: -0.510         Y: -1.773       Z: 9.696 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.102 °C
+
+Accel X: -0.498         Y: -1.768       Z: 9.710 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.129 °C
+
+Accel X: -0.514         Y: -1.771       Z: 9.703 m/s/s
+ Gyro X: -0.002         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.094 °C
+
+Accel X: -0.510         Y: -1.775       Z: 9.712 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.129 °C
+
+Accel X: -0.507         Y: -1.773       Z: 9.715 m/s/s
+ Gyro X: -0.007         Y: -0.010       Z: -0.009 rad/s
+Temperature: 33.102 °C
+
+Accel X: -0.507         Y: -1.783       Z: 9.698 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.121 °C
+
+Accel X: -0.498         Y: -1.785       Z: 9.712 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.125 °C
+
+Accel X: -0.493         Y: -1.785       Z: 9.715 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.105 °C
+
+Accel X: -0.507         Y: -1.790       Z: 9.703 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.113 °C
+
+Accel X: -0.512         Y: -1.783       Z: 9.701 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.090 °C
+
+Accel X: -0.512         Y: -1.778       Z: 9.703 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.109 °C
+
+Accel X: -0.498         Y: -1.792       Z: 9.715 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.141 °C
+
+Accel X: -0.500         Y: -1.795       Z: 9.689 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.094 °C
+
+Accel X: -0.514         Y: -1.795       Z: 9.703 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.109 °C
+
+Accel X: -0.500         Y: -1.787       Z: 9.703 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.152 °C
+
+Accel X: -0.502         Y: -1.780       Z: 9.705 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.133 °C
+
+Accel X: -0.507         Y: -1.797       Z: 9.710 m/s/s
+ Gyro X: -0.001         Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.129 °C
+
+Accel X: -0.500         Y: -1.799       Z: 9.705 m/s/s
+ Gyro X: -0.001         Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.121 °C
+
+Accel X: -0.498         Y: -1.799       Z: 9.717 m/s/s
+ Gyro X: 0.000  Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.145 °C
+
+Accel X: -0.498         Y: -1.795       Z: 9.696 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.125 °C
+
+Accel X: -0.517         Y: -1.787       Z: 9.705 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.125 °C
+
+Accel X: -0.512         Y: -1.795       Z: 9.705 m/s/s
+ Gyro X: -0.000         Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.176 °C
+
+Accel X: -0.498         Y: -1.795       Z: 9.722 m/s/s
+ Gyro X: 0.003  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.113 °C
+
+Accel X: -0.502         Y: -1.790       Z: 9.703 m/s/s
+ Gyro X: 0.003  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.148 °C
+
+Accel X: -0.502         Y: -1.797       Z: 9.715 m/s/s
+ Gyro X: 0.002  Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.191 °C
+
+Accel X: -0.498         Y: -1.795       Z: 9.715 m/s/s
+ Gyro X: -0.003         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.156 °C
+
+Accel X: -0.498         Y: -1.802       Z: 9.715 m/s/s
+ Gyro X: -0.002         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.156 °C
+
+Accel X: -0.493         Y: -1.797       Z: 9.701 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.152 °C
+
+Accel X: -0.491         Y: -1.783       Z: 9.701 m/s/s
+ Gyro X: 0.000  Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.148 °C
+
+Accel X: -0.514         Y: -1.797       Z: 9.708 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.113 °C
+
+Accel X: -0.495         Y: -1.799       Z: 9.689 m/s/s
+ Gyro X: -0.007         Y: -0.009       Z: -0.009 rad/s
+Temperature: 33.141 °C
+
+Accel X: -0.493         Y: -1.795       Z: 9.705 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.148 °C
+
+Accel X: -0.502         Y: -1.807       Z: 9.705 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.184 °C
+
+Accel X: -0.500         Y: -1.809       Z: 9.691 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.164 °C
+
+Accel X: -0.512         Y: -1.802       Z: 9.698 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.141 °C
+
+Accel X: -0.505         Y: -1.809       Z: 9.703 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.156 °C
+
+Accel X: -0.505         Y: -1.802       Z: 9.701 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.160 °C
+
+Accel X: -0.498         Y: -1.809       Z: 9.712 m/s/s
+ Gyro X: 0.001  Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.191 °C
+
+Accel X: -0.502         Y: -1.816       Z: 9.708 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.207 °C
+
+Accel X: -0.498         Y: -1.807       Z: 9.715 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.230 °C
+
+Accel X: -0.502         Y: -1.809       Z: 9.715 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.203 °C
+
+Accel X: -0.495         Y: -1.811       Z: 9.712 m/s/s
+ Gyro X: 0.001  Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.172 °C
+
+Accel X: -0.488         Y: -1.804       Z: 9.703 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.207 °C
+
+Accel X: -0.505         Y: -1.809       Z: 9.696 m/s/s
+ Gyro X: -0.000         Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.180 °C
+
+Accel X: -0.519         Y: -1.814       Z: 9.701 m/s/s
+ Gyro X: 0.000  Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.121 °C
+
+Accel X: -0.507         Y: -1.807       Z: 9.698 m/s/s
+ Gyro X: -0.001         Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.195 °C
+
+Accel X: -0.483         Y: -1.804       Z: 9.701 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.184 °C
+
+Accel X: -0.500         Y: -1.802       Z: 9.715 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.238 °C
+
+Accel X: -0.493         Y: -1.809       Z: 9.705 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.203 °C
+
+Accel X: -0.495         Y: -1.799       Z: 9.698 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.273 °C
+
+Accel X: -0.495         Y: -1.799       Z: 9.703 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.234 °C
+
+Accel X: -0.510         Y: -1.809       Z: 9.691 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.289 °C
+
+Accel X: -0.507         Y: -1.799       Z: 9.715 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.219 °C
+
+Accel X: -0.500         Y: -1.802       Z: 9.710 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.258 °C
+
+Accel X: -0.500         Y: -1.799       Z: 9.708 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.227 °C
+
+Accel X: -0.507         Y: -1.811       Z: 9.710 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.230 °C
+
+Accel X: -0.505         Y: -1.807       Z: 9.703 m/s/s
+ Gyro X: 0.001  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.227 °C
+
+Accel X: -0.493         Y: -1.797       Z: 9.691 m/s/s
+ Gyro X: -0.000         Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.223 °C
+
+Accel X: -0.498         Y: -1.811       Z: 9.703 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.258 °C
+
+Accel X: -0.498         Y: -1.809       Z: 9.698 m/s/s
+ Gyro X: -0.001         Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.234 °C
+
+Accel X: -0.493         Y: -1.823       Z: 9.698 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.006 rad/s
+Temperature: 33.234 °C
+
+Accel X: -0.500         Y: -1.814       Z: 9.701 m/s/s
+ Gyro X: 0.000  Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.301 °C
+
+Accel X: -0.507         Y: -1.811       Z: 9.710 m/s/s
+ Gyro X: 0.000  Y: -0.008       Z: -0.007 rad/s
+Temperature: 33.234 °C
+
+Accel X: -0.505         Y: -1.807       Z: 9.701 m/s/s
+ Gyro X: -0.000         Y: -0.009       Z: -0.007 rad/s
+Temperature: 33.258 °C
+
+done!
+---------------------------------------
+
+Initializing filesystem...done!
+Testing filesystem...
+SD Card Size: 3781MB
+Listing directory: /
+  DIR : System Volume Information
+  FILE: test.txt  SIZE: 1048576
+  FILE: foo.txt  SIZE: 14
+Creating Dir: /mydir
+Dir created
+Listing directory: /
+  DIR : System Volume Information
+  FILE: test.txt  SIZE: 1048576
+  FILE: foo.txt  SIZE: 14
+  DIR : mydir
+Removing Dir: /mydir
+Dir removed
+Listing directory: /
+  DIR : System Volume Information
+Listing directory: /System Volume Information
+  FILE: WPSettings.dat  SIZE: 12
+  FILE: IndexerVolumeGuid  SIZE: 76
+  FILE: test.txt  SIZE: 1048576
+  FILE: foo.txt  SIZE: 14
+Writing file: /hello.txt
+Message appended!
+Appending to file: /hello.txt
+Message appended!
+Read from file: Hello World!
+Deleting file: /foo.txt
+Deleted file
+Renaming file /hello.txt to /foo.txt
+Renamed file
+Read from file: Hello World!
+1048576 bytes read for 2383 ms
+1048576 bytes written for 2622 ms
+Total space: 3772MB
+Used space: 1MB
+done!
+---------------------------------------
+
+Unit test complete
