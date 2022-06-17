@@ -66,9 +66,9 @@ void loop() {
     // calcLinAccel(linAccel, accel.acceleration);
     computeAngles(accel.acceleration, gyro.gyro, dt);
     // Serial.println();
-    // delay(1000/52.0); // Run at 52 Hz - DSO32 defualt sampling speed
     timer = micros();
-    delay(500);
+    delay(1000/52.0); // Run at 52 Hz - DSO32 defualt sampling speed
+    // delay(500);
 }
 
 
@@ -163,11 +163,25 @@ void computeAngles(sensors_vec_t &accel, sensors_vec_t &gyro, double dt) {
     if (ufAngle.heading < -180 || ufAngle.heading > 180)
         ufAngle.heading = kfAngle.heading;
 
+    // Add calculations to data packet
+    uint8_t rollQualities[3] = {25, 75, 75};
+    float rollValues[3] = {accelAngle.roll, cfAngle.roll, kfAngle.roll};
+    data.roll  = weightedAvg(rollQualities, rollValues, 3);
+
+    uint8_t pitchQualities[3] = {25, 75, 75};
+    float pitchValues[3] = {accelAngle.pitch, cfAngle.pitch, kfAngle.pitch};
+    data.pitch = weightedAvg(pitchQualities, pitchValues, 3);
+    
+    data.yaw   = cfAngle.heading;
+
     // DEBUG statements
-    Serial.printf("Accelerometer Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", accelAngle.roll, accelAngle.pitch, accelAngle.heading);
-    Serial.printf("Unfiltered    Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", ufAngle.roll, ufAngle.pitch, ufAngle.heading);
-    Serial.printf("Complimentary Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", cfAngle.roll, cfAngle.pitch, cfAngle.heading);
-    Serial.printf("Kalman        Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", kfAngle.roll, kfAngle.pitch, kfAngle.heading);
+    // Serial.printf("Accelerometer Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", accelAngle.roll, accelAngle.pitch, accelAngle.heading);
+    // Serial.printf("Unfiltered    Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", ufAngle.roll, ufAngle.pitch, ufAngle.heading);
+    // Serial.printf("Complimentary Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", cfAngle.roll, cfAngle.pitch, cfAngle.heading);
+    // Serial.printf("Kalman        Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", kfAngle.roll, kfAngle.pitch, kfAngle.heading);
+
+    Serial.printf("Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", data.roll, data.pitch, data.yaw);
+    
     Serial.println();
 }
 
@@ -237,4 +251,47 @@ void computeKFAngles(sensors_vec_t &angle, sensors_vec_t & accel, sensors_vec_t 
 
     // DEBUG statements
     // Serial.printf("Roll: %0.3f \t Pitch: %0.3f \t Yaw: %0.3f deg\n\r", angle.roll, angle.pitch, angle.heading);
+}
+
+
+// =========================
+// === UTILITY FUNCTIONS ===
+// =========================
+
+
+float weightedRMS(uint8_t qualities[], float values[], uint8_t n) {
+    // Convert qualities into weight
+    float _sum = 0;
+    for (int i=0; i<n; i++) { // Sum up the qualities
+        _sum += qualities[i];
+    }
+    float _weights[n];
+    for (int i=0; i<n; i++) { // Normalize qualities into weights
+        _weights[i] = qualities[i]/_sum;
+    }
+
+    // wRMS = sqrt(sum(w[] * x[]))
+    _sum = 0;
+    for (int i=0; i<n; i++) { // Find sum inside sqrt
+        _sum += _weights[i] * (values[i]*values[i]);
+    }
+    return sqrt(_sum); // Calculate weighted RMS
+}
+
+float weightedAvg(uint8_t qualities[], float values[], uint8_t n) {
+    // Convert qualities into weight
+    float _sum = 0;
+    for (int i=0; i<n; i++) { // Sum up the qualities
+        _sum += qualities[i];
+    }
+    float _weights[n];
+    for (int i=0; i<n; i++) { // Normalize qualities into weights
+        _weights[i] = qualities[i]/_sum;
+    }
+
+    float _avg = 0;
+    for (int i=0; i<n; i++) { // Calculate weight average
+        _avg += _weights[i] * values[i];
+    }
+    return _avg;
 }
