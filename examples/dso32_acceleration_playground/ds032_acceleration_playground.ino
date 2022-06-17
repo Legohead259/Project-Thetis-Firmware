@@ -2,7 +2,23 @@
 #include <utility/imumaths.h>
 #include <filters/ButterworthBP2.h>
 
+#include <Kalman.h>
+
+#define RESTRICT_PITCH // Comment out to restrict roll to ±90deg instead
+Kalman kalmanX;
+Kalman kalmanY;
+Kalman kalmanZ;
+uint32_t timer;
+
 telemetry_t data;
+sensors_event_t accel;
+sensors_event_t gyro;
+sensors_event_t temp;
+sensors_vec_t accelAngle;
+sensors_vec_t ufAngle;
+sensors_vec_t cfAngle;
+sensors_vec_t kfAngle;
+
 bool isDSO32Available = false;
 // const double f_c = 1; // Hz - cutoff frequency
 // const double f_s = 52; // Hz - sample frequency
@@ -10,6 +26,8 @@ bool isDSO32Available = false;
 // auto filter = butter<6>(f_n); // Creates a 6th-order Butterworth filter with a normalized cutoff frequency
 
 void calcLinAccel(sensors_vec_t &linAccel, sensors_vec_t &accel, double fc=1, double fs=52);
+void computeCFAngles(sensors_vec_t &angle, sensors_vec_t & accel, sensors_vec_t &gyro, double dt,
+                     double wGyro=0.93, double wAccel=0.07);
 
 void setup() {
     Serial.begin(115200);
@@ -21,23 +39,35 @@ void setup() {
     Serial.println();
 
     // IMU Initialization
-    Serial.print("Initializing IMU...");
     isDSO32Available = initLSM6DSO32();
     if (!isDSO32Available) {
-        Serial.println("Failed!");
         while (true); // Halt further code execution
     }
-    Serial.println("done!");
 
-    // Filter Initialization
-    // Serial.println("Initializing filter...");
-    // filter.begin(52); // Initialize the filter to expect updates at 52 Hz
-    // Serial.println("done!");
+    pollDSO32();
+    computeRawAngles(ufAngle, accel.acceleration, gyro.gyro, 0);
+
+    // Set starting angles
+    cfAngle.roll = ufAngle.roll;
+    cfAngle.pitch = ufAngle.pitch;
+    cfAngle.heading = ufAngle.heading;
+    kalmanX.setAngle(ufAngle.roll); 
+    kalmanY.setAngle(ufAngle.pitch);
+    kalmanZ.setAngle(ufAngle.heading);
+
+    timer = micros();
 }
 
 void loop() {
+    double dt = (double)(micros() - timer) / 1E6; // Calculate delta time
     pollDSO32();
+    
+    // sensors_vec_t linAccel;
+    // calcLinAccel(linAccel, accel.acceleration);
+    computeAngles(accel.acceleration, gyro.gyro, dt);
+    // Serial.println();
     // delay(1000/52.0); // Run at 52 Hz - DSO32 defualt sampling speed
+    timer = micros();
     delay(500);
 }
 
@@ -48,30 +78,25 @@ void loop() {
 
 
 void pollDSO32() {
-    sensors_event_t accel;
-    sensors_event_t gyro;
-    sensors_event_t temp;
     DSO32_IMU.getEvent(&accel, &gyro, &temp);
-    sensors_vec_t linAccel;
-    calcLinAccel(linAccel, accel.acceleration);
+
+    // Convert gyro to deg/s from rad/s
+    gyro.gyro.x *= RAD_TO_DEG;
+    gyro.gyro.y *= RAD_TO_DEG;
+    gyro.gyro.z *= RAD_TO_DEG;
 
     // Update data packet
     data.accelX = accel.acceleration.x;
-    data.accelY = accel.acceleration.x;
-    data.accelZ = accel.acceleration.x;
-    data.linAccelX = linAccel.x;
-    data.linAccelY = linAccel.y;
-    data.linAccelZ = linAccel.z;
+    data.accelY = accel.acceleration.y;
+    data.accelZ = accel.acceleration.z;
     data.gyroX = gyro.gyro.x;
-    data.gyroY = gyro.gyro.x;
-    data.gyroZ = gyro.gyro.x;
+    data.gyroY = gyro.gyro.y;
+    data.gyroZ = gyro.gyro.z;
     data.imuTemp = temp.temperature;
 
     // Debug print statements
     // Serial.printf("Accel X: %0.3f \tY: %0.3f \tZ: %0.3f m/s/s\n\r", data.accelX, data.accelY, data.accelZ);
     // Serial.printf(" Gyro X: %0.3f \tY: %0.3f \tZ: %0.3f rad/s\n\r", data.gyroX, data.gyroY, data.gyroZ);
-    // Serial.printf("LinAc X: %0.3f \tY: %0.3f \tZ: %0.3f m/s/s\n\r", data.linAccelX, data.linAccelY, data.linAccelZ);
-    // Serial.printf("   Roll: %0.3f \tP: %0.3f \tY: %0.3f deg\n\r", data.roll, data.pitch, data.yaw);
     // Serial.printf("Temperature: %0.3f °C\n\n\r", data.imuTemp);
 
     // Serial plotter print statements
@@ -94,7 +119,122 @@ void calcLinAccel(sensors_vec_t &linAccel, sensors_vec_t &accel, double fc, doub
     linAccel.y = accel.y - gravity.y;
     linAccel.z = accel.z - gravity.z;
 
-    Serial.printf("Accel   X: %0.3f \tY: %0.3f \tZ: %0.3f m/s/s\n\r", accel.x, accel.y, accel.z);
-    Serial.printf("Gravity X: %0.3f \tY: %0.3f \tZ: %0.3f m/s/s\n\r", gravity.x, gravity.y, gravity.z);
-    Serial.printf("LinAcc  X: %0.3f \tY: %0.3f \tZ: %0.3f m/s/s\n\r", linAccel.x, linAccel.y, linAccel.z);
+    // Add calculations to data packet
+    // data.linAccelX = linAccel.x;
+    // data.linAccelY = linAccel.y;
+    // data.linAccelZ = linAccel.z;
+
+    // DEBUG statements
+    Serial.printf("X: %0.3f \tY: %0.3f \tZ: %0.3f m/s/s\n\r", linAccel.x, linAccel.y, linAccel.z);
+}
+
+
+// =============================
+// === ORIENTATION FUNCTIONS ===
+// =============================
+
+
+void computeAngles(sensors_vec_t &accel, sensors_vec_t &gyro, double dt) {
+    computeAccelAngles(accelAngle, accel);
+    computeRawAngles(ufAngle, accel, gyro, dt);    
+    computeCFAngles(cfAngle, accel, gyro, dt);
+    computeKFAngles(kfAngle, accel, gyro, dt);
+
+    // This fixes the transition problem when the accelerometer angle jumps between -180 and 180 degrees
+    if ((accelAngle.roll < -90 && kfAngle.roll > 90) || (accelAngle.roll > 90 && kfAngle.roll < -90)) {
+        kalmanX.setAngle(accelAngle.roll);
+        ufAngle.roll = accelAngle.roll;
+        cfAngle.roll = accelAngle.roll;
+        kfAngle.roll = accelAngle.roll;
+    } else
+        kfAngle.roll = kalmanX.getAngle(accelAngle.roll, gyro.x, dt); // Calculate the angle using a Kalman filter
+
+    if (abs(kfAngle.roll) > 90)
+        gyro.y = -gyro.y; // Invert rate, so it fits the restriced accelerometer reading
+    kfAngle.pitch = kalmanY.getAngle(accelAngle.pitch, gyro.y, dt);
+
+    // Reset the angle when it has drifted too much
+    if (ufAngle.roll < -180 || ufAngle.roll > 180)
+        ufAngle.roll = kfAngle.roll;
+
+    if (ufAngle.pitch < -180 || ufAngle.pitch > 180)
+        ufAngle.pitch = kfAngle.pitch;
+
+    if (ufAngle.heading < -180 || ufAngle.heading > 180)
+        ufAngle.heading = kfAngle.heading;
+
+    // DEBUG statements
+    Serial.printf("Accelerometer Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", accelAngle.roll, accelAngle.pitch, accelAngle.heading);
+    Serial.printf("Unfiltered    Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", ufAngle.roll, ufAngle.pitch, ufAngle.heading);
+    Serial.printf("Complimentary Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", cfAngle.roll, cfAngle.pitch, cfAngle.heading);
+    Serial.printf("Kalman        Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", kfAngle.roll, kfAngle.pitch, kfAngle.heading);
+    Serial.println();
+}
+
+void computeAccelAngles(sensors_vec_t &angle, sensors_vec_t &accel) {
+    // Compute orientations using equations from: 
+    angle.roll  = atan2(accel.y, accel.z) * RAD_TO_DEG;
+    angle.pitch = atan(-accel.x / sqrt(accel.y*accel.y + accel.z*accel.z)) * RAD_TO_DEG;
+    angle.heading = atan(sqrt((accel.y*accel.y) +(accel.x*accel.y)) / accel.z) * RAD_TO_DEG;
+}
+
+void computeRawAngles(sensors_vec_t &angle, sensors_vec_t &accel, sensors_vec_t &gyro, double dt) {
+    // Compute orientations from accelerometer
+    sensors_vec_t _accelAngle;
+    computeAccelAngles(_accelAngle, accel);
+
+    // Integrate gyro values and add to orientation
+    angle.roll    += _accelAngle.roll    + gyro.x * dt;
+    angle.pitch   += _accelAngle.pitch   + gyro.y * dt;
+    angle.heading += _accelAngle.heading + gyro.z * dt;
+
+    // Add calculations into data packet
+    // data.roll  = angle.roll;
+    // data.pitch = angle.pitch;
+    // data.yaw   = angle.heading;
+
+    // DEBUG statements
+    // Serial.printf("Roll: %0.3f \t Pitch: %0.3f \t Yaw: %0.3f deg\n\r", angle.roll, angle.pitch, angle.heading);
+}
+
+void computeCFAngles(sensors_vec_t &angle, sensors_vec_t & accel, sensors_vec_t &gyro, double dt,
+                     double wGyro, double wAccel) {
+    // Check for valid weights, return if not valid
+    if (wGyro+wAccel != 1) return;
+
+    // Compute raw orientation angles
+    sensors_vec_t _accelAngle;
+    computeAccelAngles(_accelAngle, accel);
+
+    // Compute complimentary-filtered angles
+    angle.roll    = wGyro * (_accelAngle.roll    + gyro.x * dt) + wAccel * _accelAngle.roll;
+    angle.pitch   = wGyro * (_accelAngle.pitch   + gyro.y * dt) + wAccel * _accelAngle.pitch;
+    angle.heading = wGyro * (_accelAngle.heading + gyro.y * dt) + wAccel * _accelAngle.heading;
+
+    // Add calculations into data packet
+    // data.roll  = angle.roll;
+    // data.pitch = angle.pitch;
+    // data.yaw   = angle.heading;
+
+    // DEBUG statements
+    // Serial.printf("Roll: %0.3f \t Pitch: %0.3f \t Yaw: %0.3f deg\n\r", angle.roll, angle.pitch, angle.heading);
+}
+
+void computeKFAngles(sensors_vec_t &angle, sensors_vec_t & accel, sensors_vec_t &gyro, double dt) {
+    // Compute orientations from accelerometer
+    sensors_vec_t _accelAngle;
+    computeAccelAngles(_accelAngle, accel);
+
+    // Compute Kalman-filtered angles
+    angle.roll    = kalmanX.getAngle(_accelAngle.roll, gyro.x, dt);
+    angle.pitch   = kalmanY.getAngle(_accelAngle.pitch, gyro.y, dt);
+    angle.heading = kalmanZ.getAngle(_accelAngle.heading, gyro.z, dt);
+
+    // Add calculations into data packet
+    // data.roll  = angle.roll;
+    // data.pitch = angle.pitch;
+    // data.yaw   = angle.heading;
+
+    // DEBUG statements
+    // Serial.printf("Roll: %0.3f \t Pitch: %0.3f \t Yaw: %0.3f deg\n\r", angle.roll, angle.pitch, angle.heading);
 }
