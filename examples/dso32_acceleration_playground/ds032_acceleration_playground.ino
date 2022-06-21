@@ -10,6 +10,12 @@ Kalman kalmanY;
 Kalman kalmanZ;
 uint32_t timer;
 
+#include <MahonyAHRS.h>
+
+Mahony filter;
+
+imu::Quaternion Qb;
+
 telemetry_t data;
 sensors_event_t accel;
 sensors_event_t gyro;
@@ -38,6 +44,8 @@ void setup() {
     Serial.println("-------------------------------------------------");
     Serial.println();
 
+    filter.begin(52); // Initialize the Mahony filter at a sampling rate of 52 Hz
+
     // IMU Initialization
     isDSO32Available = initLSM6DSO32();
     if (!isDSO32Available) {
@@ -62,10 +70,41 @@ void loop() {
     double dt = (double)(micros() - timer) / 1E6; // Calculate delta time
     pollDSO32();
     
+    // Traditional AHRS calcs
     // sensors_vec_t linAccel;
     // calcLinAccel(linAccel, accel.acceleration);
     computeAngles(accel.acceleration, gyro.gyro, dt);
     // Serial.println();
+
+    // Mahony AHRS Filter
+    filter.updateIMU(gyro.gyro.x, gyro.gyro.y, gyro.gyro.z,
+                     accel.acceleration.x, accel.acceleration.y, accel.acceleration.z);
+    Serial.printf("Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", filter.getRoll(), filter.getPitch(), filter.getYaw());
+    // Serial.println();
+
+    // Graviational acceleration in NED coordinate system
+    imu::Vector<3> gravGlobal = {0, 0, 9.81};
+
+    float qComponents[4];
+    filter.getQuaternion(qComponents);
+    // Body orientation as a quaternion
+    Qb = imu::Quaternion(qComponents[0],  // w
+                    qComponents[1],  // x
+                    qComponents[2],  // y
+                    qComponents[3]); // z
+    // imu::Vector<3> gravBody = Qb.rotateVector(gravGlobal);
+    imu::Quaternion gravBody = Qb.invert() * imu::Quaternion(0, gravGlobal) * Qb;
+    // Serial.printf("X: %0.3f \t\t Y: %0.3f \t\t Z: %0.3f \t\t m/s/s\n\r", gravBody.x(), gravBody.y(), gravBody.z());
+
+    float linAccelX = accel.acceleration.x - gravBody.x();
+    float linAccelY = accel.acceleration.y - gravBody.y();
+    float linAccelZ = accel.acceleration.z - gravBody.z();
+
+    Serial.printf("X: %0.3f \t\t Y: %0.3f \t\t Z: %0.3f \t\t m/s/s\n\r", linAccelX, linAccelY, linAccelZ);
+
+    Serial.println();
+
+
     timer = micros();
     delay(1000/52.0); // Run at 52 Hz - DSO32 defualt sampling speed
     // delay(500);
@@ -141,17 +180,17 @@ void computeAngles(sensors_vec_t &accel, sensors_vec_t &gyro, double dt) {
     computeKFAngles(kfAngle, accel, gyro, dt);
 
     // This fixes the transition problem when the accelerometer angle jumps between -180 and 180 degrees
-    if ((accelAngle.roll < -90 && kfAngle.roll > 90) || (accelAngle.roll > 90 && kfAngle.roll < -90)) {
-        kalmanX.setAngle(accelAngle.roll);
-        ufAngle.roll = accelAngle.roll;
-        cfAngle.roll = accelAngle.roll;
-        kfAngle.roll = accelAngle.roll;
-    } else
-        kfAngle.roll = kalmanX.getAngle(accelAngle.roll, gyro.x, dt); // Calculate the angle using a Kalman filter
+    // if ((accelAngle.roll < -90 && kfAngle.roll > 90) || (accelAngle.roll > 90 && kfAngle.roll < -90)) {
+    //     kalmanX.setAngle(accelAngle.roll);
+    //     ufAngle.roll = accelAngle.roll;
+    //     cfAngle.roll = accelAngle.roll;
+    //     kfAngle.roll = accelAngle.roll;
+    // } else
+    //     kfAngle.roll = kalmanX.getAngle(accelAngle.roll, gyro.x, dt); // Calculate the angle using a Kalman filter
 
-    if (abs(kfAngle.roll) > 90)
-        gyro.y = -gyro.y; // Invert rate, so it fits the restriced accelerometer reading
-    kfAngle.pitch = kalmanY.getAngle(accelAngle.pitch, gyro.y, dt);
+    // if (abs(kfAngle.roll) > 90)
+    //     gyro.y = -gyro.y; // Invert rate, so it fits the restriced accelerometer reading
+    // kfAngle.pitch = kalmanY.getAngle(accelAngle.pitch, gyro.y, dt);
 
     // Reset the angle when it has drifted too much
     if (ufAngle.roll < -180 || ufAngle.roll > 180)
@@ -180,9 +219,7 @@ void computeAngles(sensors_vec_t &accel, sensors_vec_t &gyro, double dt) {
     // Serial.printf("Complimentary Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", cfAngle.roll, cfAngle.pitch, cfAngle.heading);
     // Serial.printf("Kalman        Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", kfAngle.roll, kfAngle.pitch, kfAngle.heading);
 
-    Serial.printf("Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", data.roll, data.pitch, data.yaw);
-    
-    Serial.println();
+    // Serial.printf("Roll: %0.3f \t\t Pitch: %0.3f \t\t Yaw: %0.3f deg\n\r", data.roll, data.pitch, data.yaw);    
 }
 
 void computeAccelAngles(sensors_vec_t &angle, sensors_vec_t &accel) {
