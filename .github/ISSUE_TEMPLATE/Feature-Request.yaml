@@ -1,0 +1,43 @@
+name: Feature Request
+description: File a feature request
+title: "[Feature Request]: "
+labels: ["enhancement"]
+assignees:
+  - Legohead259
+body:
+  - type: textarea
+    id: desired-behavior
+    attributes:
+      label: What is the Desired Behavior?
+      description: Tell us what you expect to happen.
+      placeholder: Give us something new!
+      value: "A feature has been requested!"
+    validations:
+      required: true
+  - type: textarea
+    id: value-added
+    attributes:
+      label: What value will this add?
+      description: What will the new feature do for the firmware?
+    validations:
+      required: true
+  - type: dropdown
+    id: boards
+    attributes:
+      label: What board revisions would support this feature?
+      multiple: true
+      options:
+        - Rev F4
+        - All
+  - type: dropdown
+    id: priority
+    attributes:
+      label: What is the priority for this new feature?
+      description: Please specify the priority. 5 is most urgent (i.e. needs to be in the next minor update), 1 is least urgent (i.e. can wait a few major updates)
+      options:
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+      multiple: false
