@@ -19,21 +19,8 @@
  * @date June 10, 2022
  *       July 15, 2022 (last edit)
 **/
-const char FW_VERSION[] = "0.3.0";
+const char FW_VERSION[] = "0.4.0";
 const char HW_REVISION[] = "Rev F4";
-
-// DEBUG FLAGS
-// #define IMU_DEBUG
-// #define GPS_DEBUG
-// #define SDCARD_DEBUG
-// #define SDCONFIG_DEBUG
-// #define WIFI_ENABLE
-#ifdef WIFI_ENABLE
-    #include "WiFi.h"
-    #include "ESPAsyncWebServer.h"
-    char ssid[32];
-    AsyncWebServer server(80); // Create AsyncWebServer object on port 80
-#endif // WIFI_ENABLE
 
 #include <ThetisLib.h>
 
@@ -60,6 +47,7 @@ bool isIMUAvailable = false;
 bool isLogging = false;
 bool isLogFileCreated = false;
 bool isIMUCalibrated = true;
+bool hasClientSSID = false;
 
 // Prototypes
 void syncInternalClockGPS();
@@ -77,7 +65,7 @@ void setup() {
     }
 
     Serial.println("-------------------------------------");
-    Serial.println("    Thetis Firmware Version 0.4.0    ");
+    Serial.println("    Thetis Firmware Version 0.4.0    "); // TODO: Update to dynamically use FW_VERSION
     Serial.println("-------------------------------------");
     Serial.println();
 
@@ -118,6 +106,19 @@ void setup() {
                 Serial.print("GPS functionality has been: ");
                 Serial.println(isGPSEnable ? "Enabled" : "Disabled");
             }
+            #ifdef WIFICLIENT_ENABLE
+            else if (cfg.nameIs("client-ssid")) {
+                hasClientSSID = true;
+                strcpy(ssid, cfg.getValue());
+                Serial.print("Client SSID configured to: ");
+                Serial.println(ssid)
+            }
+            else if (cfg.nameIs("client-password")) {
+                strcpy(password, cfg.getValue());
+                Serial.print("Client password configured to: ");
+                Serial.println(password);
+            }
+            #endif // WIFICLIENT_ENABLE
             else {
                 Serial.print("Unknown setting name: ");
                 Serial.println(cfg.getName());
@@ -150,19 +151,32 @@ void setup() {
         Serial.print("AP IP address: ");
         Serial.println(IP);
 
-        // Route for root / web page
-        server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-            request->send(SPIFFS, "/index.html", String(), false, processor);
-        });
-        
-        // Route to load style.css file
-        server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
-            request->send(SPIFFS, "/style.css", "text/css");
-        });
+        // Start server
+        server.begin();
+    #endif // WIFIAP_ENABLE
+
+    #ifdef WIFICLIENT_ENABLE
+        Serial.println("Starting WiFi client...");
+        Serial.printf("Connecting to %s ", ssid);
+        if (!WiFi.begin(ssid, password)) {
+            Serial.println("Failed to start WiFi client!");
+            while (true) blinkCode(RADIO_ERROR_CODE); // Block code execution
+        }
+        else {
+            while (WiFi.getStatus() != WL_CONNECTED) { // Wait until client is connected to WiFi
+                delay(500);
+                Serial.print(".");
+            }
+            Serial.println();
+            Serial.print("Connected!");
+            Serial.println();
+            Serial.print("IP address: ");
+            Serial.println(WiFi.localIP());
+        }
 
         // Start server
         server.begin();
-    #endif // WIFI_ENABLE
+    #endif //WIFICLIENT_ENABLE
 }
 
 void loop() {
