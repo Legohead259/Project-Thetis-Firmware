@@ -1,45 +1,63 @@
 html {
-    font-family: Helvetica;
-    display: inline-block;
-    margin: 0px auto;
-    text-align: center;
+  font-family: Helvetica;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: center;
 }
 .system-wrapper {
-  display: flex;
+display: flex;
 }
 
 .system-wrapper div {
-  flex: 1; /*grow*/
-  vertical-align: top;
-  border: 1px solid black;
+flex: 1; /*grow*/
+vertical-align: top;
 }
 
-#system-time {
-  /* font-size: 1.5rem; */
+/* Status Box */
 
+.status-box {
+  width: 50px; 
+  height: 50px; 
+  border: 1px solid black; 
+  background: grey;
+}
+
+#status-label {
+  font-size: 0.75rem;
+}
+
+#timestamp {
+  font-size: 0.75rem;
 }
 
 /* Versioning information */
 .version-info div {
-    display: flex;
-    text-align: center;
-  }
-  
-  .version-info span {
-    flex: 1;
-  }
-  
-  .version-info span:first-of-type {
-    text-align: right;
-    padding-right: 5px;
-  }
-  
-  .version-info span:last-of-type {
-    text-align: left;
-    padding-left: 1px;
-  }
+  display: flex;
+  text-align: center;
+}
 
-  .version-info div p {
-    font-size: 1.0rem;
-  }
+.version-info span {
+  flex: 1;
+}
 
+.version-info span:first-of-type {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.version-info span:last-of-type {
+  text-align: left;
+  padding-left: 1px;
+}
+
+.version-info div p {
+  font-size: 1.0rem;
+}
+
+/* Sensor Values */
+
+.sensor-values-wrapper {
+  display: flex;
+  border: 1px black;
+
+}

@@ -11,19 +11,37 @@
     <div class="system-wrapper">
         <div id="system-status">
             <h2> System Status </h2>
+            <p id="status-label">%STATUS%</p>
             <!-- Draw box and make flash colors according to state-->
         </div>
         <div id="system-info">
             <div class="version-info">
-                <div> <span> <strong> Device ID </strong> </span>        : <span> %DEVICE_ID% </span> <br> </div>
-                <div> <span> <strong> Firmware Version </strong> </span> : <span> %FW_VERSION% </span> <br> </div>
-                <div> <span> <strong> Revision </strong> </span>         : <span> %HW_REVISION% </span> <br> </div>
+                <div> <span> <strong> Device ID </strong> </span> : <span> %DEVICE_ID% </span> <br> </div>
+                <div> <span> <strong> Firmware </strong> </span>  : <span> %FW_VERSION% </span> <br> </div>
+                <div> <span> <strong> Revision </strong> </span>  : <span> %HW_REVISION% </span> <br> </div>
             </div>
         </div>
         <div id="system-time">
             <h2> System Time </h2>
-            <p> %TIMESTAMP% </p>
+            <p id="timestamp"> %TIMESTAMP% </p>
         </div>
+    </div>
+    <div class="sensor-values-wrapper">
+        <h2> IMU Readings </h2> <br>
+        <h3> Accelerometer </h3> <br>
     </div>
 </body>
 </html>
+
+<script>
+setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("timestamp").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "/timestamp", true);
+    xhttp.send();
+    }, 1000 ) ;
+</script>
