@@ -17,12 +17,19 @@ Release sections
 
 ## Unreleased
 ### **TODO**
-- Move WiFi functions to seperate library files within ThetisLib
+
 - Implement HTTP API ([#7](https://github.com/Legohead259/Thetis-Firmware/issues/7))
+    - [X] timestamp
+    - [ ] imu data
+    - [ ] gps data
+    - [ ] status indications 
 
 ### Added
 - Added the `writeTelemetryData()` function to be local
 - Added local declaration for `currentState`
+
+### Changed
+- Move WiFi functions to seperate library files within ThetisLib
 
 ### Removed
 - Removed the GPS enable flag since it doesn't have a use case right now
