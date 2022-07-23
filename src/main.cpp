@@ -91,8 +91,16 @@ void setup() {
     Serial.println("done!");
 
     Serial.print("Loading configurations...");
-    
+    if (cfg.begin("/config.cfg", 127)) { // Check configuration file
+        cfg.loadConfigurations();
+    }
+    else {
+        Serial.println("Failed to open config file!");
+        while (true) blinkCode(FILE_ERROR_CODE); // Block code execution
+    }
+    Serial.println("done!");
    
+   // Check if GPS fix is good; synchronize internal clock if so
     syncInternalClockGPS();
 
     // Attach the log enable button interrupt
@@ -122,9 +130,10 @@ void setup() {
 
     #ifdef WIFICLIENT_ENABLE
         Serial.println("Starting WiFi client...");
+        hasClientSSID = strcmp(cfgData.ssid, "");
         if (hasClientSSID) {
-            Serial.printf("Connecting to %s ", ssid);
-            if (!WiFi.begin(ssid, password)) {
+            Serial.printf("Connecting to %s ", cfgData.ssid);
+            if (!WiFi.begin(cfgData.ssid, cfgData.password)) {
                 Serial.println("Failed to start WiFi client!");
                 while (true) blinkCode(RADIO_ERROR_CODE); // Block code execution
             }
@@ -161,6 +170,11 @@ void setup() {
     server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
         request->send(SPIFFS, "/style.css", "text/css");
     });
+
+    server.on("/timestamp", HTTP_GET, [](AsyncWebServerRequest *request){
+		getISO8601Time_RTC(timestamp);
+		request->send_P(200, "text/plain", timestamp);
+	});
     #endif
 }
 
