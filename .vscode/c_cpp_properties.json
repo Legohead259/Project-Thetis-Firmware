@@ -10,13 +10,13 @@
             "includePath": [
                 "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/include",
                 "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/src",
+                "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/ThetisLib/src",
+                "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/SD/src",
                 "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                 "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/ESP Async WebServer/src",
                 "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
-                "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/AsyncTCP/src",
-                "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/ThetisLib/src",
-                "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/SD/src",
                 "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
+                "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/AsyncTCP/src",
                 "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/Adafruit NeoPixel",
                 "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/Adafruit LSM6DS",
                 "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/Adafruit BNO055",
@@ -234,13 +234,13 @@
                 "path": [
                     "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/include",
                     "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/src",
+                    "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/ThetisLib/src",
+                    "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/SD/src",
                     "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                     "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/ESP Async WebServer/src",
                     "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
-                    "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/AsyncTCP/src",
-                    "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/ThetisLib/src",
-                    "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/SD/src",
                     "C:/Users/legoh/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
+                    "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/AsyncTCP/src",
                     "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/Adafruit NeoPixel",
                     "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/Adafruit LSM6DS",
                     "c:/Users/legoh/Documents/PlatformIO/Projects/Thetis-Firmware-PIO/.pio/libdeps/thetis_revf4/Adafruit BNO055",
@@ -456,8 +456,10 @@
             },
             "defines": [
                 "PLATFORMIO=60103",
-                "ARDUINO_ESP32S2_DEV",
-                "ARDUINO_USB_CDC_ON_BOOT",
+                "ARDUINO_THETIS_REVF4",
+                "ARDUINO_USB_CDC_ON_BOOT=1",
+                "BOARD_HAS_PSRAM",
+                "__HARDWARE_REVISION__=RevF4",
                 "HAVE_CONFIG_H",
                 "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\"",
                 "UNITY_INCLUDE_CONFIG_H",
@@ -480,6 +482,8 @@
             "compilerPath": "C:/Users/legoh/.platformio/packages/toolchain-xtensa-esp32s2/bin/xtensa-esp32s2-elf-gcc.exe",
             "compilerArgs": [
                 "-mlongcalls",
+                "-mfix-esp32-psram-cache-issue",
+                "-mfix-esp32-psram-cache-strategy=memw",
                 ""
             ]
         }

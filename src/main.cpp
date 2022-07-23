@@ -1,6 +1,6 @@
 /**
  * @file Thetis Firmware
- * @version 0.3.0
+ * @version 0.4.0
  * 
  * @brief This firmware variant enables Thetis to act as an embedded accelerometer.
  * Accelerometer values will be logged to the onboard storage device and can be accesible via the WiFi interface, if enabled.
@@ -13,14 +13,16 @@
  * Version 0.2.1 - Integrated internal RTC for timestamps
  * Version 0.2.2 - Fixed log file write issue and implemented log enable functionality
  * Version 0.2.3 - Fixed major bug with the device crashing on log enabled
- * Version 0.3.0 - Added loading configurations from file on SPIFFS; added WiFi hotspot functionality
+ * Version 0.3.0 - Added loading configurations from file on SPIFFS
+ * Version 0.4.0 - Added NeoPixel functionality; added WiFi AP and client device functionality
  * 
  * @author Braidan Duffy
  * @date June 10, 2022
- *       July 15, 2022 (last edit)
+ *       July 22, 2022 (last edit)
 **/
-const char FW_VERSION[] = "0.4.0";
-const char HW_REVISION[] = "Rev F4";
+#define __FIRMWARE_VERSION__ "0.4.0"
+
+#include <Arduino.h>
 
 #include <ThetisLib.h>
 
@@ -31,15 +33,12 @@ const char HW_REVISION[] = "Rev F4";
 #define IMU_POLL_RATE 52.0 // Hz
 #define IMU_POLL_INTERVAL 1000/IMU_POLL_RATE // ms
 
+Config cfg;
+
 telemetry_t data;
 char filename[13];
 char timestamp[40];
 Status_t currentState;
-
-// Configuration Data
-Config cfg;
-bool isGPSEnable = true;
-uint8_t deviceID;
 
 // Flags
 bool isDebugging = false;
@@ -52,7 +51,6 @@ bool hasClientSSID = false;
 // Prototypes
 void syncInternalClockGPS();
 void loadConfig();
-String processor(const String &var);
 void updateSystemState();
 void updateSystemLED();
 bool writeTelemetryData();
@@ -93,52 +91,19 @@ void setup() {
     Serial.println("done!");
 
     Serial.print("Loading configurations...");
-    if (cfg.begin(SPIFFS, "/config.cfg", 127)) {
-        Serial.println();
-        while (cfg.readNextSetting()) {
-            if (cfg.nameIs("id")) {
-                deviceID = cfg.getIntValue();
-                Serial.print("The ID of this device is configured to: ");
-                Serial.println(deviceID);
-            }
-            else if (cfg.nameIs("gps_enable")) {
-                isGPSEnable = cfg.getBooleanValue();
-                Serial.print("GPS functionality has been: ");
-                Serial.println(isGPSEnable ? "Enabled" : "Disabled");
-            }
-            #ifdef WIFICLIENT_ENABLE
-            else if (cfg.nameIs("client-ssid")) {
-                hasClientSSID = true;
-                strcpy(ssid, cfg.getValue());
-                Serial.print("Client SSID configured to: ");
-                Serial.println(ssid)
-            }
-            else if (cfg.nameIs("client-password")) {
-                strcpy(password, cfg.getValue());
-                Serial.print("Client password configured to: ");
-                Serial.println(password);
-            }
-            #endif // WIFICLIENT_ENABLE
-            else {
-                Serial.print("Unknown setting name: ");
-                Serial.println(cfg.getName());
-            }
-        }
-        cfg.end();
-    }
-    else {
-        Serial.print("Failed to open configuration file!");
-        while (true) blinkCode(FILE_ERROR_CODE); // Block code execution
-    }
+    
    
-    if (isGPSEnable) {
-        syncInternalClockGPS();
-    }
+    syncInternalClockGPS();
 
     // Attach the log enable button interrupt
     attachInterrupt(LOG_EN, logButtonISR, FALLING);
 
-    #ifdef WIFIAP_ENABLE
+    // Configure WiFi radio and settings
+    #if defined(WIFIAP_ENABLE) && defined(WIFICLIENT_ENABLE) // Check that both WiFi EN flags are not present
+        #error "Both the WIFIAP_ENABLE and WIFICLIENT_ENABLE flags cannot be present!"
+    #endif //WIFIAP_ENABLE and WIFICLIENT_ENABLE
+
+    #ifdef WIFIAP_ENABLE // Check for WiFi AP build flag
         Serial.print("Starting WiFi access point...");
         sprintf(ssid, "Thetis-%03u", deviceID); // Format AP SSID based on Device ID
         if (!WiFi.softAP(ssid, "")) {
@@ -157,26 +122,46 @@ void setup() {
 
     #ifdef WIFICLIENT_ENABLE
         Serial.println("Starting WiFi client...");
-        Serial.printf("Connecting to %s ", ssid);
-        if (!WiFi.begin(ssid, password)) {
-            Serial.println("Failed to start WiFi client!");
-            while (true) blinkCode(RADIO_ERROR_CODE); // Block code execution
+        if (hasClientSSID) {
+            Serial.printf("Connecting to %s ", ssid);
+            if (!WiFi.begin(ssid, password)) {
+                Serial.println("Failed to start WiFi client!");
+                while (true) blinkCode(RADIO_ERROR_CODE); // Block code execution
+            }
+            else {
+                while (WiFi.status() != WL_CONNECTED) { // Wait until client is connected to WiFi
+                    delay(500);
+                    Serial.print(".");
+                }
+                Serial.println();
+                Serial.print("Connected!");
+                Serial.println();
+                Serial.print("IP address: ");
+                Serial.println(WiFi.localIP());
+            }
+
+            // Start server
+            server.begin();
         }
         else {
-            while (WiFi.getStatus() != WL_CONNECTED) { // Wait until client is connected to WiFi
-                delay(500);
-                Serial.print(".");
-            }
-            Serial.println();
-            Serial.print("Connected!");
-            Serial.println();
-            Serial.print("IP address: ");
-            Serial.println(WiFi.localIP());
+            Serial.println("No SSID specified in config.cfg!");
+            WiFi.mode(WIFI_OFF); // Turn off WiFi Radio
+            while (true) blinkCode(RADIO_ERROR_CODE); // Block code execution 
         }
-
-        // Start server
-        server.begin();
     #endif //WIFICLIENT_ENABLE
+
+    // Define ThetisAPI
+    #if defined(WIFIAP_ENABLE) || defined(WIFICLIENT_ENABLE)
+    // Route for root / web page
+    server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
+        request->send(SPIFFS, "/index.html", String(), false, processor);
+    });
+    
+    // Route to load style.css file
+    server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
+        request->send(SPIFFS, "/style.css", "text/css");
+    });
+    #endif
 }
 
 void loop() {
@@ -185,7 +170,7 @@ void loop() {
     updateSystemLED();
 
     static long _lastGPSSync = millis();
-    if (isGPSEnable && millis() >= _lastGPSSync+GPS_SYNC_INTERVAL*60000) { // Check GPS enabled and if GPS_SYNC_INTERVAL time has passed
+    if (millis() >= _lastGPSSync+GPS_SYNC_INTERVAL*60000) { // Check if GPS_SYNC_INTERVAL time has passed
         syncInternalClockGPS();
         _lastGPSSync = millis(); // Reset GPS sync timer flag
     }
@@ -261,6 +246,12 @@ void syncInternalClockGPS() {
 }
 
 void updateSystemState() {
+    static Status_t _oldState = BOOTING;
+    if (_oldState != currentState) {
+        Serial.printf("Current state: %d\r\n", currentState); // DEBUG
+        _oldState = currentState;
+    }
+
     if (!isIMUCalibrated && !data.GPSFix)                       currentState = STANDBY;
     else if (isIMUCalibrated && !data.GPSFix && !isLogging)     currentState = READY_NO_GPS;
     else if (isIMUCalibrated && data.GPSFix && !isLogging)      currentState = READY_GPS;
@@ -270,18 +261,18 @@ void updateSystemState() {
 }
 
 void updateSystemLED() {
-    switch (data.state) {
+    switch (currentState) {
         case LOGGING_NO_GPS:
             pixel.setPixelColor(0, BLUE); pixel.show(); // Glow solid blue
             break;
         case LOGGING_GPS:
-            pixel.setPixelColor(0, GREEN); pixel.show(); // Glow solid green
+            pixel.setPixelColor(0, PURPLE); pixel.show(); // Glow solid green
             break;
         case READY_NO_GPS:
             pulseLED(BLUE); // Pulse blue
             break;
         case READY_GPS:
-            pulseLED(GREEN); // Pulse green
+            pulseLED(PURPLE); // Pulse green
             break;
         case STANDBY:
             pixel.setPixelColor(0, 255, 191, 0); pixel.show(); // Glow solid amber
@@ -351,29 +342,4 @@ bool writeTelemetryData() {
     DEBUG_SERIAL_PORT.printf("Wrote to: %s\n\r", filename);
     #endif
     return true;
-}
-
-
-// ======================
-// === WIFI FUNCTIONS ===
-// ======================
-
-String processor(const String &var) {
-    Serial.print(var); Serial.print(": ");
-    if (var == "DEVICE_ID") {
-        char _deviceIDStr[4];
-        sprintf(_deviceIDStr, "%03u", deviceID);
-        Serial.println(_deviceIDStr);
-        return _deviceIDStr;
-    }
-    else if (var == "FW_VERSION") {
-        Serial.println(FW_VERSION);
-        return FW_VERSION;
-    }
-    else if (var == "HW_REVISION") {
-        Serial.println(HW_REVISION);
-        return HW_REVISION;
-    }
-    Serial.println();
-    return var;
 }

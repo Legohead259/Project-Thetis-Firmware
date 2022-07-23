@@ -24,6 +24,9 @@ Release sections
 - Added the `writeTelemetryData()` function to be local
 - Added local declaration for `currentState`
 
+### Removed
+- Removed the GPS enable flag since it doesn't have a use case right now
+
 ---
 
 ## 0.3.0 - 2022-07-15
